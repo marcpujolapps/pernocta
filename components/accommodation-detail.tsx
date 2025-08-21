@@ -286,7 +286,7 @@ export function AccommodationDetail({ accommodation }: AccommodationDetailProps)
               </div>
 
               <div>
-                <h3 className="font-medium text-foreground mb-3">Llocs d'interès propers</h3>
+                <h3 className="font-medium text-foreground mb-3">Llocs d&apos;interès propers</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   {accommodation.nearbyAttractions.map((attraction) => (
                     <div key={attraction.name} className="flex items-center justify-between">

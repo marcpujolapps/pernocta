@@ -409,7 +409,7 @@ export function SearchSection() {
                         </span>
                         <button
                           className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center hover:border-gray-900 transition-colors"
-                          onClick={() => setGuests(Math.min(10, guests + 1))}
+                          onClick={() => setGuests(Math.min(50, guests + 1))}
                         >
                           <Plus className="h-3 w-3" />
                         </button>

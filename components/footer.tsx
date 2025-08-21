@@ -1,6 +1,6 @@
-import { Separator } from "@/components/ui/separator"
-import { MapPin, Mail, Shield } from "lucide-react"
-import Link from "next/link"
+import { Separator } from "@/components/ui/separator";
+import { MapPin, Mail, Shield } from "lucide-react";
+import Link from "next/link";
 
 export function Footer() {
   return (
@@ -9,10 +9,12 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div className="md:col-span-1">
-            <h3 className="text-xl font-bold text-primary mb-4">Pernocta.cat</h3>
+            <h3 className="text-xl font-bold text-primary mb-4">
+              Pernocta.cat
+            </h3>
             <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-              El metabuscador de confiança per trobar tots els allotjaments legals de Catalunya. Verificats oficialment
-              per la Generalitat.
+              El metabuscador de confiança per trobar tots els allotjaments
+              legals de Catalunya. Verificats oficialment per la Generalitat.
             </p>
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <Shield className="w-4 h-4 text-secondary" />
@@ -22,7 +24,9 @@ export function Footer() {
 
           {/* Destinations */}
           <div>
-            <h4 className="font-semibold text-card-foreground mb-4">Destinacions populars</h4>
+            <h4 className="font-semibold text-card-foreground mb-4">
+              Destinacions populars
+            </h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
@@ -77,7 +81,9 @@ export function Footer() {
 
           {/* Accommodation Types */}
           <div>
-            <h4 className="font-semibold text-card-foreground mb-4">Tipus d&apos;allotjament</h4>
+            <h4 className="font-semibold text-card-foreground mb-4">
+              Tipus d&apos;allotjament
+            </h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
@@ -119,22 +125,34 @@ export function Footer() {
             <h4 className="font-semibold text-card-foreground mb-4">Suport</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/com-funciona" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  href="/com-funciona"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   Com funciona
                 </Link>
               </li>
               <li>
-                <Link href="/ajuda" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  href="/ajuda"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   Centre d&apos;ajuda
                 </Link>
               </li>
               <li>
-                <Link href="/contacte" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  href="/contacte"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   Contacte
                 </Link>
               </li>
               <li>
-                <Link href="/propietaris" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  href="/propietaris"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   Per a propietaris
                 </Link>
               </li>
@@ -180,13 +198,22 @@ export function Footer() {
           </div>
 
           <div className="flex items-center gap-4 text-sm">
-            <Link href="/privacitat" className="text-muted-foreground hover:text-foreground transition-colors">
+            <Link
+              href="/privacitat"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
               Privacitat
             </Link>
-            <Link href="/termes" className="text-muted-foreground hover:text-foreground transition-colors">
+            <Link
+              href="/termes"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
               Termes d&apos;ús
             </Link>
-            <Link href="/cookies" className="text-muted-foreground hover:text-foreground transition-colors">
+            <Link
+              href="/cookies"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
               Cookies
             </Link>
           </div>
@@ -195,13 +222,11 @@ export function Footer() {
         <Separator className="my-6" />
 
         <div className="text-center text-sm text-muted-foreground">
-          <p className="mb-2">© 2024 Pernocta.cat. Tots els drets reservats.</p>
-          <p className="flex items-center justify-center gap-2">
-            <Shield className="w-4 h-4 text-secondary" />
-            <span>Plataforma verificada per la Generalitat de Catalunya</span>
+          <p className="mb-2">
+            © {new Date().getFullYear()} Pernocta.cat. Tots els drets reservats.
           </p>
         </div>
       </div>
     </footer>
-  )
+  );
 }

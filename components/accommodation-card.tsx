@@ -1,11 +1,11 @@
 "use client";
 
 import type React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { ImageSlider } from "@/components/ui/image-slider";
 import {
   Users,
   Heart,
@@ -14,8 +14,6 @@ import {
   Tent,
   Trees,
   ShieldCheck,
-  ChevronLeft,
-  ChevronRight,
 } from "lucide-react";
 import type { Place } from "@/lib/place";
 import { hereGeocode } from "@/helpers/geocode";
@@ -43,56 +41,6 @@ export function AccommodationCard({
   const [isFavorite, setIsFavorite] = useState(false);
   const [isEnriching, setIsEnriching] = useState(false);
   const [isLocating, setIsLocating] = useState(false);
-  const [imageLoaded, setImageLoaded] = useState(false);
-  const [imageError, setImageError] = useState(false);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  // Reset image state when accommodation images change
-  useEffect(() => {
-    setImageError(false);
-    setImageLoaded(false);
-    setCurrentImageIndex(0);
-  }, [accommodation.images]);
-
-  // Navigation functions for image carousel
-  const goToPreviousImage = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    if (accommodation.images && accommodation.images.length > 1) {
-      setCurrentImageIndex((prev) => 
-        prev === 0 ? accommodation.images!.length - 1 : prev - 1
-      );
-      setImageLoaded(false);
-    }
-  };
-
-  const goToNextImage = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    if (accommodation.images && accommodation.images.length > 1) {
-      setCurrentImageIndex((prev) => 
-        prev === accommodation.images!.length - 1 ? 0 : prev + 1
-      );
-      setImageLoaded(false);
-    }
-  };
-
-  // Keyboard navigation
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (accommodation.images && accommodation.images.length > 1) {
-      if (e.key === 'ArrowLeft') {
-        e.stopPropagation();
-        setCurrentImageIndex((prev) => 
-          prev === 0 ? accommodation.images!.length - 1 : prev - 1
-        );
-        setImageLoaded(false);
-      } else if (e.key === 'ArrowRight') {
-        e.stopPropagation();
-        setCurrentImageIndex((prev) => 
-          prev === accommodation.images!.length - 1 ? 0 : prev + 1
-        );
-        setImageLoaded(false);
-      }
-    }
-  };
 
   const handleEnrich = async (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -271,116 +219,30 @@ export function AccommodationCard({
         paddingBottom: "0",
       }}
       className={`group relative overflow-hidden hover:shadow-lg transition-all duration-200 cursor-pointer border border-gray-200 bg-white rounded-xl ${
-        isSelected ? "ring-2 ring-rose-500 shadow-lg" : "hover:shadow-lg"
+        isSelected ? "ring-2 ring-gray-500 shadow-lg" : "hover:shadow-lg"
       } ${isHovered ? "shadow-md" : ""}`}
       onClick={onSelect}
       onMouseEnter={onHover}
       onMouseLeave={onLeave}
-      onKeyDown={handleKeyDown}
       tabIndex={0}
     >
-      {/* Image placeholder with gradient overlay */}
-      <div className="relative aspect-[4/3] bg-gradient-to-br from-rose-100 via-orange-50 to-amber-100 overflow-hidden rounded-t-xl">
-        {/* Display current image if available */}
-        {accommodation.images && accommodation.images.length > 0 && !imageError && (
-          <>
-            {!imageLoaded && (
-              <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-rose-100 via-orange-50 to-amber-100">
-                <div className="w-8 h-8 border-2 border-rose-300 border-t-rose-600 rounded-full animate-spin" />
+      {/* Image section */}
+      <div className="relative">
+        <ImageSlider
+          images={accommodation.images || []}
+          altText={accommodation.name || "Accommodation"}
+          className="rounded-t-xl"
+          showNavigationOnHover={true}
+          showIndicators={true}
+          fallbackContent={
+            accommodation.name === "Sense especificar" ? (
+              <div className="absolute inset-0 flex items-center justify-center">
+                <Home className="w-12 h-12 text-rose-300" />
               </div>
-            )}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={accommodation.images[currentImageIndex]}
-              alt={accommodation.name || "Accommodation"}
-              className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-300 ${
-                imageLoaded ? 'opacity-100' : 'opacity-0'
-              }`}
-              onLoad={() => setImageLoaded(true)}
-              onError={() => {
-                console.log('Image failed to load:', accommodation.images?.[currentImageIndex]);
-                setImageError(true);
-              }}
-            />
-            
-            {/* Navigation buttons - only show when there are multiple images and card is hovered */}
-            {accommodation.images.length > 1 && (
-              <>
-                <button
-                  onClick={goToPreviousImage}
-                  className="absolute left-2 top-1/2 transform -translate-y-1/2 p-1.5 bg-black/60 hover:bg-black/80 text-white rounded-full transition-all duration-200 opacity-0 group-hover:opacity-100 z-20"
-                >
-                  <ChevronLeft className="w-4 h-4" />
-                </button>
-                <button
-                  onClick={goToNextImage}
-                  className="absolute right-2 top-1/2 transform -translate-y-1/2 p-1.5 bg-black/60 hover:bg-black/80 text-white rounded-full transition-all duration-200 opacity-0 group-hover:opacity-100 z-20"
-                >
-                  <ChevronRight className="w-4 h-4" />
-                </button>
-                
-                {/* Image indicator dots - smart display based on number of images */}
-                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20">
-                  {accommodation.images.length <= 5 ? (
-                    // Show all dots if 5 or fewer images
-                    accommodation.images.map((_, index) => (
-                      <button
-                        key={index}
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          setCurrentImageIndex(index);
-                          setImageLoaded(false);
-                        }}
-                        className={`w-2 h-2 rounded-full transition-all duration-200 ${
-                          index === currentImageIndex
-                            ? 'bg-white'
-                            : 'bg-white/50 hover:bg-white/75'
-                        }`}
-                      />
-                    ))
-                  ) : accommodation.images.length <= 10 ? (
-                    // Show sliding window of dots for 6-10 images
-                    <>
-                      {Array.from({ length: Math.min(5, accommodation.images.length) }, (_, i) => {
-                        const maxStart = (accommodation.images?.length || 0) - 5;
-                        const start = Math.max(0, Math.min(maxStart, currentImageIndex - 2));
-                        const actualIndex = start + i;
-                        
-                        return (
-                          <button
-                            key={actualIndex}
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              setCurrentImageIndex(actualIndex);
-                              setImageLoaded(false);
-                            }}
-                            className={`w-2 h-2 rounded-full transition-all duration-200 ${
-                              actualIndex === currentImageIndex
-                                ? 'bg-white'
-                                : 'bg-white/50 hover:bg-white/75'
-                            }`}
-                          />
-                        );
-                      })}
-                    </>
-                  ) : (
-                    // Show position indicator for many images (11+)
-                    <div className="text-white text-xs font-medium bg-black/60 px-2 py-1 rounded-full">
-                      {currentImageIndex + 1} / {accommodation.images.length}
-                    </div>
-                  )}
-                </div>
-              </>
-            )}
-          </>
-        )}
+            ) : undefined
+          }
+        />
         
-        {/* Show icon for accommodations without meaningful names */}
-        {accommodation.name === "Sense especificar" && (
-          <div className="absolute inset-0 flex items-center justify-center">
-            <Home className="w-12 h-12 text-rose-300" />
-          </div>
-        )}
         {/* Favorite button */}
         <button
           onClick={(e) => {
@@ -397,16 +259,6 @@ export function AccommodationCard({
             }`}
           />
         </button>
-
-        {/* License badge */}
-        {accommodation.licence_id && accommodation.licence_id !== "—" && (
-          <div className="absolute bottom-2 left-2 z-30">
-            <Badge className="bg-white/95 hover:bg-white text-gray-700 text-xs font-medium px-2 py-1 backdrop-blur-sm border-0">
-              <ShieldCheck className="w-3 h-3 mr-1 text-emerald-600" />
-              {accommodation.licence_id}
-            </Badge>
-          </div>
-        )}
       </div>
 
       <CardContent className="p-3 space-y-1">
@@ -446,6 +298,7 @@ export function AccommodationCard({
             </>
           )}
         </div>
+          {accommodation.street_type} {accommodation.street_name} {accommodation.number} {accommodation.municipality} 
 
         {/* Date range placeholder */}
         {/* <div className="text-xs text-gray-500">15–20 ago</div> */}
