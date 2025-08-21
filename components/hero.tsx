@@ -55,62 +55,153 @@ export function Hero() {
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-4 sm:mb-6 md:mb-8 max-w-4xl mx-auto leading-relaxed">
             Tenim <b>tots</b> els allotjaments que tenen les altres plataformes, <b>menys els il·legals sense llicència.</b>
           </p>
-          <div className={`grid grid-cols-2 sm:flex sm:flex-wrap justify-center items-center gap-3 sm:gap-4 md:gap-6 text-sm max-w-4xl mx-auto ${
+          {/* Mobile: Infinite Slider */}
+          <div className={`sm:hidden overflow-hidden relative ${
+            descriptionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}>
+            <div className="flex animate-[scroll_15s_linear_infinite] gap-8 whitespace-nowrap">
+              {/* First set of logos */}
+              <img
+                src="platforms/airbnb.png"
+                alt="Airbnb"
+                className="w-20 h-7 object-contain flex-shrink-0"
+              />
+              <img
+                src="platforms/booking.png"
+                alt="Booking"
+                className="w-20 h-7 object-contain flex-shrink-0"
+              />
+              <img
+                src="platforms/escapada_rural.png"
+                alt="Escapada Rural"
+                className="w-20 h-7 object-contain flex-shrink-0"
+              />
+              <img
+                src="platforms/club_rural.png"
+                alt="Club Rural"
+                className="w-20 h-7 object-contain flex-shrink-0"
+              />
+              <img
+                src="platforms/homeaway.png"
+                alt="HomeAway"
+                className="w-20 h-7 object-contain flex-shrink-0"
+              />
+              <img
+                src="platforms/tripadvisor.png"
+                alt="TripAdvisor"
+                className="w-20 h-7 object-contain flex-shrink-0"
+              />
+              <img
+                src="platforms/expedia.png"
+                alt="Expedia"
+                className="w-20 h-7 object-contain flex-shrink-0"
+              />
+              <img
+                src="platforms/hotels.png"
+                alt="Hotels.com"
+                className="w-20 h-7 object-contain flex-shrink-0"
+              />
+              {/* Duplicate set for seamless loop */}
+              <img
+                src="platforms/airbnb.png"
+                alt="Airbnb"
+                className="w-20 h-7 object-contain flex-shrink-0"
+              />
+              <img
+                src="platforms/booking.png"
+                alt="Booking"
+                className="w-20 h-7 object-contain flex-shrink-0"
+              />
+              <img
+                src="platforms/escapada_rural.png"
+                alt="Escapada Rural"
+                className="w-20 h-7 object-contain flex-shrink-0"
+              />
+              <img
+                src="platforms/club_rural.png"
+                alt="Club Rural"
+                className="w-20 h-7 object-contain flex-shrink-0"
+              />
+              <img
+                src="platforms/homeaway.png"
+                alt="HomeAway"
+                className="w-20 h-7 object-contain flex-shrink-0"
+              />
+              <img
+                src="platforms/tripadvisor.png"
+                alt="TripAdvisor"
+                className="w-20 h-7 object-contain flex-shrink-0"
+              />
+              <img
+                src="platforms/expedia.png"
+                alt="Expedia"
+                className="w-20 h-7 object-contain flex-shrink-0"
+              />
+              <img
+                src="platforms/hotels.png"
+                alt="Hotels.com"
+                className="w-20 h-7 object-contain flex-shrink-0"
+              />
+            </div>
+          </div>
+
+          {/* Desktop: Static Grid */}
+          <div className={`hidden sm:flex sm:flex-wrap justify-center items-center gap-2 md:gap-6 text-sm max-w-4xl mx-auto ${
             descriptionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}>
             <img
               src="platforms/airbnb.png"
               alt="Airbnb"
-              className={`w-16 h-6 sm:w-20 sm:h-7 md:w-24 md:h-8 object-contain hover:scale-110 transition-all duration-500 mx-auto ${
+              className={`w-20 h-7 md:w-24 md:h-8 object-contain hover:scale-110 transition-all duration-500 mx-auto ${
                 logosVisible[0] ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-4 scale-95'
               }`}
             />
              <img
               src="platforms/booking.png"
               alt="Booking"
-              className={`w-16 h-6 sm:w-20 sm:h-7 md:w-24 md:h-8 object-contain hover:scale-110 transition-all duration-500 mx-auto ${
+              className={`w-20 h-7 md:w-24 md:h-8 object-contain hover:scale-110 transition-all duration-500 mx-auto ${
                 logosVisible[1] ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-4 scale-95'
               }`}
             />
             <img
               src="platforms/escapada_rural.png"
               alt="Escapada Rural"
-              className={`w-16 h-6 sm:w-20 sm:h-7 md:w-24 md:h-8 object-contain hover:scale-110 transition-all duration-500 mx-auto ${
+              className={`w-20 h-7 md:w-24 md:h-8 object-contain hover:scale-110 transition-all duration-500 mx-auto ${
                 logosVisible[2] ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-4 scale-95'
               }`}
             />
             <img
               src="platforms/club_rural.png"
               alt="Club Rural"
-              className={`w-16 h-6 sm:w-20 sm:h-7 md:w-24 md:h-8 object-contain hover:scale-110 transition-all duration-500 mx-auto ${
+              className={`w-20 h-7 md:w-24 md:h-8 object-contain hover:scale-110 transition-all duration-500 mx-auto ${
                 logosVisible[3] ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-4 scale-95'
               }`}
             />
             <img
               src="platforms/homeaway.png"
               alt="HomeAway"
-              className={`w-16 h-6 sm:w-20 sm:h-7 md:w-24 md:h-8 object-contain hover:scale-110 transition-all duration-500 mx-auto ${
+              className={`w-20 h-7 md:w-24 md:h-8 object-contain hover:scale-110 transition-all duration-500 mx-auto ${
                 logosVisible[4] ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-4 scale-95'
               }`}
             />
             <img
               src="platforms/tripadvisor.png"
               alt="TripAdvisor"
-              className={`w-16 h-6 sm:w-20 sm:h-7 md:w-24 md:h-8 object-contain hover:scale-110 transition-all duration-500 mx-auto ${
+              className={`w-20 h-7 md:w-24 md:h-8 object-contain hover:scale-110 transition-all duration-500 mx-auto ${
                 logosVisible[5] ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-4 scale-95'
               }`}
             />
             <img
               src="platforms/expedia.png"
               alt="Expedia"
-              className={`w-16 h-6 sm:w-20 sm:h-7 md:w-24 md:h-8 object-contain hover:scale-110 transition-all duration-500 mx-auto ${
+              className={`w-20 h-7 md:w-24 md:h-8 object-contain hover:scale-110 transition-all duration-500 mx-auto ${
                 logosVisible[6] ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-4 scale-95'
               }`}
             />
             <img
               src="platforms/hotels.png"
               alt="Hotels.com"
-              className={`w-16 h-6 sm:w-20 sm:h-7 md:w-24 md:h-8 object-contain hover:scale-110 transition-all duration-500 mx-auto col-span-2 sm:col-span-1 ${
+              className={`w-20 h-7 md:w-24 md:h-8 object-contain hover:scale-110 transition-all duration-500 mx-auto ${
                 logosVisible[7] ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-4 scale-95'
               }`}
             />

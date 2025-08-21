@@ -125,3 +125,24 @@
     @apply bg-background text-foreground font-sans;
   }
 }
+
+/* Infinite scroll animation for platform logos */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% + 100vw));
+  }
+}
+
+@media (max-width: 640px) {
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+}
