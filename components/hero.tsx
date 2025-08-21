@@ -110,7 +110,7 @@ export function Hero() {
                     key={`${setIndex}-${index}`}
                     src={logo.src}
                     alt={logo.alt}
-                    className="w-20 h-7 sm:w-24 sm:h-8 md:w-28 md:h-9 object-contain flex-shrink-0 opacity-80 hover:opacity-100 transition-opacity"
+                    className="w-24 h-6 sm:w-24 sm:h-8 md:w-28 md:h-9 object-contain flex-shrink-0 opacity-80 hover:opacity-100 transition-opacity"
                   />
                 ))
               )}
