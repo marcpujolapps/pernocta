@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import { ExternalLink, Shield, Search, PiggyBank } from "lucide-react";
+import { Shield, Search, PiggyBank } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 export function PlatformLogos() {

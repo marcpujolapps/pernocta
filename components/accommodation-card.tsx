@@ -298,8 +298,6 @@ export function AccommodationCard({
             </>
           )}
         </div>
-          {accommodation.street_type} {accommodation.street_name} {accommodation.number} {accommodation.municipality} 
-
         {/* Date range placeholder */}
         {/* <div className="text-xs text-gray-500">15–20 ago</div> */}
 
