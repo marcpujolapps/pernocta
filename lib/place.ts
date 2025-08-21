@@ -2,45 +2,47 @@
 // Keys are normalized to English snake_case.
 
 export interface Place {
-  type: string | null
-  licence_id: string | null
-  control_digit: number | null
-  name: string | null
-  status: string | null
-  street_type: string | null
-  street_name: string | null
-  number: number | null
-  floor: string | null
-  door: string | null
-  staircase: string | null
-  block: string | null
-  postal_code: string | null
-  municipality: string | null
-  municipality_code: number | null
-  county: string | null
-  county_code: number | null
-  province: string | null
-  cadastral_ref: string | null
-  occupancy_certificate: string | null
-  group: string | null
-  modality: string | null
-  category: string | null
-  accommodation_unit: string | null
-  total_places: number | null
-  total_rooms: number | null
-  territorial_unit: string | null
-  tourist_brand: string | null
-  tax_id: string | null
-  holder_company_name: string | null
-  holder_name: string | null
-  holder_surname1: string | null
-  holder_surname2: string | null
+  type: string | null;
+  licence_id: string | null;
+  control_digit: number | null;
+  name: string | null;
+  status: string | null;
+  street_type: string | null;
+  street_name: string | null;
+  number: number | null;
+  floor: string | null;
+  door: string | null;
+  staircase: string | null;
+  block: string | null;
+  postal_code: string | null;
+  municipality: string | null;
+  municipality_code: number | null;
+  county: string | null;
+  county_code: number | null;
+  province: string | null;
+  cadastral_ref: string | null;
+  occupancy_certificate: string | null;
+  group: string | null;
+  modality: string | null;
+  category: string | null;
+  accommodation_unit: string | null;
+  total_places: number | null;
+  total_rooms: number | null;
+  territorial_unit: string | null;
+  tourist_brand: string | null;
+  tax_id: string | null;
+  holder_company_name: string | null;
+  holder_name: string | null;
+  holder_surname1: string | null;
+  holder_surname2: string | null;
   // Derived / supplemental fields
-  address: string | null
-  slug: string
-  coordinates?: [number, number] // For map display
+  address: string | null;
+  slug: string;
+  coordinates?: [number, number]; // For map display
   geocode_error?: boolean;
-  createdAt?: unknown // Firestore Timestamp when stored in DB
+  get_images_error?: boolean;
+  images?: string[]; // Array of image URLs
+  createdAt?: unknown; // Firestore Timestamp when stored in DB
 }
 
 // Mapping from original Catalan dataset keys to normalized keys.
@@ -79,7 +81,7 @@ export const CATALAN_TO_ENGLISH_KEY_MAP: Record<string, keyof Place> = {
   "Nom del titular": "holder_name",
   "Primer cognom": "holder_surname1",
   "Segon cognom": "holder_surname2",
-}
+};
 
 export const PLACE_NUMERIC_FIELDS: Array<keyof Place> = [
   "control_digit",
@@ -88,4 +90,4 @@ export const PLACE_NUMERIC_FIELDS: Array<keyof Place> = [
   "total_rooms",
   "county_code",
   "municipality_code",
-]
+];

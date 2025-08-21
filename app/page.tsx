@@ -15,7 +15,7 @@ export default function HomePage() {
       <div style={{ width: "100vw", height: "100vh" }}>
         <MapboxMap
           initialLat={41.3851}
-          initialLng={2.1734}
+          initialLng={1.1734}
           initialZoom={12}
         />
       </div>

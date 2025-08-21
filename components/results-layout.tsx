@@ -1,7 +1,7 @@
 "use client";
 
 import { fetchCollectionPage, Filter, updateDocument } from "@/lib/firestore";
-import { useEffect, useState, use, useRef } from "react";
+import { useEffect, useState, use, useRef, useCallback } from "react";
 import { AccommodationCard } from "@/components/accommodation-card";
 import { MapView } from "@/components/map-view";
 import { Button } from "@/components/ui/button";
@@ -41,8 +41,12 @@ export function ResultsLayout({
   const geocodingQueueRef = useRef<AccommodationItem[]>([]);
   const isGeocodingRef = useRef(false);
 
+  // Image fetching queue management
+  const imageQueueRef = useRef<AccommodationItem[]>([]);
+  const isFetchingImagesRef = useRef(false);
+
   // Process geocoding queue with concurrent requests
-  const processGeocodingQueue = async () => {
+  const processGeocodingQueue = useCallback(async () => {
     if (isGeocodingRef.current || geocodingQueueRef.current.length === 0) {
       return;
     }
@@ -160,10 +164,116 @@ export function ResultsLayout({
         processGeocodingQueue();
       }
     }
-  };
+  }, []);
+
+  // Process image fetching queue with concurrent requests
+  const processImageQueue = useCallback(async () => {
+    if (isFetchingImagesRef.current || imageQueueRef.current.length === 0) {
+      return;
+    }
+
+    isFetchingImagesRef.current = true;
+
+    // Process up to 20 items concurrently
+    const batchSize = Math.min(20, imageQueueRef.current.length);
+    const batch = imageQueueRef.current.splice(0, batchSize);
+
+    const imagePromises = batch.map(async (item) => {
+      try {
+        // Build a meaningful query - avoid "Sense especificar" and other non-descriptive names
+        let query = "";
+        
+        if (item.name && item.name !== "Sense especificar" && item.name.trim() !== "") {
+          query = item.name;
+        } else if (item.address && item.address.trim() !== "") {
+          query = item.address;
+        } else {
+          // If no meaningful name or address, mark as error to avoid future attempts
+          await updateDocument("places", item.id, {
+            get_images_error: true,
+          });
+          return;
+        }
+        
+        // Add type to improve search results
+        if (item.type) {
+          query += ` ${item.type}`;
+        }
+        
+        // Add location context to improve search results
+        if (item.municipality) {
+          query += ` ${item.municipality}`;
+        }
+        
+        console.log(
+          "Auto-fetching images for:",
+          item.name || item.address || item.licence_id,
+          "-",
+          query
+        );
+
+        const res = await fetch(`/api/get-image?query=${encodeURIComponent(query)}`);
+        const data = await res.json();
+
+        if (!res.ok) {
+          console.error("Get image failed", { status: res.status, data });
+          await updateDocument("places", item.id, {
+            get_images_error: true,
+          });
+        } else {
+          console.log(
+            "Images fetched successfully for:",
+            item.name || item.licence_id,
+            data.map((img: { url: string }) => img.url)
+          );
+          
+          // Store the image URLs in the document
+          await updateDocument("places", item.id, {
+            images: data.map((img: { url: string }) => img.url),
+            get_images_error: false,
+          });
+
+          // Update local state
+          setAccommodations((prev) =>
+            prev.map((acc) =>
+              acc.id === item.id
+                ? { 
+                    ...acc, 
+                    images: data.map((img: { url: string }) => img.url),
+                    get_images_error: false 
+                  }
+                : acc
+            )
+          );
+        }
+      } catch (err) {
+        console.error("Image fetching error for", item.name || item.address, err);
+        try {
+          await updateDocument("places", item.id, {
+            get_images_error: true,
+          });
+        } catch (updateErr) {
+          console.error("Failed to update get_images_error flag:", updateErr);
+        }
+      }
+    });
+
+    try {
+      await Promise.all(imagePromises);
+    } catch (err) {
+      console.error("Batch image fetching error:", err);
+    } finally {
+      isFetchingImagesRef.current = false;
+
+      // Continue processing if there are more items in the queue
+      if (imageQueueRef.current.length > 0) {
+        processImageQueue();
+      }
+    }
+  }, []);
 
   // Add accommodations to geocoding queue
-  const queueAccommodationsForGeocoding = (items: AccommodationItem[]) => {
+  const queueAccommodationsForGeocoding = useCallback((items: AccommodationItem[]) => {
     const itemsNeedingGeocoding = items.filter(
       (item) => !item.coordinates && !item.geocode_error
     );
@@ -182,13 +292,40 @@ export function ResultsLayout({
         processGeocodingQueue();
       }
     }
-  };
+  }, [processGeocodingQueue]);
+
+  // Add accommodations to image fetching queue
+  const queueAccommodationsForImageFetching = useCallback((items: AccommodationItem[]) => {
+    const itemsNeedingImages = items.filter(
+      (item) => !item.images && 
+                !item.get_images_error &&
+                item.name !== "Sense especificar" &&
+                (item.name || item.address) // Only fetch if we have a meaningful name or address
+    );
+
+    if (itemsNeedingImages.length > 0) {
+      console.log(
+        `Queueing ${itemsNeedingImages.length} items for image fetching`
+      );
+      imageQueueRef.current = [
+        ...imageQueueRef.current,
+        ...itemsNeedingImages,
+      ];
+
+      // Start processing if not already running
+      if (!isFetchingImagesRef.current) {
+        processImageQueue();
+      }
+    }
+  }, [processImageQueue]);
 
   // Cleanup on unmount
   useEffect(() => {
     return () => {
       isGeocodingRef.current = false;
       geocodingQueueRef.current = [];
+      isFetchingImagesRef.current = false;
+      imageQueueRef.current = [];
     };
   }, []);
 
@@ -261,6 +398,24 @@ export function ResultsLayout({
 
         // Queue items for geocoding
         queueAccommodationsForGeocoding(page.items);
+        
+        // Queue items for image fetching
+        queueAccommodationsForImageFetching(page.items);
+        
+        // Mark items with "Sense especificar" names to avoid future image fetching attempts
+        const itemsWithGenericNames = page.items.filter(
+          (item) => item.name === "Sense especificar" && !item.get_images_error
+        );
+        
+        itemsWithGenericNames.forEach(async (item) => {
+          try {
+            await updateDocument("places", item.id, {
+              get_images_error: true,
+            });
+          } catch (err) {
+            console.error("Failed to mark generic name as image error:", err);
+          }
+        });
 
         // Notify parent about results count
         if (onResultsCount) {
@@ -277,7 +432,7 @@ export function ResultsLayout({
     return () => {
       cancelled = true;
     };
-  }, [searchParams, onResultsCount]);
+  }, [searchParams, onResultsCount, queueAccommodationsForGeocoding, queueAccommodationsForImageFetching]);
 
   // Load more results function
   const loadMoreResults = async () => {
@@ -347,6 +502,24 @@ export function ResultsLayout({
 
       // Queue new items for geocoding
       queueAccommodationsForGeocoding(page.items);
+      
+      // Queue new items for image fetching
+      queueAccommodationsForImageFetching(page.items);
+      
+      // Mark items with "Sense especificar" names to avoid future image fetching attempts
+      const itemsWithGenericNames = page.items.filter(
+        (item) => item.name === "Sense especificar" && !item.get_images_error
+      );
+      
+      itemsWithGenericNames.forEach(async (item) => {
+        try {
+          await updateDocument("places", item.id, {
+            get_images_error: true,
+          });
+        } catch (err) {
+          console.error("Failed to mark generic name as image error:", err);
+        }
+      });
 
       // Notify parent about updated results count
       if (onResultsCount) {
