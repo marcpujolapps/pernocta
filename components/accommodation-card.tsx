@@ -259,9 +259,9 @@ export function AccommodationCard({
         {/* Location and rating */}
         <div className="flex items-center justify-between">
           <span className="text-sm font-medium text-gray-900 truncate">
-            {[accommodation.municipality, accommodation.province]
-              .filter(Boolean)
-              .join(", ") || "Ubicació no especificada"}
+          {accommodation.name && accommodation.name !== "Sense especificar"
+            ? accommodation.name
+            : accommodation.address || "Sense nom"}
           </span>
           {/* <div className="flex items-center gap-1 text-xs">
             <span className="text-gray-400">★</span>
@@ -271,9 +271,9 @@ export function AccommodationCard({
 
         {/* Title */}
         <h3 className="text-sm text-gray-600 line-clamp-1">
-          {accommodation.name && accommodation.name !== "Sense especificar"
-            ? accommodation.name
-            : accommodation.address || "Sense nom"}
+            {[accommodation.municipality, accommodation.province]
+              .filter(Boolean)
+              .join(", ") || "Ubicació no especificada"}
         </h3>
 
         {/* Type and capacity */}

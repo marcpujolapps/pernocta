@@ -1,6 +1,6 @@
 import { NextRequest } from "next/server";
 import { z } from "zod";
-import { generateObject, generateText } from "ai";
+import { generateObject } from "ai";
 
 const requestSchema = z.object({
   model: z.string().optional(),
@@ -61,7 +61,7 @@ export async function POST(req: NextRequest) {
     ).join(", ")}.`;
 
     const { object } = await generateObject({
-      model: "perplexity/sonar-pro",
+      model: "openai/gpt-5-mini",
       system: systemPrompt,
       prompt: userPrompt,
       maxOutputTokens: 800,
