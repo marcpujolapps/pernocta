@@ -39,12 +39,8 @@ export interface Place {
   address: string | null
   slug: string
   coordinates?: [number, number] // For map display
+  geocode_error?: boolean;
   createdAt?: unknown // Firestore Timestamp when stored in DB
-}
-
-// Extended Place type for UI components that includes computed coordinates
-export interface PlaceWithCoordinates extends Place {
-  coordinates: [number, number]
 }
 
 // Mapping from original Catalan dataset keys to normalized keys.

@@ -1,12 +1,12 @@
 "use client";
 
 import type React from "react";
+import { useState } from "react";
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
-  MapPin,
   Users,
   Heart,
   Home,
@@ -15,13 +15,13 @@ import {
   Trees,
   ShieldCheck,
 } from "lucide-react";
-import { useState } from "react";
-import Link from "next/link";
 import type { Place } from "@/lib/place";
 import { hereGeocode } from "@/helpers/geocode";
+import { updateDocument } from "@/lib/firestore";
 
 interface AccommodationCardProps {
   accommodation: Place;
+  accommodationId: string;
   isSelected: boolean;
   isHovered: boolean;
   onSelect: () => void;
@@ -31,6 +31,7 @@ interface AccommodationCardProps {
 
 export function AccommodationCard({
   accommodation,
+  accommodationId,
   isSelected,
   isHovered,
   onSelect,
@@ -83,25 +84,26 @@ export function AccommodationCard({
     }
   };
 
-  const handleLocate = async (e: React.MouseEvent) => {
-    e.stopPropagation();
-    if (isLocating) return;
+  const handleLocate = async (e?: React.MouseEvent) => {
+    if (e) {
+      e.stopPropagation();
+    }
+    console.log("Manual geocode attempt", accommodation);
+    if (isLocating || accommodation.geocode_error) return;
     setIsLocating(true);
     try {
       // Build comprehensive address string for geocoding
       const addressParts = [];
-      
-      // // Start with the accommodation name if available
-      // if (accommodation.name && accommodation.name !== "Sense especificar") {
-      //   addressParts.push(accommodation.name);
-      // }
-      
+
       // Build street address
       const streetParts = [];
-      if (accommodation.street_type) streetParts.push(accommodation.street_type);
-      if (accommodation.street_name) streetParts.push(accommodation.street_name);
-      if (accommodation.number) streetParts.push(accommodation.number.toString());
-      
+      if (accommodation.street_type)
+        streetParts.push(accommodation.street_type);
+      if (accommodation.street_name)
+        streetParts.push(accommodation.street_name);
+      if (accommodation.number)
+        streetParts.push(accommodation.number.toString());
+
       if (streetParts.length > 0) {
         const streetAddress = streetParts.join(" ");
         addressParts.push(streetAddress);
@@ -109,48 +111,80 @@ export function AccommodationCard({
         // Fallback to the general address field
         addressParts.push(accommodation.address);
       }
-      
+
       // Add postal code
       if (accommodation.postal_code) {
         addressParts.push(accommodation.postal_code);
       }
-      
+
       // Add municipality and province
-      if (accommodation.municipality) addressParts.push(accommodation.municipality);
+      if (accommodation.municipality)
+        addressParts.push(accommodation.municipality);
       if (accommodation.province) addressParts.push(accommodation.province);
-      
+
       const addressString = addressParts.filter(Boolean).join(", ");
-      
+
       if (!addressString) {
         console.log("No address available for geocoding");
+        // Mark as geocoding error to avoid future attempts
+        await updateDocument("places", accommodationId, {
+          geocode_error: true,
+        });
         return;
       }
 
       console.log("Geocoding address:", addressString);
-      
+
       const result = await hereGeocode(addressString);
-      
-      if (result && typeof result === 'object' && 'position' in result) {
-        const geocodeResult = result as { position: { lat: number; lng: number } };
+
+      if (result && typeof result === "object" && "position" in result) {
+        const geocodeResult = result as {
+          position: { lat: number; lng: number };
+        };
         const position = geocodeResult.position;
-        console.log("Coordinates for", accommodation.name || accommodation.address || accommodation.licence_id, {
-          latitude: position.lat,
-          longitude: position.lng,
-          address: addressString,
-          fullResult: result
+        console.log(
+          "Coordinates for",
+          accommodation.name ||
+            accommodation.address ||
+            accommodation.licence_id,
+          {
+            latitude: position.lat,
+            longitude: position.lng,
+            address: addressString,
+            fullResult: result,
+          }
+        );
+        // update accommodation coordinates
+        await updateDocument("places", accommodationId, {
+          coordinates: [position.lng, position.lat],
+          geocode_error: false, // Clear any previous error flag
         });
+        accommodation.coordinates = [position.lng, position.lat];
       } else {
         console.log("Unexpected geocoding result:", result);
+        // Mark as geocoding error
+        await updateDocument("places", accommodationId, {
+          geocode_error: true,
+        });
       }
     } catch (err) {
-      console.error("Geocoding error for", accommodation.name || accommodation.address, err);
+      console.error(
+        "Geocoding error for",
+        accommodation.name || accommodation.address,
+        err
+      );
+      // Mark as geocoding error in Firestore
+      try {
+        await updateDocument("places", accommodationId, {
+          geocode_error: true,
+        });
+      } catch (updateErr) {
+        console.error("Failed to update geocode_error flag:", updateErr);
+      }
     } finally {
       setIsLocating(false);
     }
   };
-
-  const accommodationId =
-    accommodation.licence_id || accommodation.slug || "unknown";
 
   // Map accommodation types to icons
   const getTypeIcon = (type: string) => {
@@ -180,147 +214,116 @@ export function AccommodationCard({
 
   return (
     <Card
-      className={`group overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer border-0 bg-white ${
-        isSelected
-          ? "ring-2 ring-rose-500 shadow-xl scale-[1.02]"
-          : "shadow-md hover:shadow-xl"
-      } ${isHovered ? "shadow-lg scale-[1.01]" : ""} hover:-translate-y-1`}
+      style={{
+        paddingTop: "0",
+        paddingBottom: "0",
+      }}
+      className={`group relative overflow-hidden hover:shadow-lg transition-all duration-200 cursor-pointer border border-gray-200 bg-white rounded-xl ${
+        isSelected ? "ring-2 ring-rose-500 shadow-lg" : "hover:shadow-lg"
+      } ${isHovered ? "shadow-md" : ""}`}
       onClick={onSelect}
       onMouseEnter={onHover}
       onMouseLeave={onLeave}
     >
       {/* Image placeholder with gradient overlay */}
-      <div className="relative h-48 bg-gradient-to-br from-rose-100 via-orange-50 to-amber-100 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-
+      <div className="relative aspect-[4/3] bg-gradient-to-br from-rose-100 via-orange-50 to-amber-100 overflow-hidden rounded-t-xl">
         {/* Favorite button */}
         <button
           onClick={(e) => {
             e.stopPropagation();
             setIsFavorite(!isFavorite);
           }}
-          className="absolute top-3 right-3 p-2 bg-white/90 backdrop-blur-sm hover:bg-white rounded-full transition-all duration-200 shadow-sm hover:shadow-md z-10"
+          className="absolute top-2 right-2 p-1.5 bg-white/90 backdrop-blur-sm hover:bg-white rounded-full transition-all duration-200 shadow-sm z-10"
         >
           <Heart
-            className={`w-4 h-4 transition-colors ${
+            className={`w-3.5 h-3.5 transition-colors ${
               isFavorite
                 ? "fill-rose-500 text-rose-500"
-                : "text-gray-500 hover:text-rose-500"
+                : "text-gray-600 hover:text-rose-500"
             }`}
           />
         </button>
 
-        {/* Type badge with icon */}
-        <div className="absolute top-3 left-3 flex items-center gap-1.5 bg-white/95 backdrop-blur-sm px-2.5 py-1.5 rounded-full shadow-sm">
-          <TypeIcon className="w-3.5 h-3.5 text-gray-600" />
-          <span className="text-xs font-medium text-gray-700 capitalize">
-            {accommodation.type && accommodation.type !== "—"
-              ? accommodation.type
-              : "Allotjament"}
-          </span>
-        </div>
-
         {/* License badge */}
         {accommodation.licence_id && accommodation.licence_id !== "—" && (
-          <div className="absolute bottom-3 left-3">
-            <Badge className="bg-emerald-500/90 hover:bg-emerald-500 text-white text-xs font-medium px-2 py-1 backdrop-blur-sm">
-              <ShieldCheck className="w-3 h-3 mr-1" />
+          <div className="absolute bottom-2 left-2">
+            <Badge className="bg-white/95 hover:bg-white text-gray-700 text-xs font-medium px-2 py-1 backdrop-blur-sm border-0">
+              <ShieldCheck className="w-3 h-3 mr-1 text-emerald-600" />
               {accommodation.licence_id}
             </Badge>
           </div>
         )}
       </div>
 
-      <CardContent className="p-4 space-y-3">
-        {/* Header with title */}
-        <div className="space-y-2">
-          <h3 className="font-semibold text-lg text-gray-900 line-clamp-2 leading-tight group-hover:text-rose-700 transition-colors">
-            {accommodation.name && accommodation.name !== "Sense especificar"
-              ? accommodation.name
-              : accommodation.address || "Sense nom"}
-          </h3>
-        </div>
-
-        {/* Location */}
-        <div className="flex items-center gap-2 text-gray-600">
-          <MapPin className="w-4 h-4 flex-shrink-0" />
-          <span className="text-sm truncate">
+      <CardContent className="p-3 space-y-1">
+        {/* Location and rating */}
+        <div className="flex items-center justify-between">
+          <span className="text-sm font-medium text-gray-900 truncate">
             {[accommodation.municipality, accommodation.province]
               .filter(Boolean)
               .join(", ") || "Ubicació no especificada"}
           </span>
+          {/* <div className="flex items-center gap-1 text-xs">
+            <span className="text-gray-400">★</span>
+            <span className="text-gray-600">4.9</span>
+          </div> */}
         </div>
 
-        {/* Capacity and rooms */}
-        <div className="space-y-2">
-          <div className="flex items-center gap-2 text-gray-600">
-            <Users className="w-4 h-4 flex-shrink-0" />
-            <span className="text-sm">
-              {accommodation.total_places && accommodation.total_places > 0
-                ? `Fins a ${accommodation.total_places} persones`
-                : "Capacitat variable"}
-            </span>
-          </div>
+        {/* Title */}
+        <h3 className="text-sm text-gray-600 line-clamp-1">
+          {accommodation.name && accommodation.name !== "Sense especificar"
+            ? accommodation.name
+            : accommodation.address || "Sense nom"}
+        </h3>
 
-          {accommodation.total_rooms && accommodation.total_rooms > 0 && (
-            <div className="flex items-center gap-2 text-gray-600">
-              <Home className="w-4 h-4 flex-shrink-0" />
-              <span className="text-sm">
-                {accommodation.total_rooms}{" "}
-                {accommodation.total_rooms === 1 ? "habitació" : "habitacions"}
-              </span>
-            </div>
+        {/* Type and capacity */}
+        <div className="flex items-center gap-1 text-xs text-gray-600">
+          <TypeIcon className="w-3 h-3" />
+          <span className="truncate">
+            {accommodation.type && accommodation.type !== "—"
+              ? accommodation.type
+              : "Allotjament"}
+          </span>
+          {accommodation.total_places && accommodation.total_places > 0 && (
+            <>
+              <span>•</span>
+              <Users className="w-3 h-3" />
+              <span>{accommodation.total_places}</span>
+            </>
           )}
         </div>
 
-        {/* Additional info */}
-        <div className="space-y-1">
-          {accommodation.category && accommodation.category !== "—" && (
-            <div className="text-xs text-gray-500">
-              Categoria:{" "}
-              <span className="font-medium text-gray-700">
-                {accommodation.category}
-              </span>
-            </div>
-          )}
+        {/* Date range placeholder */}
+        {/* <div className="text-xs text-gray-500">15–20 ago</div> */}
 
-          {accommodation.modality && accommodation.modality !== "—" && (
-            <div className="text-xs text-gray-500">
-              Modalitat:{" "}
-              <span className="font-medium text-gray-700">
-                {accommodation.modality}
-              </span>
-            </div>
-          )}
-        </div>
+        {/* Price */}
+        {/* <div className="flex items-baseline gap-1 pt-1">
+          <span className="text-sm font-semibold text-gray-900">€123</span>
+          <span className="text-xs text-gray-500">nit</span>
+        </div> */}
 
-        {/* CTA */}
-        <div className="flex items-center justify-end gap-2 pt-2 border-t border-gray-100">
+        {/* Hidden action buttons - only show on hover for development */}
+        <div className="absolute top-2 left-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex gap-1 pt-2">
           <Button
             size="sm"
             variant="outline"
             onClick={handleEnrich}
             disabled={isEnriching}
-            className="text-xs"
+            className="text-xs h-6 px-2"
           >
             {isEnriching ? "..." : "Enriquir"}
           </Button>
-          <Button 
-            size="sm" 
-            variant="outline" 
-            className="text-xs"
-            onClick={handleLocate}
-            disabled={isLocating}
-          >
-            {isLocating ? "..." : "Ubicar"}
-          </Button>
-          <Button
-            size="sm"
-            className="bg-rose-500 hover:bg-rose-600 text-white shadow-sm hover:shadow-md transition-all duration-200"
-            asChild
-          >
-            <Link href={`/accommodation/${accommodationId}`}>Veure més</Link>
-          </Button>
+          {!accommodation.coordinates && !accommodation.geocode_error && (
+            <Button
+              size="sm"
+              variant="outline"
+              className="text-xs h-6 px-2"
+              onClick={handleLocate}
+              disabled={isLocating}
+            >
+              {isLocating ? "..." : "Ubicar"}
+            </Button>
+          )}
         </div>
       </CardContent>
     </Card>

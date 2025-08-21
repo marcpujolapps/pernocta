@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import MapGL, { Layer, Marker, Source, NavigationControl, GeolocateControl } from "react-map-gl";
+import MapGL, { Marker, NavigationControl, GeolocateControl } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 
 interface MapboxMapProps {

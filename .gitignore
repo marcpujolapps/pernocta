@@ -34,7 +34,7 @@ yarn-error.log*
 .env*
 
 # Firebase service account (never commit)
-node/k.sjon
+node/k.json
 
 # vercel
 .vercel
