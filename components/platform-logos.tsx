@@ -8,13 +8,21 @@ export function PlatformLogos() {
   const [cardsVisible, setCardsVisible] = useState([false, false, false]);
   const sectionRef = useRef<HTMLElement>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const [isFirstVisit, setIsFirstVisit] = useState(true);
+
+  useEffect(() => {
+    // Check if user has visited before
+    const hasVisited = localStorage.getItem('pernocta-visited');
+    setIsFirstVisit(!hasVisited);
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          // Delay animation to start after search section completes (1600ms + 1000ms + 200ms buffer)
-          setTimeout(() => setIsVisible(true), 2800);
+          // Much faster for returning visitors
+          const delay = isFirstVisit ? 2800 : 300;
+          setTimeout(() => setIsVisible(true), delay);
         }
       },
       { threshold: 0.2 }
@@ -25,7 +33,7 @@ export function PlatformLogos() {
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [isFirstVisit]);
 
   useEffect(() => {
     const cardObserver = new IntersectionObserver(
@@ -34,13 +42,15 @@ export function PlatformLogos() {
           if (entry.isIntersecting) {
             const index = cardsRef.current.indexOf(entry.target as HTMLDivElement);
             if (index !== -1) {
+              // Faster stagger for returning visitors
+              const staggerDelay = isFirstVisit ? 200 : 50;
               setTimeout(() => {
                 setCardsVisible(prev => {
                   const newState = [...prev];
                   newState[index] = true;
                   return newState;
                 });
-              }, index * 200); // Stagger animation by 200ms
+              }, index * staggerDelay);
             }
           }
         });
@@ -53,12 +63,14 @@ export function PlatformLogos() {
     });
 
     return () => cardObserver.disconnect();
-  }, []);
+  }, [isFirstVisit]);
 
   return (
     <section ref={sectionRef} className="py-16 px-4 bg-muted/30 z-20">
       <div className="max-w-6xl mx-auto text-center">
-        <div className={`bg-gradient-to-br from-background via-background to-muted/20 rounded-2xl p-8 border border-border/50 shadow-lg backdrop-blur-sm transition-all duration-1000 ease-out delay-300 ${
+        <div className={`bg-gradient-to-br from-background via-background to-muted/20 rounded-2xl p-8 border border-border/50 shadow-lg backdrop-blur-sm ${
+          isFirstVisit ? 'transition-all duration-1000 ease-out delay-300' : 'transition-all duration-300 ease-out'
+        } ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
         }`}>
           <div className="text-center mb-8">
@@ -70,7 +82,9 @@ export function PlatformLogos() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div 
               ref={el => { cardsRef.current[0] = el; }}
-              className={`group flex flex-col items-center text-center p-6 rounded-xl bg-card/50 border border-border/30 hover:bg-card/80 hover:shadow-md transition-all duration-500 ${
+              className={`group flex flex-col items-center text-center p-6 rounded-xl bg-card/50 border border-border/30 hover:bg-card/80 hover:shadow-md ${
+                isFirstVisit ? 'transition-all duration-500' : 'transition-all duration-200'
+              } ${
                 cardsVisible[0] ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-95'
               }`}
             >
@@ -86,7 +100,9 @@ export function PlatformLogos() {
             </div>
             <div 
               ref={el => { cardsRef.current[1] = el; }}
-              className={`group flex flex-col items-center text-center p-6 rounded-xl bg-card/50 border border-border/30 hover:bg-card/80 hover:shadow-md transition-all duration-500 ${
+              className={`group flex flex-col items-center text-center p-6 rounded-xl bg-card/50 border border-border/30 hover:bg-card/80 hover:shadow-md ${
+                isFirstVisit ? 'transition-all duration-500' : 'transition-all duration-200'
+              } ${
                 cardsVisible[1] ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-95'
               }`}
             >
@@ -102,7 +118,9 @@ export function PlatformLogos() {
             </div>
             <div 
               ref={el => { cardsRef.current[2] = el; }}
-              className={`group flex flex-col items-center text-center p-6 rounded-xl bg-card/50 border border-border/30 hover:bg-card/80 hover:shadow-md transition-all duration-500 ${
+              className={`group flex flex-col items-center text-center p-6 rounded-xl bg-card/50 border border-border/30 hover:bg-card/80 hover:shadow-md ${
+                isFirstVisit ? 'transition-all duration-500' : 'transition-all duration-200'
+              } ${
                 cardsVisible[2] ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-95'
               }`}
             >

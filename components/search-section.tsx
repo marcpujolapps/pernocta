@@ -42,13 +42,21 @@ export function SearchSection() {
   // Animation states
   const [searchCardVisible, setSearchCardVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
+  const [isFirstVisit, setIsFirstVisit] = useState(true);
+
+  useEffect(() => {
+    // Check if user has visited before
+    const hasVisited = localStorage.getItem('pernocta-visited');
+    setIsFirstVisit(!hasVisited);
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          // Wait longer to appear after platform logos finish (logos finish around 1640ms, so we wait until 2000ms)
-          setTimeout(() => setSearchCardVisible(true), 1600);
+          // Much faster animation for returning visitors
+          const delay = isFirstVisit ? 1600 : 200;
+          setTimeout(() => setSearchCardVisible(true), delay);
         }
       },
       { threshold: 0.2 }
@@ -59,7 +67,7 @@ export function SearchSection() {
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [isFirstVisit]);
 
   // Click outside detection and keyboard handling for dropdowns
   useEffect(() => {
@@ -246,7 +254,9 @@ export function SearchSection() {
   return (
     <section ref={sectionRef} className="relative px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-muted/20 z-50 -mt-8 sm:-mt-12 md:-mt-16">
       <div className="max-w-6xl mx-auto">
-        <div className={`bg-white rounded-2xl sm:rounded-3xl shadow-xl sm:shadow-2xl border p-2 sm:p-3 transition-all duration-1000 ease-out ${
+        <div className={`bg-white rounded-2xl sm:rounded-3xl shadow-xl sm:shadow-2xl border p-2 sm:p-3 ${
+          isFirstVisit ? 'transition-all duration-1000 ease-out' : 'transition-all duration-300 ease-out'
+        } ${
           searchCardVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-12 scale-95'
         }`}>
           {/* Accommodation Types Row */}
@@ -263,7 +273,9 @@ export function SearchSection() {
                 style={{ 
                   opacity: searchCardVisible ? 1 : 0,
                   transform: searchCardVisible ? 'translateX(0)' : 'translateX(-16px)',
-                  transition: `opacity 1000ms ease-out ${400 + index * 100}ms, transform 1000ms ease-out ${400 + index * 100}ms, background-color 150ms ease-out, color 150ms ease-out, box-shadow 150ms ease-out`
+                  transition: isFirstVisit 
+                    ? `opacity 1000ms ease-out ${400 + index * 100}ms, transform 1000ms ease-out ${400 + index * 100}ms, background-color 150ms ease-out, color 150ms ease-out, box-shadow 150ms ease-out`
+                    : `opacity 200ms ease-out ${index * 20}ms, transform 200ms ease-out ${index * 20}ms, background-color 150ms ease-out, color 150ms ease-out, box-shadow 150ms ease-out`
                 }}
                 onClick={() => toggleAccommodationType(type.id)}
               >
@@ -277,7 +289,9 @@ export function SearchSection() {
           </div>
 
           {/* Main Search Controls */}
-          <div className={`flex flex-col lg:flex-row lg:divide-x divide-gray-200 transition-all duration-1000 ease-out delay-700 ${
+          <div className={`flex flex-col lg:flex-row lg:divide-x divide-gray-200 ${
+            isFirstVisit ? 'transition-all duration-1000 ease-out delay-700' : 'transition-all duration-300 ease-out'
+          } ${
             searchCardVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}>
             {/* Location Search with Autocomplete */}
@@ -406,9 +420,11 @@ export function SearchSection() {
 
         {/* Additional Filters */}
         {selectedTypes.length > 0 && !selectedTypes.includes("tots") && (
-          <div className={`mt-6 sm:mt-8 cursor-pointer text-center transition-all duration-500 ease-out ${
+          <div className={`mt-6 sm:mt-8 cursor-pointer text-center ${
+            isFirstVisit ? 'transition-all duration-500 ease-out' : 'transition-all duration-200 ease-out'
+          } ${
             searchCardVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-          }`} style={{ transitionDelay: '1000ms' }}>
+          }`} style={{ transitionDelay: isFirstVisit ? '1000ms' : '0ms' }}>
             <button
               className="cursor-pointer inline-flex items-center px-3 sm:px-4 py-2 text-xs sm:text-sm text-gray-600 hover:text-gray-900 transition-colors"
               onClick={() => setSelectedTypes([])}
