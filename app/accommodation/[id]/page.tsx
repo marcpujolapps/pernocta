@@ -5,19 +5,22 @@ import { fetchDoc } from "@/lib/firestore";
 import { Place } from "@/lib/place";
 
 interface AccommodationPageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
 export default async function AccommodationPage({
   params,
 }: AccommodationPageProps) {
+  // Await the params since they're now a Promise in Next.js 15
+  const { id } = await params;
+  
   // Try to fetch the accommodation from Firestore
   let place: Place | null = null;
 
   try {
-    place = await fetchDoc<Place>("places", params.id);
+    place = await fetchDoc<Place>("places", id);
   } catch (error) {
     console.error("Error fetching accommodation:", error);
   }

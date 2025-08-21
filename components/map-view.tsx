@@ -151,7 +151,7 @@ export function MapView({
               >
                 <div
                   className="cursor-pointer"
-                  onClick={() => router.push(`/accommodation/${accommodationId}`)}
+                  onClick={() => onAccommodationSelect(accommodationId)}
                   onMouseEnter={() => onAccommodationHover(accommodationId)}
                   onMouseLeave={() => onAccommodationHover(null)}
                 >
