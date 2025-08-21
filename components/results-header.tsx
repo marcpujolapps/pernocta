@@ -4,8 +4,9 @@ import { useState, useEffect, use } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
-import { MapPin, Users, Calendar, ArrowLeft, SlidersHorizontal, Plus, Minus, Home, Hotel, Tent, Trees, Star, Euro, Wifi, Car, Coffee } from "lucide-react"
+import { MapPin, Users, Calendar, ArrowLeft, SlidersHorizontal, Plus, Minus, Star, Euro, Wifi, Car, Coffee } from "lucide-react"
 import Link from "next/link"
+import { ACCOMMODATION_TYPES } from "@/lib/accommodation-types"
 
 interface LocationSuggestion {
   name: string;
@@ -88,13 +89,8 @@ export function ResultsHeader({
   const checkOutDate = typeof check_out === "string" ? check_out : "";
   const selectedTypes = typeof types === "string" ? types.split(",") : [];
   
-  // Accommodation types with icons
-  const accommodationTypes = [
-    { id: "casa-rural", name: "Cases rurals", icon: Trees },
-    { id: "apartament", name: "Apartaments", icon: Home },
-    { id: "hotel", name: "Hotels", icon: Hotel },
-    { id: "camping", name: "Càmpings", icon: Tent },
-  ];
+  // Use imported accommodation types
+  const accommodationTypes = ACCOMMODATION_TYPES;
 
   // Amenities options
   const amenitiesOptions = [

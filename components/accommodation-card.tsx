@@ -11,11 +11,9 @@ import {
   Users,
   Heart,
   Home,
-  Hotel,
-  Tent,
-  Trees,
   ShieldCheck,
 } from "lucide-react";
+import { getIconForType } from "@/lib/accommodation-types";
 import type { Place } from "@/lib/place";
 import { hereGeocode } from "@/helpers/geocode";
 import { updateDocument } from "@/lib/firestore";
@@ -193,26 +191,7 @@ export function AccommodationCard({
 
   // Map accommodation types to icons
   const getTypeIcon = (type: string) => {
-    const typeIcons: {
-      [key: string]: React.ComponentType<{ className?: string }>;
-    } = {
-      "casa-rural": Trees,
-      "cases rurals": Trees,
-      apartament: Home,
-      apartaments: Home,
-      hotel: Hotel,
-      hotels: Hotel,
-      camping: Tent,
-      càmpings: Tent,
-    };
-
-    const normalizedType = type?.toLowerCase() || "";
-    for (const [key, IconComponent] of Object.entries(typeIcons)) {
-      if (normalizedType.includes(key)) {
-        return IconComponent;
-      }
-    }
-    return Home; // Default icon
+    return getIconForType(type);
   };
 
   const TypeIcon = getTypeIcon(accommodation.type || "");

@@ -3,7 +3,8 @@
 import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Plus, Minus, Search, X, Home, Hotel, Tent, Trees } from "lucide-react";
+import { MapPin, Plus, Minus, Search, X, Home } from "lucide-react";
+import { ACCOMMODATION_TYPES } from "@/lib/accommodation-types";
 
 interface LocationSuggestion {
   name: string;
@@ -159,12 +160,10 @@ export function SearchSection() {
     router.push(`/results?${params.toString()}`);
   };
 
+  // Add "tots" option to the accommodation types
   const accommodationTypes = [
     { id: "tots", name: "Tots els tipus", icon: Home },
-    { id: "casa-rural", name: "Cases rurals", icon: Trees },
-    { id: "apartament", name: "Apartaments", icon: Home },
-    { id: "hotel", name: "Hotels", icon: Hotel },
-    { id: "camping", name: "Càmpings", icon: Tent },
+    ...ACCOMMODATION_TYPES
   ];
 
   const filteredSuggestions = location

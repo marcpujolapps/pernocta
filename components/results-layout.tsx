@@ -12,6 +12,8 @@ import { hereGeocode } from "@/helpers/geocode";
 // Represent a place with its Firestore document ID
 type AccommodationItem = Place & { id: string };
 
+import { getFirestoreValuesForTypes } from "@/lib/accommodation-types";
+
 export function ResultsLayout({
   searchParamsPromise,
   onResultsCount,
@@ -361,7 +363,11 @@ export function ResultsLayout({
       if (types && typeof types === "string") {
         const typeList = types.split(",").filter((type) => type !== "tots"); // Filter out "tots" since it means all types
         if (typeList.length > 0) {
-          filters.push({ field: "type", op: "in", value: typeList });
+          // Convert UI type IDs to Firestore values
+          const firestoreValues = getFirestoreValuesForTypes(typeList);
+          if (firestoreValues.length > 0) {
+            filters.push({ field: "type", op: "in", value: firestoreValues });
+          }
         }
       }
 
@@ -470,7 +476,11 @@ export function ResultsLayout({
         if (types && typeof types === "string") {
           const typeList = types.split(",").filter((type) => type !== "tots"); // Filter out "tots" since it means all types
           if (typeList.length > 0) {
-            filters.push({ field: "type", op: "in", value: typeList });
+            // Convert UI type IDs to Firestore values
+            const firestoreValues = getFirestoreValuesForTypes(typeList);
+            if (firestoreValues.length > 0) {
+              filters.push({ field: "type", op: "in", value: firestoreValues });
+            }
           }
         }
 

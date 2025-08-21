@@ -7,10 +7,6 @@ import { ImageSlider } from "@/components/ui/image-slider";
 import {
   MapPin,
   Home,
-  Hotel,
-  Tent,
-  Trees,
-  Building,
   Users,
   X,
 } from "lucide-react";
@@ -22,6 +18,7 @@ import MapGL, {
 } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { Place } from "@/lib/place";
+import { getIconForType, ACCOMMODATION_TYPES } from "@/lib/accommodation-types";
 
 // Represent a place with its Firestore document ID
 type AccommodationItem = Place & { id: string };
@@ -52,27 +49,8 @@ export function MapView({
   // Get appropriate icon based on accommodation type
   const getAccommodationIcon = (type: string | null) => {
     if (!type) return MapPin;
-
-    const normalizedType = type.toLowerCase();
-
-    if (normalizedType.includes("hotel")) return Hotel;
-    if (
-      normalizedType.includes("casa rural") ||
-      normalizedType.includes("rural")
-    )
-      return Trees;
-    if (
-      normalizedType.includes("apartament") ||
-      normalizedType.includes("apartment")
-    )
-      return Building;
-    if (normalizedType.includes("camping") || normalizedType.includes("camp"))
-      return Tent;
-    if (normalizedType.includes("casa") || normalizedType.includes("home"))
-      return Home;
-
-    // Default fallback
-    return MapPin;
+    const IconComponent = getIconForType(type);
+    return IconComponent;
   };
 
   // Calculate bounds based on accommodations
@@ -274,22 +252,15 @@ export function MapView({
       <div className="absolute bottom-4 left-4 bg-background rounded-lg p-3 shadow-lg">
         <h4 className="font-semibold text-sm mb-2">Llegenda</h4>
         <div className="space-y-1 text-xs">
-          <div className="flex items-center gap-2">
-            <Hotel className="w-4 h-4 text-muted-foreground" />
-            <span>Hotel</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Trees className="w-4 h-4 text-muted-foreground" />
-            <span>Casa Rural</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Home className="w-4 h-4 text-muted-foreground" />
-            <span>Apartament</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Tent className="w-4 h-4 text-muted-foreground" />
-            <span>Camping</span>
-          </div>
+          {ACCOMMODATION_TYPES.map((type) => {
+            const IconComponent = type.icon;
+            return (
+              <div key={type.id} className="flex items-center gap-2">
+                <IconComponent className="w-4 h-4 text-muted-foreground" />
+                <span>{type.name}</span>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

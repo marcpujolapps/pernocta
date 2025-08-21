@@ -10,6 +10,7 @@
     "upload:places": "node scripts/upload-places.js"
   },
   "dependencies": {
+    "@ai-sdk/google": "^2.0.8",
     "@ai-sdk/openai": "^1.0.0",
     "@radix-ui/react-separator": "^1.1.7",
     "@radix-ui/react-slot": "^1.2.3",
