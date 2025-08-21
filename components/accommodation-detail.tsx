@@ -1,105 +1,73 @@
-"use client"
+/* eslint-disable @next/next/no-img-element */
+"use client";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Separator } from "@/components/ui/separator"
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
+import { ImageSlider } from "@/components/ui/image-slider";
+import MapboxMap from "@/components/MapboxMap";
+import { Place } from "@/lib/place";
 import {
   ArrowLeft,
   Star,
   MapPin,
   Users,
   Bed,
-  Bath,
   Shield,
   ExternalLink,
   Heart,
   Share,
-  ChevronLeft,
-  ChevronRight,
-  Calendar,
-  MessageCircle,
-  Award,
-} from "lucide-react"
-import Link from "next/link"
-
-interface Accommodation {
-  id: number
-  name: string
-  location: string
-  fullAddress: string
-  coordinates: [number, number]
-  capacity: number
-  bedrooms: number
-  bathrooms: number
-  rating: number
-  reviews: number
-  price: number
-  originalPrice: number
-  images: string[]
-  type: string
-  verified: boolean
-  premium: boolean
-  registrationCode: string
-  description: string
-  longDescription: string
-  amenities: Array<{
-    name: string
-    icon: string
-    category: string
-  }>
-  platforms: Array<{
-    name: string
-    url: string
-    price: number
-    available: boolean
-  }>
-  rules: string[]
-  nearbyAttractions: Array<{
-    name: string
-    distance: string
-  }>
-  host: {
-    name: string
-    avatar: string
-    joinedYear: number
-    reviews: number
-    responseRate: number
-    languages: string[]
-  }
-}
+  Building,
+  Home,
+  FileText,
+  CheckCircle,
+  Grid3X3,
+} from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
 
 interface AccommodationDetailProps {
-  accommodation: Accommodation
+  place: Place;
 }
 
-export function AccommodationDetail({ accommodation }: AccommodationDetailProps) {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0)
-  const [isFavorite, setIsFavorite] = useState(false)
-  const [showAllAmenities, setShowAllAmenities] = useState(false)
+export function AccommodationDetail({ place }: AccommodationDetailProps) {
+  const [isFavorite, setIsFavorite] = useState(false);
 
-  const nextImage = () => {
-    setCurrentImageIndex((prev) => (prev + 1) % accommodation.images.length)
-  }
+  // Build full address from Place data
+  const fullAddress = [
+    place.street_type,
+    place.street_name,
+    place.number,
+    place.floor && `Pis ${place.floor}`,
+    place.door && `Porta ${place.door}`,
+    place.postal_code,
+    place.municipality,
+    place.province,
+  ]
+    .filter(Boolean)
+    .join(", ");
 
-  const prevImage = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + accommodation.images.length) % accommodation.images.length)
-  }
+  // Get accommodation type translation
+  const getTypeTranslation = (type: string | null) => {
+    if (!type) return "Allotjament";
+    const translations: Record<string, string> = {
+      "Casa rural": "Casa rural",
+      "Apartament turístic": "Apartament",
+      Hotel: "Hotel",
+      "Habitatge d'ús turístic": "Habitatge turístic",
+    };
+    return translations[type] || type;
+  };
 
-  const groupedAmenities = accommodation.amenities.reduce(
-    (acc, amenity) => {
-      if (!acc[amenity.category]) {
-        acc[amenity.category] = []
-      }
-      acc[amenity.category].push(amenity)
-      return acc
-    },
-    {} as Record<string, typeof accommodation.amenities>,
-  )
-
-  const bestPrice = Math.min(...accommodation.platforms.filter((p) => p.available).map((p) => p.price))
-  const bestPlatform = accommodation.platforms.find((p) => p.price === bestPrice && p.available)
+  // Get status badge color
+  const getStatusBadgeColor = (status: string | null) => {
+    if (status === "Actiu") return "bg-green-100 text-green-800";
+    if (status === "Baixa temporal") return "bg-yellow-100 text-yellow-800";
+    if (status === "Baixa definitiva") return "bg-red-100 text-red-800";
+    return "bg-gray-100 text-gray-800";
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -114,8 +82,16 @@ export function AccommodationDetail({ accommodation }: AccommodationDetailProps)
           </Link>
 
           <div className="flex items-center gap-2">
-            <Button variant="ghost" size="sm" onClick={() => setIsFavorite(!isFavorite)}>
-              <Heart className={`w-4 h-4 mr-2 ${isFavorite ? "fill-red-500 text-red-500" : ""}`} />
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setIsFavorite(!isFavorite)}
+            >
+              <Heart
+                className={`w-4 h-4 mr-2 ${
+                  isFavorite ? "fill-red-500 text-red-500" : ""
+                }`}
+              />
               Guardar
             </Button>
             <Button variant="ghost" size="sm">
@@ -130,350 +106,464 @@ export function AccommodationDetail({ accommodation }: AccommodationDetailProps)
         {/* Title and basic info */}
         <div className="mb-6">
           <div className="flex items-start justify-between mb-4">
-            <div>
-              <h1 className="text-3xl font-bold text-foreground mb-2">{accommodation.name}</h1>
+            <div className="flex-1">
+              <h1 className="text-3xl font-bold text-foreground mb-2">
+                {place.name || "Allotjament sense nom"}
+              </h1>
               <div className="flex items-center gap-4 text-muted-foreground mb-2">
                 <div className="flex items-center gap-1">
-                  <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                  <span className="font-medium">{accommodation.rating}</span>
-                  <span>({accommodation.reviews} valoracions)</span>
+                  <MapPin className="w-4 h-4" />
+                  <span>{place.municipality || place.address}</span>
                 </div>
                 <div className="flex items-center gap-1">
-                  <MapPin className="w-4 h-4" />
-                  <span>{accommodation.location}</span>
+                  <Grid3X3 className="w-4 h-4" />
+                  <span>Codi: {place.licence_id}</span>
                 </div>
               </div>
-              <div className="flex items-center gap-2">
-                <Badge variant="secondary" className="bg-secondary text-secondary-foreground">
+              <div className="flex items-center gap-2 flex-wrap">
+                <Badge
+                  variant="secondary"
+                  className="bg-secondary text-secondary-foreground"
+                >
                   <Shield className="w-3 h-3 mr-1" />
-                  Legal verificat
+                  {getTypeTranslation(place.type)}
                 </Badge>
-                {accommodation.premium && <Badge className="bg-accent text-accent-foreground">Premium</Badge>}
-                <Badge variant="outline">{accommodation.type}</Badge>
+                {place.status && (
+                  <Badge className={getStatusBadgeColor(place.status)}>
+                    <CheckCircle className="w-3 h-3 mr-1" />
+                    {place.status}
+                  </Badge>
+                )}
+                {place.category && (
+                  <Badge variant="outline">
+                    <Star className="w-3 h-3 mr-1" />
+                    {place.category}
+                  </Badge>
+                )}
+                {place.modality && (
+                  <Badge variant="outline">{place.modality}</Badge>
+                )}
               </div>
             </div>
           </div>
         </div>
 
         {/* Image Gallery */}
-        <div className="mb-8">
-          <div className="relative h-96 md:h-[500px] rounded-lg overflow-hidden group">
-            <img
-              src={accommodation.images[currentImageIndex] || "/placeholder.svg"}
-              alt={accommodation.name}
-              className="w-full h-full object-cover"
-            />
+        {place.images && place.images.length > 0 ? (
+          <div className="mb-8">
+            <div className="relative h-96 md:h-[500px] rounded-lg overflow-hidden">
+              <ImageSlider
+                images={place.images}
+                altText={place.name || "Allotjament"}
+                aspectRatio="aspect-auto"
+                className="h-full"
+                showNavigationOnHover={true}
+                showIndicators={true}
+                fallbackContent={
+                  <div className="h-full bg-muted flex items-center justify-center">
+                    <div className="text-center text-muted-foreground">
+                      <Building className="w-16 h-16 mx-auto mb-4 opacity-50" />
+                      <p>Imatges no disponibles</p>
+                    </div>
+                  </div>
+                }
+              />
+            </div>
 
-            {accommodation.images.length > 1 && (
-              <>
-                <button
-                  onClick={prevImage}
-                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity"
-                >
-                  <ChevronLeft className="w-5 h-5" />
-                </button>
-                <button
-                  onClick={nextImage}
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity"
-                >
-                  <ChevronRight className="w-5 h-5" />
-                </button>
-
-                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
-                  {accommodation.images.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentImageIndex(index)}
-                      className={`w-2 h-2 rounded-full transition-colors ${
-                        index === currentImageIndex ? "bg-white" : "bg-white/50"
-                      }`}
+            {place.images.length > 1 && (
+              <div className="grid grid-cols-4 md:grid-cols-6 gap-2 mt-4">
+                {place.images.slice(1, 7).map((image, index) => (
+                  <div
+                    key={index}
+                    className="relative h-20 rounded overflow-hidden hover:opacity-80 transition-opacity cursor-pointer"
+                  >
+                    <img
+                      src={image || "/placeholder.svg"}
+                      alt={`${place.name} ${index + 2}`}
+                      className="w-full h-full object-cover"
                     />
-                  ))}
-                </div>
-              </>
+                  </div>
+                ))}
+                {place.images.length > 7 && (
+                  <div className="relative h-20 rounded overflow-hidden bg-black/50 flex items-center justify-center text-white font-medium">
+                    +{place.images.length - 6}
+                  </div>
+                )}
+              </div>
             )}
           </div>
-
-          {accommodation.images.length > 1 && (
-            <div className="grid grid-cols-4 gap-2 mt-4">
-              {accommodation.images.slice(1, 5).map((image, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentImageIndex(index + 1)}
-                  className="relative h-20 rounded overflow-hidden hover:opacity-80 transition-opacity"
-                >
-                  <img
-                    src={image || "/placeholder.svg"}
-                    alt={`${accommodation.name} ${index + 2}`}
-                    className="w-full h-full object-cover"
-                  />
-                </button>
-              ))}
+        ) : (
+          <div className="mb-8 h-96 md:h-[500px] bg-muted rounded-lg flex items-center justify-center">
+            <div className="text-center text-muted-foreground">
+              <Building className="w-16 h-16 mx-auto mb-4 opacity-50" />
+              <p>Imatges no disponibles</p>
             </div>
-          )}
-        </div>
+          </div>
+        )}
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-8">
             {/* Basic Info */}
             <div>
-              <div className="flex items-center gap-6 mb-4 text-muted-foreground">
-                <div className="flex items-center gap-2">
-                  <Users className="w-5 h-5" />
-                  <span>{accommodation.capacity} persones</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Bed className="w-5 h-5" />
-                  <span>{accommodation.bedrooms} habitacions</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Bath className="w-5 h-5" />
-                  <span>{accommodation.bathrooms} banys</span>
-                </div>
+              <div className="flex items-center gap-6 mb-6 text-muted-foreground">
+                {place.total_places && (
+                  <div className="flex items-center gap-2">
+                    <Users className="w-5 h-5" />
+                    <span>{place.total_places} places</span>
+                  </div>
+                )}
+                {place.total_rooms && (
+                  <div className="flex items-center gap-2">
+                    <Bed className="w-5 h-5" />
+                    <span>{place.total_rooms} estances</span>
+                  </div>
+                )}
+                {place.accommodation_unit && (
+                  <div className="flex items-center gap-2">
+                    <Home className="w-5 h-5" />
+                    <span>{place.accommodation_unit}</span>
+                  </div>
+                )}
               </div>
-
-              <p className="text-foreground leading-relaxed mb-4">{accommodation.description}</p>
-
-              <p className="text-muted-foreground leading-relaxed">{accommodation.longDescription}</p>
             </div>
 
             <Separator />
 
-            {/* Amenities */}
+            {/* Property Details */}
             <div>
-              <h2 className="text-2xl font-semibold text-foreground mb-6">Serveis i equipaments</h2>
+              <h2 className="text-2xl font-semibold text-foreground mb-6">
+                Detalls de la propietat
+              </h2>
 
-              <div className="space-y-6">
-                {Object.entries(groupedAmenities).map(([category, amenities]) => (
-                  <div key={category}>
-                    <h3 className="font-medium text-foreground mb-3">{category}</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                      {amenities.slice(0, showAllAmenities ? amenities.length : 4).map((amenity) => (
-                        <div key={amenity.name} className="flex items-center gap-3">
-                          <span className="text-lg">{amenity.icon}</span>
-                          <span className="text-muted-foreground">{amenity.name}</span>
-                        </div>
-                      ))}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-4">
+                  <h3 className="font-medium text-foreground mb-3">
+                    Informació general
+                  </h3>
+
+                  {place.type && (
+                    <div className="flex justify-between">
+                      <span className="text-muted-foreground">
+                        Tipus d&apos;establiment:
+                      </span>
+                      <span className="font-medium">{place.type}</span>
                     </div>
-                  </div>
-                ))}
-              </div>
+                  )}
 
-              {accommodation.amenities.length > 8 && (
-                <Button variant="outline" onClick={() => setShowAllAmenities(!showAllAmenities)} className="mt-4">
-                  {showAllAmenities ? "Mostrar menys" : `Mostrar tots els ${accommodation.amenities.length} serveis`}
-                </Button>
-              )}
+                  {place.category && (
+                    <div className="flex justify-between">
+                      <span className="text-muted-foreground">Categoria:</span>
+                      <span className="font-medium">{place.category}</span>
+                    </div>
+                  )}
+
+                  {place.modality && (
+                    <div className="flex justify-between">
+                      <span className="text-muted-foreground">Modalitat:</span>
+                      <span className="font-medium">{place.modality}</span>
+                    </div>
+                  )}
+
+                  {place.group && (
+                    <div className="flex justify-between">
+                      <span className="text-muted-foreground">Grup:</span>
+                      <span className="font-medium">{place.group}</span>
+                    </div>
+                  )}
+                </div>
+
+                <div className="space-y-4">
+                  <h3 className="font-medium text-foreground mb-3">
+                    Capacitat
+                  </h3>
+
+                  {place.total_places && (
+                    <div className="flex justify-between">
+                      <span className="text-muted-foreground">
+                        Places totals:
+                      </span>
+                      <span className="font-medium">{place.total_places}</span>
+                    </div>
+                  )}
+
+                  {place.total_rooms && (
+                    <div className="flex justify-between">
+                      <span className="text-muted-foreground">Estances:</span>
+                      <span className="font-medium">{place.total_rooms}</span>
+                    </div>
+                  )}
+
+                  {place.accommodation_unit && (
+                    <div className="flex justify-between">
+                      <span className="text-muted-foreground">
+                        Unitat d&apos;allotjament:
+                      </span>
+                      <span className="font-medium">
+                        {place.accommodation_unit}
+                      </span>
+                    </div>
+                  )}
+                </div>
+              </div>
             </div>
 
             <Separator />
 
             {/* Location */}
             <div>
-              <h2 className="text-2xl font-semibold text-foreground mb-6">Ubicació</h2>
+              <h2 className="text-2xl font-semibold text-foreground mb-6">
+                Ubicació
+              </h2>
 
               <div className="mb-4">
-                <p className="text-muted-foreground mb-2">{accommodation.fullAddress}</p>
+                <p className="text-muted-foreground mb-4">{fullAddress}</p>
 
-                <div className="h-64 bg-muted rounded-lg flex items-center justify-center mb-4">
-                  <div className="text-center text-muted-foreground">
-                    <MapPin className="w-8 h-8 mx-auto mb-2" />
-                    <p>Mapa interactiu</p>
-                    <p className="text-sm">Coordenades: {accommodation.coordinates.join(", ")}</p>
-                  </div>
+                <div className="h-80 bg-muted rounded-lg overflow-hidden">
+                  {place.coordinates ? (
+                    <MapboxMap
+                      initialLat={place.coordinates[1]}
+                      initialLng={place.coordinates[0]}
+                      initialZoom={15}
+                    />
+                  ) : (
+                    <div className="h-full flex items-center justify-center">
+                      <div className="text-center text-muted-foreground">
+                        <MapPin className="w-8 h-8 mx-auto mb-2" />
+                        <p>Ubicació no disponible</p>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
 
-              <div>
-                <h3 className="font-medium text-foreground mb-3">Llocs d&apos;interès propers</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  {accommodation.nearbyAttractions.map((attraction) => (
-                    <div key={attraction.name} className="flex items-center justify-between">
-                      <span className="text-muted-foreground">{attraction.name}</span>
-                      <span className="text-sm font-medium">{attraction.distance}</span>
-                    </div>
-                  ))}
-                </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                {place.municipality && (
+                  <div>
+                    <span className="text-muted-foreground">Municipi:</span>
+                    <span className="ml-2 font-medium">
+                      {place.municipality}
+                    </span>
+                  </div>
+                )}
+                {place.county && (
+                  <div>
+                    <span className="text-muted-foreground">Comarca:</span>
+                    <span className="ml-2 font-medium">{place.county}</span>
+                  </div>
+                )}
+                {place.province && (
+                  <div>
+                    <span className="text-muted-foreground">Província:</span>
+                    <span className="ml-2 font-medium">{place.province}</span>
+                  </div>
+                )}
+                {place.postal_code && (
+                  <div>
+                    <span className="text-muted-foreground">Codi postal:</span>
+                    <span className="ml-2 font-medium">
+                      {place.postal_code}
+                    </span>
+                  </div>
+                )}
               </div>
             </div>
 
             <Separator />
 
-            {/* Rules */}
+            {/* Administrative Information */}
             <div>
-              <h2 className="text-2xl font-semibold text-foreground mb-6">Normes de la casa</h2>
+              <h2 className="text-2xl font-semibold text-foreground mb-6">
+                Informació administrativa
+              </h2>
 
-              <div className="space-y-3">
-                {accommodation.rules.map((rule, index) => (
-                  <div key={index} className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-muted-foreground">{rule}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-4">
+                  <h3 className="font-medium text-foreground mb-3">
+                    Registre i llicències
+                  </h3>
 
-            <Separator />
-
-            {/* Host Info */}
-            <div>
-              <h2 className="text-2xl font-semibold text-foreground mb-6">Amfitrió</h2>
-
-              <div className="flex items-start gap-4">
-                <img
-                  src={accommodation.host.avatar || "/placeholder.svg"}
-                  alt={accommodation.host.name}
-                  className="w-16 h-16 rounded-full object-cover"
-                />
-                <div className="flex-1">
-                  <h3 className="font-semibold text-foreground mb-1">{accommodation.host.name}</h3>
-                  <p className="text-sm text-muted-foreground mb-3">Amfitrió des de {accommodation.host.joinedYear}</p>
-
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-                    <div>
-                      <div className="flex items-center gap-1 mb-1">
-                        <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                        <span className="font-medium">{accommodation.host.reviews}</span>
-                      </div>
-                      <p className="text-xs text-muted-foreground">Valoracions</p>
+                  {place.licence_id && (
+                    <div className="flex items-center justify-between">
+                      <span className="text-muted-foreground">
+                        Número d&apos;inscripció:
+                      </span>
+                      <span className="font-mono text-sm font-medium">
+                        {place.licence_id}
+                      </span>
                     </div>
-                    <div>
-                      <div className="flex items-center gap-1 mb-1">
-                        <MessageCircle className="w-4 h-4 text-primary" />
-                        <span className="font-medium">{accommodation.host.responseRate}%</span>
-                      </div>
-                      <p className="text-xs text-muted-foreground">Taxa de resposta</p>
-                    </div>
-                    <div>
-                      <div className="flex items-center gap-1 mb-1">
-                        <Award className="w-4 h-4 text-accent" />
-                        <span className="font-medium">Superamfitrió</span>
-                      </div>
-                      <p className="text-xs text-muted-foreground">Reconeixement</p>
-                    </div>
-                  </div>
+                  )}
 
-                  <div className="mb-4">
-                    <p className="text-sm text-muted-foreground mb-2">Idiomes:</p>
-                    <div className="flex gap-2">
-                      {accommodation.host.languages.map((language) => (
-                        <Badge key={language} variant="outline" className="text-xs">
-                          {language}
-                        </Badge>
-                      ))}
+                  {place.control_digit && (
+                    <div className="flex justify-between">
+                      <span className="text-muted-foreground">
+                        Dígit de control:
+                      </span>
+                      <span className="font-medium">{place.control_digit}</span>
                     </div>
-                  </div>
+                  )}
+
+                  {place.occupancy_certificate && (
+                    <div className="flex justify-between">
+                      <span className="text-muted-foreground">
+                        Cèdula d&apos;habitabilitat:
+                      </span>
+                      <span className="font-mono text-sm font-medium">
+                        {place.occupancy_certificate}
+                      </span>
+                    </div>
+                  )}
+
+                  {place.cadastral_ref && (
+                    <div className="flex justify-between">
+                      <span className="text-muted-foreground">
+                        Referència cadastral:
+                      </span>
+                      <span className="font-mono text-sm font-medium">
+                        {place.cadastral_ref}
+                      </span>
+                    </div>
+                  )}
+                </div>
+
+                <div className="space-y-4">
+                  <h3 className="font-medium text-foreground mb-3">
+                    Propietari/Gestor
+                  </h3>
+
+                  {place.holder_company_name && (
+                    <div className="flex justify-between">
+                      <span className="text-muted-foreground">Raó social:</span>
+                      <span className="font-medium">
+                        {place.holder_company_name}
+                      </span>
+                    </div>
+                  )}
+
+                  {(place.holder_name || place.holder_surname1) && (
+                    <div className="flex justify-between">
+                      <span className="text-muted-foreground">Titular:</span>
+                      <span className="font-medium">
+                        {[
+                          place.holder_name,
+                          place.holder_surname1,
+                          place.holder_surname2,
+                        ]
+                          .filter(Boolean)
+                          .join(" ")}
+                      </span>
+                    </div>
+                  )}
+
+                  {place.tax_id && (
+                    <div className="flex justify-between">
+                      <span className="text-muted-foreground">CIF/NIF:</span>
+                      <span className="font-mono text-sm font-medium">
+                        {place.tax_id}
+                      </span>
+                    </div>
+                  )}
+
+                  {place.tourist_brand && (
+                    <div className="flex justify-between">
+                      <span className="text-muted-foreground">
+                        Marca turística:
+                      </span>
+                      <span className="font-medium">{place.tourist_brand}</span>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Booking Sidebar */}
+          {/* Contact/Booking Sidebar */}
           <div className="lg:col-span-1">
             <div className="sticky top-24">
               <Card className="shadow-lg">
                 <CardHeader>
-                  <div className="flex items-baseline gap-2 mb-2">
-                    {accommodation.originalPrice > accommodation.price && (
-                      <span className="text-lg text-muted-foreground line-through">€{accommodation.originalPrice}</span>
-                    )}
-                    <span className="text-3xl font-bold text-primary">€{accommodation.price}</span>
-                    <span className="text-muted-foreground">/ nit</span>
+                  <div className="flex items-center gap-2 mb-4">
+                    <Shield className="w-5 h-5 text-green-600" />
+                    <span className="font-semibold text-foreground">
+                      Allotjament legal verificat
+                    </span>
                   </div>
 
-                  <div className="flex items-center gap-2">
-                    <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                    <span className="font-medium">{accommodation.rating}</span>
-                    <span className="text-muted-foreground">({accommodation.reviews} valoracions)</span>
+                  <div className="space-y-2 text-sm">
+                    <div className="flex justify-between">
+                      <span className="text-muted-foreground">Estat:</span>
+                      <Badge className={getStatusBadgeColor(place.status)}>
+                        {place.status || "No especificat"}
+                      </Badge>
+                    </div>
+
+                    {place.licence_id && (
+                      <div className="flex justify-between">
+                        <span className="text-muted-foreground">
+                          Número d&apos;inscripció:
+                        </span>
+                        <span className="font-mono text-xs">
+                          {place.licence_id}
+                        </span>
+                      </div>
+                    )}
                   </div>
                 </CardHeader>
 
                 <CardContent className="space-y-4">
-                  <div className="grid grid-cols-2 gap-2">
-                    <div className="border rounded p-3">
-                      <label className="text-xs text-muted-foreground">ENTRADA</label>
-                      <div className="flex items-center gap-2 mt-1">
-                        <Calendar className="w-4 h-4 text-muted-foreground" />
-                        <span className="text-sm">Seleccionar</span>
-                      </div>
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-muted-foreground">Capacitat:</span>
+                      <span className="font-medium">
+                        {place.total_places
+                          ? `${place.total_places} places`
+                          : "No especificada"}
+                      </span>
                     </div>
-                    <div className="border rounded p-3">
-                      <label className="text-xs text-muted-foreground">SORTIDA</label>
-                      <div className="flex items-center gap-2 mt-1">
-                        <Calendar className="w-4 h-4 text-muted-foreground" />
-                        <span className="text-sm">Seleccionar</span>
-                      </div>
-                    </div>
-                  </div>
 
-                  <div className="border rounded p-3">
-                    <label className="text-xs text-muted-foreground">PERSONES</label>
-                    <div className="flex items-center gap-2 mt-1">
-                      <Users className="w-4 h-4 text-muted-foreground" />
-                      <span className="text-sm">2 persones</span>
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-muted-foreground">Estances:</span>
+                      <span className="font-medium">
+                        {place.total_rooms
+                          ? `${place.total_rooms} habitacions`
+                          : "No especificat"}
+                      </span>
                     </div>
                   </div>
-
-                  {bestPlatform && (
-                    <Button size="lg" className="w-full h-12 text-lg font-semibold" asChild>
-                      <a href={bestPlatform.url} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="w-5 h-5 mr-2" />
-                        Consultar disponibilitat i reservar
-                      </a>
-                    </Button>
-                  )}
-
-                  <p className="text-xs text-center text-muted-foreground">No es farà cap càrrec encara</p>
 
                   <Separator />
 
-                  <div>
-                    <h3 className="font-medium text-foreground mb-3">Disponible a aquestes plataformes:</h3>
-                    <div className="space-y-2">
-                      {accommodation.platforms.map((platform) => (
-                        <div
-                          key={platform.name}
-                          className={`flex items-center justify-between p-3 rounded border ${
-                            platform.available ? "bg-background" : "bg-muted/50"
-                          }`}
-                        >
-                          <div className="flex items-center gap-3">
-                            <span className="font-medium text-sm">{platform.name}</span>
-                            {!platform.available && (
-                              <Badge variant="outline" className="text-xs">
-                                No disponible
-                              </Badge>
-                            )}
-                          </div>
-                          <div className="flex items-center gap-2">
-                            <span
-                              className={`font-medium ${
-                                platform.available ? "text-foreground" : "text-muted-foreground"
-                              }`}
-                            >
-                              €{platform.price}
-                            </span>
-                            {platform.available && (
-                              <Button size="sm" variant="outline" asChild>
-                                <a href={platform.url} target="_blank" rel="noopener noreferrer">
-                                  <ExternalLink className="w-3 h-3" />
-                                </a>
-                              </Button>
-                            )}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
+                  <Button
+                    size="lg"
+                    className="w-full h-12 text-lg font-semibold"
+                  >
+                    <ExternalLink className="w-5 h-5 mr-2" />
+                    Contactar propietari
+                  </Button>
+
+                  <p className="text-xs text-center text-muted-foreground">
+                    Aquest allotjament està registrat legalment a la Generalitat
+                    de Catalunya
+                  </p>
 
                   <div className="bg-muted/50 rounded p-3">
                     <div className="flex items-center gap-2 mb-2">
-                      <Shield className="w-4 h-4 text-secondary" />
-                      <span className="font-medium text-sm">Allotjament legal verificat</span>
+                      <FileText className="w-4 h-4 text-primary" />
+                      <span className="font-medium text-sm">
+                        Informació legal
+                      </span>
                     </div>
-                    <p className="text-xs text-muted-foreground">Codi de registre: {accommodation.registrationCode}</p>
-                    <p className="text-xs text-muted-foreground mt-1">Verificat per la Generalitat de Catalunya</p>
+                    <div className="space-y-1 text-xs text-muted-foreground">
+                      {place.territorial_unit && (
+                        <p>Unitat territorial: {place.territorial_unit}</p>
+                      )}
+                      {place.municipality_code && (
+                        <p>Codi municipi: {place.municipality_code}</p>
+                      )}
+                      {place.county_code && (
+                        <p>Codi comarca: {place.county_code}</p>
+                      )}
+                    </div>
                   </div>
                 </CardContent>
               </Card>
@@ -482,5 +572,5 @@ export function AccommodationDetail({ accommodation }: AccommodationDetailProps)
         </div>
       </div>
     </div>
-  )
+  );
 }
