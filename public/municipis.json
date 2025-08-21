@@ -1,0 +1,5684 @@
+[
+  {
+    "Codi": 250019,
+    "Nom": "Abella de la Conca",
+    "Codi comarca": 25,
+    "Nom comarca": "Pallars Jussà"
+  },
+  {
+    "Codi": 80018,
+    "Nom": "Abrera",
+    "Codi comarca": 11,
+    "Nom comarca": "Baix Llobregat"
+  },
+  {
+    "Codi": 250024,
+    "Nom": "Àger",
+    "Codi comarca": 23,
+    "Nom comarca": "Noguera"
+  },
+  {
+    "Codi": 250030,
+    "Nom": "Agramunt",
+    "Codi comarca": 38,
+    "Nom comarca": "Urgell"
+  },
+  {
+    "Codi": 80023,
+    "Nom": "Aguilar de Segarra",
+    "Codi comarca": 7,
+    "Nom comarca": "Bages"
+  },
+  {
+    "Codi": 170010,
+    "Nom": "Agullana",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 80142,
+    "Nom": "Aiguafreda",
+    "Codi comarca": 41,
+    "Nom comarca": "Vallès Oriental"
+  },
+  {
+    "Codi": 430017,
+    "Nom": "Aiguamúrcia",
+    "Codi comarca": 1,
+    "Nom comarca": "Alt Camp"
+  },
+  {
+    "Codi": 170025,
+    "Nom": "Aiguaviva",
+    "Codi comarca": 20,
+    "Nom comarca": "Gironès"
+  },
+  {
+    "Codi": 250387,
+    "Nom": "Aitona",
+    "Codi comarca": 33,
+    "Nom comarca": "Segrià"
+  },
+  {
+    "Codi": 250045,
+    "Nom": "Alamús, els",
+    "Codi comarca": 33,
+    "Nom comarca": "Segrià"
+  },
+  {
+    "Codi": 250058,
+    "Nom": "Alàs i Cerc",
+    "Codi comarca": 4,
+    "Nom comarca": "Alt Urgell"
+  },
+  {
+    "Codi": 250061,
+    "Nom": "Albagés, l'",
+    "Codi comarca": 18,
+    "Nom comarca": "Garrigues"
+  },
+  {
+    "Codi": 170031,
+    "Nom": "Albanyà",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 250077,
+    "Nom": "Albatàrrec",
+    "Codi comarca": 33,
+    "Nom comarca": "Segrià"
+  },
+  {
+    "Codi": 250083,
+    "Nom": "Albesa",
+    "Codi comarca": 23,
+    "Nom comarca": "Noguera"
+  },
+  {
+    "Codi": 250096,
+    "Nom": "Albi, l'",
+    "Codi comarca": 18,
+    "Nom comarca": "Garrigues"
+  },
+  {
+    "Codi": 430022,
+    "Nom": "Albinyana",
+    "Codi comarca": 12,
+    "Nom comarca": "Baix Penedès"
+  },
+  {
+    "Codi": 430038,
+    "Nom": "Albiol, l'",
+    "Codi comarca": 8,
+    "Nom comarca": "Baix Camp"
+  },
+  {
+    "Codi": 170046,
+    "Nom": "Albons",
+    "Codi comarca": 10,
+    "Nom comarca": "Baix Empordà"
+  },
+  {
+    "Codi": 430043,
+    "Nom": "Alcanar",
+    "Codi comarca": 22,
+    "Nom comarca": "Montsià"
+  },
+  {
+    "Codi": 250100,
+    "Nom": "Alcanó",
+    "Codi comarca": 33,
+    "Nom comarca": "Segrià"
+  },
+  {
+    "Codi": 250117,
+    "Nom": "Alcarràs",
+    "Codi comarca": 33,
+    "Nom comarca": "Segrià"
+  },
+  {
+    "Codi": 250122,
+    "Nom": "Alcoletge",
+    "Codi comarca": 33,
+    "Nom comarca": "Segrià"
+  },
+  {
+    "Codi": 430056,
+    "Nom": "Alcover",
+    "Codi comarca": 1,
+    "Nom comarca": "Alt Camp"
+  },
+  {
+    "Codi": 439044,
+    "Nom": "Aldea, l'",
+    "Codi comarca": 9,
+    "Nom comarca": "Baix Ebre"
+  },
+  {
+    "Codi": 430069,
+    "Nom": "Aldover",
+    "Codi comarca": 9,
+    "Nom comarca": "Baix Ebre"
+  },
+  {
+    "Codi": 430075,
+    "Nom": "Aleixar, l'",
+    "Codi comarca": 8,
+    "Nom comarca": "Baix Camp"
+  },
+  {
+    "Codi": 80039,
+    "Nom": "Alella",
+    "Codi comarca": 21,
+    "Nom comarca": "Maresme"
+  },
+  {
+    "Codi": 430081,
+    "Nom": "Alfara de Carles",
+    "Codi comarca": 9,
+    "Nom comarca": "Baix Ebre"
+  },
+  {
+    "Codi": 250138,
+    "Nom": "Alfarràs",
+    "Codi comarca": 33,
+    "Nom comarca": "Segrià"
+  },
+  {
+    "Codi": 250143,
+    "Nom": "Alfés",
+    "Codi comarca": 33,
+    "Nom comarca": "Segrià"
+  },
+  {
+    "Codi": 430094,
+    "Nom": "Alforja",
+    "Codi comarca": 8,
+    "Nom comarca": "Baix Camp"
+  },
+  {
+    "Codi": 250156,
+    "Nom": "Algerri",
+    "Codi comarca": 23,
+    "Nom comarca": "Noguera"
+  },
+  {
+    "Codi": 250169,
+    "Nom": "Alguaire",
+    "Codi comarca": 33,
+    "Nom comarca": "Segrià"
+  },
+  {
+    "Codi": 250175,
+    "Nom": "Alins",
+    "Codi comarca": 26,
+    "Nom comarca": "Pallars Sobirà"
+  },
+  {
+    "Codi": 430108,
+    "Nom": "Alió",
+    "Codi comarca": 1,
+    "Nom comarca": "Alt Camp"
+  },
+  {
+    "Codi": 250194,
+    "Nom": "Almacelles",
+    "Codi comarca": 33,
+    "Nom comarca": "Segrià"
+  },
+  {
+    "Codi": 250208,
+    "Nom": "Almatret",
+    "Codi comarca": 33,
+    "Nom comarca": "Segrià"
+  },
+  {
+    "Codi": 250215,
+    "Nom": "Almenar",
+    "Codi comarca": 33,
+    "Nom comarca": "Segrià"
+  },
+  {
+    "Codi": 430115,
+    "Nom": "Almoster",
+    "Codi comarca": 8,
+    "Nom comarca": "Baix Camp"
+  },
+  {
+    "Codi": 250220,
+    "Nom": "Alòs de Balaguer",
+    "Codi comarca": 23,
+    "Nom comarca": "Noguera"
+  },
+  {
+    "Codi": 170062,
+    "Nom": "Alp",
+    "Codi comarca": 15,
+    "Nom comarca": "Cerdanya"
+  },
+  {
+    "Codi": 80044,
+    "Nom": "Alpens",
+    "Codi comarca": 43,
+    "Nom comarca": "Lluçanès"
+  },
+  {
+    "Codi": 250236,
+    "Nom": "Alpicat",
+    "Codi comarca": 33,
+    "Nom comarca": "Segrià"
+  },
+  {
+    "Codi": 250241,
+    "Nom": "Alt Àneu",
+    "Codi comarca": 26,
+    "Nom comarca": "Pallars Sobirà"
+  },
+  {
+    "Codi": 430120,
+    "Nom": "Altafulla",
+    "Codi comarca": 36,
+    "Nom comarca": "Tarragonès"
+  },
+  {
+    "Codi": 170078,
+    "Nom": "Amer",
+    "Codi comarca": 34,
+    "Nom comarca": "Selva"
+  },
+  {
+    "Codi": 430136,
+    "Nom": "Ametlla de Mar, l'",
+    "Codi comarca": 9,
+    "Nom comarca": "Baix Ebre"
+  },
+  {
+    "Codi": 80057,
+    "Nom": "Ametlla del Vallès, l'",
+    "Codi comarca": 41,
+    "Nom comarca": "Vallès Oriental"
+  },
+  {
+    "Codi": 439060,
+    "Nom": "Ampolla, l'",
+    "Codi comarca": 9,
+    "Nom comarca": "Baix Ebre"
+  },
+  {
+    "Codi": 430141,
+    "Nom": "Amposta",
+    "Codi comarca": 22,
+    "Nom comarca": "Montsià"
+  },
+  {
+    "Codi": 170084,
+    "Nom": "Anglès",
+    "Codi comarca": 34,
+    "Nom comarca": "Selva"
+  },
+  {
+    "Codi": 250273,
+    "Nom": "Anglesola",
+    "Codi comarca": 38,
+    "Nom comarca": "Urgell"
+  },
+  {
+    "Codi": 250292,
+    "Nom": "Arbeca",
+    "Codi comarca": 18,
+    "Nom comarca": "Garrigues"
+  },
+  {
+    "Codi": 430167,
+    "Nom": "Arboç, l'",
+    "Codi comarca": 12,
+    "Nom comarca": "Baix Penedès"
+  },
+  {
+    "Codi": 430154,
+    "Nom": "Arbolí",
+    "Codi comarca": 8,
+    "Nom comarca": "Baix Camp"
+  },
+  {
+    "Codi": 170097,
+    "Nom": "Arbúcies",
+    "Codi comarca": 34,
+    "Nom comarca": "Selva"
+  },
+  {
+    "Codi": 80060,
+    "Nom": "Arenys de Mar",
+    "Codi comarca": 21,
+    "Nom comarca": "Maresme"
+  },
+  {
+    "Codi": 80076,
+    "Nom": "Arenys de Munt",
+    "Codi comarca": 21,
+    "Nom comarca": "Maresme"
+  },
+  {
+    "Codi": 170101,
+    "Nom": "Argelaguer",
+    "Codi comarca": 19,
+    "Nom comarca": "Garrotxa"
+  },
+  {
+    "Codi": 80082,
+    "Nom": "Argençola",
+    "Codi comarca": 6,
+    "Nom comarca": "Anoia"
+  },
+  {
+    "Codi": 430173,
+    "Nom": "Argentera, l'",
+    "Codi comarca": 8,
+    "Nom comarca": "Baix Camp"
+  },
+  {
+    "Codi": 80095,
+    "Nom": "Argentona",
+    "Codi comarca": 21,
+    "Nom comarca": "Maresme"
+  },
+  {
+    "Codi": 170118,
+    "Nom": "Armentera, l'",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 430189,
+    "Nom": "Arnes",
+    "Codi comarca": 37,
+    "Nom comarca": "Terra Alta"
+  },
+  {
+    "Codi": 250313,
+    "Nom": "Arres",
+    "Codi comarca": 39,
+    "Nom comarca": "Aran"
+  },
+  {
+    "Codi": 250328,
+    "Nom": "Arsèguel",
+    "Codi comarca": 4,
+    "Nom comarca": "Alt Urgell"
+  },
+  {
+    "Codi": 80109,
+    "Nom": "Artés",
+    "Codi comarca": 7,
+    "Nom comarca": "Bages"
+  },
+  {
+    "Codi": 250334,
+    "Nom": "Artesa de Lleida",
+    "Codi comarca": 33,
+    "Nom comarca": "Segrià"
+  },
+  {
+    "Codi": 250349,
+    "Nom": "Artesa de Segre",
+    "Codi comarca": 23,
+    "Nom comarca": "Noguera"
+  },
+  {
+    "Codi": 430192,
+    "Nom": "Ascó",
+    "Codi comarca": 30,
+    "Nom comarca": "Ribera d'Ebre"
+  },
+  {
+    "Codi": 250365,
+    "Nom": "Aspa",
+    "Codi comarca": 33,
+    "Nom comarca": "Segrià"
+  },
+  {
+    "Codi": 250371,
+    "Nom": "Avellanes i Santa Linya, les",
+    "Codi comarca": 23,
+    "Nom comarca": "Noguera"
+  },
+  {
+    "Codi": 80116,
+    "Nom": "Avià",
+    "Codi comarca": 14,
+    "Nom comarca": "Berguedà"
+  },
+  {
+    "Codi": 80121,
+    "Nom": "Avinyó",
+    "Codi comarca": 7,
+    "Nom comarca": "Bages"
+  },
+  {
+    "Codi": 170123,
+    "Nom": "Avinyonet de Puigventós",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 80137,
+    "Nom": "Avinyonet del Penedès",
+    "Codi comarca": 3,
+    "Nom comarca": "Alt Penedès"
+  },
+  {
+    "Codi": 80155,
+    "Nom": "Badalona",
+    "Codi comarca": 13,
+    "Nom comarca": "Barcelonès"
+  },
+  {
+    "Codi": 89045,
+    "Nom": "Badia del Vallès",
+    "Codi comarca": 40,
+    "Nom comarca": "Vallès Occidental"
+  },
+  {
+    "Codi": 80168,
+    "Nom": "Bagà",
+    "Codi comarca": 14,
+    "Nom comarca": "Berguedà"
+  },
+  {
+    "Codi": 250390,
+    "Nom": "Baix Pallars",
+    "Codi comarca": 26,
+    "Nom comarca": "Pallars Sobirà"
+  },
+  {
+    "Codi": 250404,
+    "Nom": "Balaguer",
+    "Codi comarca": 23,
+    "Nom comarca": "Noguera"
+  },
+  {
+    "Codi": 80174,
+    "Nom": "Balenyà",
+    "Codi comarca": 24,
+    "Nom comarca": "Osona"
+  },
+  {
+    "Codi": 80180,
+    "Nom": "Balsareny",
+    "Codi comarca": 7,
+    "Nom comarca": "Bages"
+  },
+  {
+    "Codi": 430206,
+    "Nom": "Banyeres del Penedès",
+    "Codi comarca": 12,
+    "Nom comarca": "Baix Penedès"
+  },
+  {
+    "Codi": 170157,
+    "Nom": "Banyoles",
+    "Codi comarca": 28,
+    "Nom comarca": "Pla de l'Estany"
+  },
+  {
+    "Codi": 250411,
+    "Nom": "Barbens",
+    "Codi comarca": 27,
+    "Nom comarca": "Pla d'Urgell"
+  },
+  {
+    "Codi": 430213,
+    "Nom": "Barberà de la Conca",
+    "Codi comarca": 16,
+    "Nom comarca": "Conca de Barberà"
+  },
+  {
+    "Codi": 82520,
+    "Nom": "Barberà del Vallès",
+    "Codi comarca": 40,
+    "Nom comarca": "Vallès Occidental"
+  },
+  {
+    "Codi": 80193,
+    "Nom": "Barcelona",
+    "Codi comarca": 13,
+    "Nom comarca": "Barcelonès"
+  },
+  {
+    "Codi": 250426,
+    "Nom": "Baronia de Rialb, la",
+    "Codi comarca": 23,
+    "Nom comarca": "Noguera"
+  },
+  {
+    "Codi": 170160,
+    "Nom": "Bàscara",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 250447,
+    "Nom": "Bassella",
+    "Codi comarca": 4,
+    "Nom comarca": "Alt Urgell"
+  },
+  {
+    "Codi": 430228,
+    "Nom": "Batea",
+    "Codi comarca": 37,
+    "Nom comarca": "Terra Alta"
+  },
+  {
+    "Codi": 250450,
+    "Nom": "Bausen",
+    "Codi comarca": 39,
+    "Nom comarca": "Aran"
+  },
+  {
+    "Codi": 80207,
+    "Nom": "Begues",
+    "Codi comarca": 11,
+    "Nom comarca": "Baix Llobregat"
+  },
+  {
+    "Codi": 170139,
+    "Nom": "Begur",
+    "Codi comarca": 10,
+    "Nom comarca": "Baix Empordà"
+  },
+  {
+    "Codi": 250463,
+    "Nom": "Belianes",
+    "Codi comarca": 38,
+    "Nom comarca": "Urgell"
+  },
+  {
+    "Codi": 250485,
+    "Nom": "Bell-lloc d'Urgell",
+    "Codi comarca": 27,
+    "Nom comarca": "Pla d'Urgell"
+  },
+  {
+    "Codi": 251706,
+    "Nom": "Bellaguarda",
+    "Codi comarca": 18,
+    "Nom comarca": "Garrigues"
+  },
+  {
+    "Codi": 170182,
+    "Nom": "Bellcaire d'Empordà",
+    "Codi comarca": 10,
+    "Nom comarca": "Baix Empordà"
+  },
+  {
+    "Codi": 250479,
+    "Nom": "Bellcaire d'Urgell",
+    "Codi comarca": 23,
+    "Nom comarca": "Noguera"
+  },
+  {
+    "Codi": 250498,
+    "Nom": "Bellmunt d'Urgell",
+    "Codi comarca": 23,
+    "Nom comarca": "Noguera"
+  },
+  {
+    "Codi": 430234,
+    "Nom": "Bellmunt del Priorat",
+    "Codi comarca": 29,
+    "Nom comarca": "Priorat"
+  },
+  {
+    "Codi": 80214,
+    "Nom": "Bellprat",
+    "Codi comarca": 6,
+    "Nom comarca": "Anoia"
+  },
+  {
+    "Codi": 250501,
+    "Nom": "Bellpuig",
+    "Codi comarca": 38,
+    "Nom comarca": "Urgell"
+  },
+  {
+    "Codi": 430249,
+    "Nom": "Bellvei",
+    "Codi comarca": 12,
+    "Nom comarca": "Baix Penedès"
+  },
+  {
+    "Codi": 250518,
+    "Nom": "Bellver de Cerdanya",
+    "Codi comarca": 15,
+    "Nom comarca": "Cerdanya"
+  },
+  {
+    "Codi": 250523,
+    "Nom": "Bellvís",
+    "Codi comarca": 27,
+    "Nom comarca": "Pla d'Urgell"
+  },
+  {
+    "Codi": 250539,
+    "Nom": "Benavent de Segrià",
+    "Codi comarca": 33,
+    "Nom comarca": "Segrià"
+  },
+  {
+    "Codi": 430252,
+    "Nom": "Benifallet",
+    "Codi comarca": 9,
+    "Nom comarca": "Baix Ebre"
+  },
+  {
+    "Codi": 430265,
+    "Nom": "Benissanet",
+    "Codi comarca": 30,
+    "Nom comarca": "Ribera d'Ebre"
+  },
+  {
+    "Codi": 80229,
+    "Nom": "Berga",
+    "Codi comarca": 14,
+    "Nom comarca": "Berguedà"
+  },
+  {
+    "Codi": 170195,
+    "Nom": "Besalú",
+    "Codi comarca": 19,
+    "Nom comarca": "Garrotxa"
+  },
+  {
+    "Codi": 170209,
+    "Nom": "Bescanó",
+    "Codi comarca": 20,
+    "Nom comarca": "Gironès"
+  },
+  {
+    "Codi": 170216,
+    "Nom": "Beuda",
+    "Codi comarca": 19,
+    "Nom comarca": "Garrotxa"
+  },
+  {
+    "Codi": 80235,
+    "Nom": "Bigues i Riells del Fai",
+    "Codi comarca": 41,
+    "Nom comarca": "Vallès Oriental"
+  },
+  {
+    "Codi": 250557,
+    "Nom": "Biosca",
+    "Codi comarca": 35,
+    "Nom comarca": "Solsonès"
+  },
+  {
+    "Codi": 170221,
+    "Nom": "Bisbal d'Empordà, la",
+    "Codi comarca": 10,
+    "Nom comarca": "Baix Empordà"
+  },
+  {
+    "Codi": 430271,
+    "Nom": "Bisbal de Montsant, la",
+    "Codi comarca": 29,
+    "Nom comarca": "Priorat"
+  },
+  {
+    "Codi": 430287,
+    "Nom": "Bisbal del Penedès, la",
+    "Codi comarca": 12,
+    "Nom comarca": "Baix Penedès"
+  },
+  {
+    "Codi": 172348,
+    "Nom": "Biure",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 430290,
+    "Nom": "Blancafort",
+    "Codi comarca": 16,
+    "Nom comarca": "Conca de Barberà"
+  },
+  {
+    "Codi": 170237,
+    "Nom": "Blanes",
+    "Codi comarca": 34,
+    "Nom comarca": "Selva"
+  },
+  {
+    "Codi": 170293,
+    "Nom": "Boadella i les Escaules",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 170242,
+    "Nom": "Bolvir",
+    "Codi comarca": 15,
+    "Nom comarca": "Cerdanya"
+  },
+  {
+    "Codi": 430304,
+    "Nom": "Bonastre",
+    "Codi comarca": 12,
+    "Nom comarca": "Baix Penedès"
+  },
+  {
+    "Codi": 250576,
+    "Nom": "Bòrdes, Es",
+    "Codi comarca": 39,
+    "Nom comarca": "Aran"
+  },
+  {
+    "Codi": 170255,
+    "Nom": "Bordils",
+    "Codi comarca": 20,
+    "Nom comarca": "Gironès"
+  },
+  {
+    "Codi": 250582,
+    "Nom": "Borges Blanques, les",
+    "Codi comarca": 18,
+    "Nom comarca": "Garrigues"
+  },
+  {
+    "Codi": 430311,
+    "Nom": "Borges del Camp, les",
+    "Codi comarca": 8,
+    "Nom comarca": "Baix Camp"
+  },
+  {
+    "Codi": 170268,
+    "Nom": "Borrassà",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 80240,
+    "Nom": "Borredà",
+    "Codi comarca": 14,
+    "Nom comarca": "Berguedà"
+  },
+  {
+    "Codi": 250595,
+    "Nom": "Bossòst",
+    "Codi comarca": 39,
+    "Nom comarca": "Aran"
+  },
+  {
+    "Codi": 430326,
+    "Nom": "Bot",
+    "Codi comarca": 37,
+    "Nom comarca": "Terra Alta"
+  },
+  {
+    "Codi": 430332,
+    "Nom": "Botarell",
+    "Codi comarca": 8,
+    "Nom comarca": "Baix Camp"
+  },
+  {
+    "Codi": 250560,
+    "Nom": "Bovera",
+    "Codi comarca": 18,
+    "Nom comarca": "Garrigues"
+  },
+  {
+    "Codi": 430347,
+    "Nom": "Bràfim",
+    "Codi comarca": 1,
+    "Nom comarca": "Alt Camp"
+  },
+  {
+    "Codi": 170274,
+    "Nom": "Breda",
+    "Codi comarca": 34,
+    "Nom comarca": "Selva"
+  },
+  {
+    "Codi": 80253,
+    "Nom": "Bruc, el",
+    "Codi comarca": 6,
+    "Nom comarca": "Anoia"
+  },
+  {
+    "Codi": 80266,
+    "Nom": "Brull, el",
+    "Codi comarca": 24,
+    "Nom comarca": "Osona"
+  },
+  {
+    "Codi": 170280,
+    "Nom": "Brunyola i Sant Martí Sapresa",
+    "Codi comarca": 34,
+    "Nom comarca": "Selva"
+  },
+  {
+    "Codi": 430350,
+    "Nom": "Cabacés",
+    "Codi comarca": 29,
+    "Nom comarca": "Priorat"
+  },
+  {
+    "Codi": 250609,
+    "Nom": "Cabanabona",
+    "Codi comarca": 23,
+    "Nom comarca": "Noguera"
+  },
+  {
+    "Codi": 170314,
+    "Nom": "Cabanelles",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 170307,
+    "Nom": "Cabanes",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 80272,
+    "Nom": "Cabanyes, les",
+    "Codi comarca": 3,
+    "Nom comarca": "Alt Penedès"
+  },
+  {
+    "Codi": 250616,
+    "Nom": "Cabó",
+    "Codi comarca": 4,
+    "Nom comarca": "Alt Urgell"
+  },
+  {
+    "Codi": 430363,
+    "Nom": "Cabra del Camp",
+    "Codi comarca": 1,
+    "Nom comarca": "Alt Camp"
+  },
+  {
+    "Codi": 80288,
+    "Nom": "Cabrera d'Anoia",
+    "Codi comarca": 6,
+    "Nom comarca": "Anoia"
+  },
+  {
+    "Codi": 80291,
+    "Nom": "Cabrera de Mar",
+    "Codi comarca": 21,
+    "Nom comarca": "Maresme"
+  },
+  {
+    "Codi": 80305,
+    "Nom": "Cabrils",
+    "Codi comarca": 21,
+    "Nom comarca": "Maresme"
+  },
+  {
+    "Codi": 170329,
+    "Nom": "Cadaqués",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 80312,
+    "Nom": "Calaf",
+    "Codi comarca": 6,
+    "Nom comarca": "Anoia"
+  },
+  {
+    "Codi": 430379,
+    "Nom": "Calafell",
+    "Codi comarca": 12,
+    "Nom comarca": "Baix Penedès"
+  },
+  {
+    "Codi": 80348,
+    "Nom": "Calders",
+    "Codi comarca": 42,
+    "Nom comarca": "Moianès"
+  },
+  {
+    "Codi": 80327,
+    "Nom": "Caldes d'Estrac",
+    "Codi comarca": 21,
+    "Nom comarca": "Maresme"
+  },
+  {
+    "Codi": 170335,
+    "Nom": "Caldes de Malavella",
+    "Codi comarca": 34,
+    "Nom comarca": "Selva"
+  },
+  {
+    "Codi": 80333,
+    "Nom": "Caldes de Montbui",
+    "Codi comarca": 41,
+    "Nom comarca": "Vallès Oriental"
+  },
+  {
+    "Codi": 80351,
+    "Nom": "Calella",
+    "Codi comarca": 21,
+    "Nom comarca": "Maresme"
+  },
+  {
+    "Codi": 80370,
+    "Nom": "Calldetenes",
+    "Codi comarca": 24,
+    "Nom comarca": "Osona"
+  },
+  {
+    "Codi": 80386,
+    "Nom": "Callús",
+    "Codi comarca": 7,
+    "Nom comarca": "Bages"
+  },
+  {
+    "Codi": 80364,
+    "Nom": "Calonge de Segarra",
+    "Codi comarca": 6,
+    "Nom comarca": "Anoia"
+  },
+  {
+    "Codi": 170340,
+    "Nom": "Calonge i Sant Antoni",
+    "Codi comarca": 10,
+    "Nom comarca": "Baix Empordà"
+  },
+  {
+    "Codi": 250621,
+    "Nom": "Camarasa",
+    "Codi comarca": 23,
+    "Nom comarca": "Noguera"
+  },
+  {
+    "Codi": 439039,
+    "Nom": "Camarles",
+    "Codi comarca": 9,
+    "Nom comarca": "Baix Ebre"
+  },
+  {
+    "Codi": 430385,
+    "Nom": "Cambrils",
+    "Codi comarca": 8,
+    "Nom comarca": "Baix Camp"
+  },
+  {
+    "Codi": 170353,
+    "Nom": "Camós",
+    "Codi comarca": 28,
+    "Nom comarca": "Pla de l'Estany"
+  },
+  {
+    "Codi": 170366,
+    "Nom": "Campdevànol",
+    "Codi comarca": 31,
+    "Nom comarca": "Ripollès"
+  },
+  {
+    "Codi": 170372,
+    "Nom": "Campelles",
+    "Codi comarca": 31,
+    "Nom comarca": "Ripollès"
+  },
+  {
+    "Codi": 80399,
+    "Nom": "Campins",
+    "Codi comarca": 41,
+    "Nom comarca": "Vallès Oriental"
+  },
+  {
+    "Codi": 170388,
+    "Nom": "Campllong",
+    "Codi comarca": 20,
+    "Nom comarca": "Gironès"
+  },
+  {
+    "Codi": 170391,
+    "Nom": "Camprodon",
+    "Codi comarca": 31,
+    "Nom comarca": "Ripollès"
+  },
+  {
+    "Codi": 250637,
+    "Nom": "Canejan",
+    "Codi comarca": 39,
+    "Nom comarca": "Aran"
+  },
+  {
+    "Codi": 170405,
+    "Nom": "Canet d'Adri",
+    "Codi comarca": 20,
+    "Nom comarca": "Gironès"
+  },
+  {
+    "Codi": 80403,
+    "Nom": "Canet de Mar",
+    "Codi comarca": 21,
+    "Nom comarca": "Maresme"
+  },
+  {
+    "Codi": 439076,
+    "Nom": "Canonja, la",
+    "Codi comarca": 36,
+    "Nom comarca": "Tarragonès"
+  },
+  {
+    "Codi": 80410,
+    "Nom": "Canovelles",
+    "Codi comarca": 41,
+    "Nom comarca": "Vallès Oriental"
+  },
+  {
+    "Codi": 80425,
+    "Nom": "Cànoves i Samalús",
+    "Codi comarca": 41,
+    "Nom comarca": "Vallès Oriental"
+  },
+  {
+    "Codi": 170412,
+    "Nom": "Cantallops",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 80431,
+    "Nom": "Canyelles",
+    "Codi comarca": 17,
+    "Nom comarca": "Garraf"
+  },
+  {
+    "Codi": 430398,
+    "Nom": "Capafonts",
+    "Codi comarca": 8,
+    "Nom comarca": "Baix Camp"
+  },
+  {
+    "Codi": 430402,
+    "Nom": "Capçanes",
+    "Codi comarca": 29,
+    "Nom comarca": "Priorat"
+  },
+  {
+    "Codi": 80446,
+    "Nom": "Capellades",
+    "Codi comarca": 6,
+    "Nom comarca": "Anoia"
+  },
+  {
+    "Codi": 170427,
+    "Nom": "Capmany",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 80459,
+    "Nom": "Capolat",
+    "Codi comarca": 14,
+    "Nom comarca": "Berguedà"
+  },
+  {
+    "Codi": 80462,
+    "Nom": "Cardedeu",
+    "Codi comarca": 41,
+    "Nom comarca": "Vallès Oriental"
+  },
+  {
+    "Codi": 80478,
+    "Nom": "Cardona",
+    "Codi comarca": 7,
+    "Nom comarca": "Bages"
+  },
+  {
+    "Codi": 80484,
+    "Nom": "Carme",
+    "Codi comarca": 6,
+    "Nom comarca": "Anoia"
+  },
+  {
+    "Codi": 430419,
+    "Nom": "Caseres",
+    "Codi comarca": 37,
+    "Nom comarca": "Terra Alta"
+  },
+  {
+    "Codi": 170448,
+    "Nom": "Cassà de la Selva",
+    "Codi comarca": 20,
+    "Nom comarca": "Gironès"
+  },
+  {
+    "Codi": 80497,
+    "Nom": "Casserres",
+    "Codi comarca": 14,
+    "Nom comarca": "Berguedà"
+  },
+  {
+    "Codi": 170486,
+    "Nom": "Castell d'Aro, Platja d'Aro i s'Agaró",
+    "Codi comarca": 10,
+    "Nom comarca": "Baix Empordà"
+  },
+  {
+    "Codi": 80575,
+    "Nom": "Castell de l'Areny",
+    "Codi comarca": 14,
+    "Nom comarca": "Berguedà"
+  },
+  {
+    "Codi": 259046,
+    "Nom": "Castell de Mur",
+    "Codi comarca": 25,
+    "Nom comarca": "Pallars Jussà"
+  },
+  {
+    "Codi": 250642,
+    "Nom": "Castellar de la Ribera",
+    "Codi comarca": 35,
+    "Nom comarca": "Solsonès"
+  },
+  {
+    "Codi": 80522,
+    "Nom": "Castellar de n'Hug",
+    "Codi comarca": 14,
+    "Nom comarca": "Berguedà"
+  },
+  {
+    "Codi": 80500,
+    "Nom": "Castellar del Riu",
+    "Codi comarca": 14,
+    "Nom comarca": "Berguedà"
+  },
+  {
+    "Codi": 80517,
+    "Nom": "Castellar del Vallès",
+    "Codi comarca": 40,
+    "Nom comarca": "Vallès Occidental"
+  },
+  {
+    "Codi": 80538,
+    "Nom": "Castellbell i el Vilar",
+    "Codi comarca": 7,
+    "Nom comarca": "Bages"
+  },
+  {
+    "Codi": 80543,
+    "Nom": "Castellbisbal",
+    "Codi comarca": 40,
+    "Nom comarca": "Vallès Occidental"
+  },
+  {
+    "Codi": 80556,
+    "Nom": "Castellcir",
+    "Codi comarca": 42,
+    "Nom comarca": "Moianès"
+  },
+  {
+    "Codi": 250674,
+    "Nom": "Castelldans",
+    "Codi comarca": 18,
+    "Nom comarca": "Garrigues"
+  },
+  {
+    "Codi": 80569,
+    "Nom": "Castelldefels",
+    "Codi comarca": 11,
+    "Nom comarca": "Baix Llobregat"
+  },
+  {
+    "Codi": 80581,
+    "Nom": "Castellet i la Gornal",
+    "Codi comarca": 3,
+    "Nom comarca": "Alt Penedès"
+  },
+  {
+    "Codi": 170464,
+    "Nom": "Castellfollit de la Roca",
+    "Codi comarca": 19,
+    "Nom comarca": "Garrotxa"
+  },
+  {
+    "Codi": 80608,
+    "Nom": "Castellfollit de Riubregós",
+    "Codi comarca": 6,
+    "Nom comarca": "Anoia"
+  },
+  {
+    "Codi": 80594,
+    "Nom": "Castellfollit del Boix",
+    "Codi comarca": 7,
+    "Nom comarca": "Bages"
+  },
+  {
+    "Codi": 80615,
+    "Nom": "Castellgalí",
+    "Codi comarca": 7,
+    "Nom comarca": "Bages"
+  },
+  {
+    "Codi": 80620,
+    "Nom": "Castellnou de Bages",
+    "Codi comarca": 7,
+    "Nom comarca": "Bages"
+  },
+  {
+    "Codi": 250680,
+    "Nom": "Castellnou de Seana",
+    "Codi comarca": 27,
+    "Nom comarca": "Pla d'Urgell"
+  },
+  {
+    "Codi": 170470,
+    "Nom": "Castelló d'Empúries",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 250693,
+    "Nom": "Castelló de Farfanya",
+    "Codi comarca": 23,
+    "Nom comarca": "Noguera"
+  },
+  {
+    "Codi": 80636,
+    "Nom": "Castellolí",
+    "Codi comarca": 6,
+    "Nom comarca": "Anoia"
+  },
+  {
+    "Codi": 250707,
+    "Nom": "Castellserà",
+    "Codi comarca": 38,
+    "Nom comarca": "Urgell"
+  },
+  {
+    "Codi": 80641,
+    "Nom": "Castellterçol",
+    "Codi comarca": 42,
+    "Nom comarca": "Moianès"
+  },
+  {
+    "Codi": 430424,
+    "Nom": "Castellvell del Camp",
+    "Codi comarca": 8,
+    "Nom comarca": "Baix Camp"
+  },
+  {
+    "Codi": 80654,
+    "Nom": "Castellví de la Marca",
+    "Codi comarca": 3,
+    "Nom comarca": "Alt Penedès"
+  },
+  {
+    "Codi": 80667,
+    "Nom": "Castellví de Rosanes",
+    "Codi comarca": 11,
+    "Nom comarca": "Baix Llobregat"
+  },
+  {
+    "Codi": 430430,
+    "Nom": "Catllar, el",
+    "Codi comarca": 36,
+    "Nom comarca": "Tarragonès"
+  },
+  {
+    "Codi": 250714,
+    "Nom": "Cava",
+    "Codi comarca": 4,
+    "Nom comarca": "Alt Urgell"
+  },
+  {
+    "Codi": 171899,
+    "Nom": "Cellera de Ter, la",
+    "Codi comarca": 34,
+    "Nom comarca": "Selva"
+  },
+  {
+    "Codi": 170499,
+    "Nom": "Celrà",
+    "Codi comarca": 20,
+    "Nom comarca": "Gironès"
+  },
+  {
+    "Codi": 80673,
+    "Nom": "Centelles",
+    "Codi comarca": 24,
+    "Nom comarca": "Osona"
+  },
+  {
+    "Codi": 82687,
+    "Nom": "Cercs",
+    "Codi comarca": 14,
+    "Nom comarca": "Berguedà"
+  },
+  {
+    "Codi": 82665,
+    "Nom": "Cerdanyola del Vallès",
+    "Codi comarca": 40,
+    "Nom comarca": "Vallès Occidental"
+  },
+  {
+    "Codi": 80689,
+    "Nom": "Cervelló",
+    "Codi comarca": 11,
+    "Nom comarca": "Baix Llobregat"
+  },
+  {
+    "Codi": 250729,
+    "Nom": "Cervera",
+    "Codi comarca": 32,
+    "Nom comarca": "Segarra"
+  },
+  {
+    "Codi": 250735,
+    "Nom": "Cervià de les Garrigues",
+    "Codi comarca": 18,
+    "Nom comarca": "Garrigues"
+  },
+  {
+    "Codi": 170502,
+    "Nom": "Cervià de Ter",
+    "Codi comarca": 20,
+    "Nom comarca": "Gironès"
+  },
+  {
+    "Codi": 170519,
+    "Nom": "Cistella",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 250740,
+    "Nom": "Ciutadilla",
+    "Codi comarca": 38,
+    "Nom comarca": "Urgell"
+  },
+  {
+    "Codi": 250753,
+    "Nom": "Clariana de Cardener",
+    "Codi comarca": 35,
+    "Nom comarca": "Solsonès"
+  },
+  {
+    "Codi": 250766,
+    "Nom": "Cogul, el",
+    "Codi comarca": 18,
+    "Nom comarca": "Garrigues"
+  },
+  {
+    "Codi": 170545,
+    "Nom": "Colera",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 250772,
+    "Nom": "Coll de Nargó",
+    "Codi comarca": 4,
+    "Nom comarca": "Alt Urgell"
+  },
+  {
+    "Codi": 80692,
+    "Nom": "Collbató",
+    "Codi comarca": 11,
+    "Nom comarca": "Baix Llobregat"
+  },
+  {
+    "Codi": 430458,
+    "Nom": "Colldejou",
+    "Codi comarca": 8,
+    "Nom comarca": "Baix Camp"
+  },
+  {
+    "Codi": 80706,
+    "Nom": "Collsuspina",
+    "Codi comarca": 42,
+    "Nom comarca": "Moianès"
+  },
+  {
+    "Codi": 170558,
+    "Nom": "Colomers",
+    "Codi comarca": 10,
+    "Nom comarca": "Baix Empordà"
+  },
+  {
+    "Codi": 251636,
+    "Nom": "Coma i la Pedra, la",
+    "Codi comarca": 35,
+    "Nom comarca": "Solsonès"
+  },
+  {
+    "Codi": 251615,
+    "Nom": "Conca de Dalt",
+    "Codi comarca": 25,
+    "Nom comarca": "Pallars Jussà"
+  },
+  {
+    "Codi": 430461,
+    "Nom": "Conesa",
+    "Codi comarca": 16,
+    "Nom comarca": "Conca de Barberà"
+  },
+  {
+    "Codi": 430477,
+    "Nom": "Constantí",
+    "Codi comarca": 36,
+    "Nom comarca": "Tarragonès"
+  },
+  {
+    "Codi": 80713,
+    "Nom": "Copons",
+    "Codi comarca": 6,
+    "Nom comarca": "Anoia"
+  },
+  {
+    "Codi": 430483,
+    "Nom": "Corbera d'Ebre",
+    "Codi comarca": 37,
+    "Nom comarca": "Terra Alta"
+  },
+  {
+    "Codi": 80728,
+    "Nom": "Corbera de Llobregat",
+    "Codi comarca": 11,
+    "Nom comarca": "Baix Llobregat"
+  },
+  {
+    "Codi": 250788,
+    "Nom": "Corbins",
+    "Codi comarca": 33,
+    "Nom comarca": "Segrià"
+  },
+  {
+    "Codi": 170577,
+    "Nom": "Corçà",
+    "Codi comarca": 10,
+    "Nom comarca": "Baix Empordà"
+  },
+  {
+    "Codi": 80734,
+    "Nom": "Cornellà de Llobregat",
+    "Codi comarca": 11,
+    "Nom comarca": "Baix Llobregat"
+  },
+  {
+    "Codi": 170561,
+    "Nom": "Cornellà del Terri",
+    "Codi comarca": 28,
+    "Nom comarca": "Pla de l'Estany"
+  },
+  {
+    "Codi": 430496,
+    "Nom": "Cornudella de Montsant",
+    "Codi comarca": 29,
+    "Nom comarca": "Priorat"
+  },
+  {
+    "Codi": 430509,
+    "Nom": "Creixell",
+    "Codi comarca": 36,
+    "Nom comarca": "Tarragonès"
+  },
+  {
+    "Codi": 170583,
+    "Nom": "Crespià",
+    "Codi comarca": 28,
+    "Nom comarca": "Pla de l'Estany"
+  },
+  {
+    "Codi": 179011,
+    "Nom": "Cruïlles, Monells i Sant Sadurní de l'Heura",
+    "Codi comarca": 10,
+    "Nom comarca": "Baix Empordà"
+  },
+  {
+    "Codi": 80749,
+    "Nom": "Cubelles",
+    "Codi comarca": 17,
+    "Nom comarca": "Garraf"
+  },
+  {
+    "Codi": 250791,
+    "Nom": "Cubells",
+    "Codi comarca": 23,
+    "Nom comarca": "Noguera"
+  },
+  {
+    "Codi": 430516,
+    "Nom": "Cunit",
+    "Codi comarca": 12,
+    "Nom comarca": "Baix Penedès"
+  },
+  {
+    "Codi": 170600,
+    "Nom": "Darnius",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 170617,
+    "Nom": "Das",
+    "Codi comarca": 15,
+    "Nom comarca": "Cerdanya"
+  },
+  {
+    "Codi": 439018,
+    "Nom": "Deltebre",
+    "Codi comarca": 9,
+    "Nom comarca": "Baix Ebre"
+  },
+  {
+    "Codi": 80752,
+    "Nom": "Dosrius",
+    "Codi comarca": 21,
+    "Nom comarca": "Maresme"
+  },
+  {
+    "Codi": 430537,
+    "Nom": "Duesaigües",
+    "Codi comarca": 8,
+    "Nom comarca": "Baix Camp"
+  },
+  {
+    "Codi": 170622,
+    "Nom": "Escala, l'",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 80765,
+    "Nom": "Esparreguera",
+    "Codi comarca": 11,
+    "Nom comarca": "Baix Llobregat"
+  },
+  {
+    "Codi": 170638,
+    "Nom": "Espinelves",
+    "Codi comarca": 24,
+    "Nom comarca": "Osona"
+  },
+  {
+    "Codi": 250812,
+    "Nom": "Espluga Calba, l'",
+    "Codi comarca": 18,
+    "Nom comarca": "Garrigues"
+  },
+  {
+    "Codi": 430542,
+    "Nom": "Espluga de Francolí, l'",
+    "Codi comarca": 16,
+    "Nom comarca": "Conca de Barberà"
+  },
+  {
+    "Codi": 80771,
+    "Nom": "Esplugues de Llobregat",
+    "Codi comarca": 11,
+    "Nom comarca": "Baix Llobregat"
+  },
+  {
+    "Codi": 170643,
+    "Nom": "Espolla",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 170656,
+    "Nom": "Esponellà",
+    "Codi comarca": 28,
+    "Nom comarca": "Pla de l'Estany"
+  },
+  {
+    "Codi": 250827,
+    "Nom": "Espot",
+    "Codi comarca": 26,
+    "Nom comarca": "Pallars Sobirà"
+  },
+  {
+    "Codi": 80787,
+    "Nom": "Espunyola, l'",
+    "Codi comarca": 14,
+    "Nom comarca": "Berguedà"
+  },
+  {
+    "Codi": 82541,
+    "Nom": "Esquirol, l'",
+    "Codi comarca": 24,
+    "Nom comarca": "Osona"
+  },
+  {
+    "Codi": 250886,
+    "Nom": "Estamariu",
+    "Codi comarca": 4,
+    "Nom comarca": "Alt Urgell"
+  },
+  {
+    "Codi": 80790,
+    "Nom": "Estany, l'",
+    "Codi comarca": 42,
+    "Nom comarca": "Moianès"
+  },
+  {
+    "Codi": 250851,
+    "Nom": "Estaràs",
+    "Codi comarca": 32,
+    "Nom comarca": "Segarra"
+  },
+  {
+    "Codi": 250864,
+    "Nom": "Esterri d'Àneu",
+    "Codi comarca": 26,
+    "Nom comarca": "Pallars Sobirà"
+  },
+  {
+    "Codi": 250870,
+    "Nom": "Esterri de Cardós",
+    "Codi comarca": 26,
+    "Nom comarca": "Pallars Sobirà"
+  },
+  {
+    "Codi": 430555,
+    "Nom": "Falset",
+    "Codi comarca": 29,
+    "Nom comarca": "Priorat"
+  },
+  {
+    "Codi": 170059,
+    "Nom": "Far d'Empordà, el",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 250899,
+    "Nom": "Farrera",
+    "Codi comarca": 26,
+    "Nom comarca": "Pallars Sobirà"
+  },
+  {
+    "Codi": 430568,
+    "Nom": "Fatarella, la",
+    "Codi comarca": 37,
+    "Nom comarca": "Terra Alta"
+  },
+  {
+    "Codi": 430574,
+    "Nom": "Febró, la",
+    "Codi comarca": 8,
+    "Nom comarca": "Baix Camp"
+  },
+  {
+    "Codi": 81347,
+    "Nom": "Figaró-Montmany",
+    "Codi comarca": 41,
+    "Nom comarca": "Vallès Oriental"
+  },
+  {
+    "Codi": 80804,
+    "Nom": "Fígols",
+    "Codi comarca": 14,
+    "Nom comarca": "Berguedà"
+  },
+  {
+    "Codi": 259084,
+    "Nom": "Fígols i Alinyà",
+    "Codi comarca": 4,
+    "Nom comarca": "Alt Urgell"
+  },
+  {
+    "Codi": 430580,
+    "Nom": "Figuera, la",
+    "Codi comarca": 29,
+    "Nom comarca": "Priorat"
+  },
+  {
+    "Codi": 170669,
+    "Nom": "Figueres",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 430593,
+    "Nom": "Figuerola del Camp",
+    "Codi comarca": 1,
+    "Nom comarca": "Alt Camp"
+  },
+  {
+    "Codi": 170675,
+    "Nom": "Flaçà",
+    "Codi comarca": 20,
+    "Nom comarca": "Gironès"
+  },
+  {
+    "Codi": 430607,
+    "Nom": "Flix",
+    "Codi comarca": 30,
+    "Nom comarca": "Ribera d'Ebre"
+  },
+  {
+    "Codi": 250925,
+    "Nom": "Floresta, la",
+    "Codi comarca": 18,
+    "Nom comarca": "Garrigues"
+  },
+  {
+    "Codi": 80826,
+    "Nom": "Fogars de la Selva",
+    "Codi comarca": 34,
+    "Nom comarca": "Selva"
+  },
+  {
+    "Codi": 80811,
+    "Nom": "Fogars de Montclús",
+    "Codi comarca": 41,
+    "Nom comarca": "Vallès Oriental"
+  },
+  {
+    "Codi": 170681,
+    "Nom": "Foixà",
+    "Codi comarca": 10,
+    "Nom comarca": "Baix Empordà"
+  },
+  {
+    "Codi": 80832,
+    "Nom": "Folgueroles",
+    "Codi comarca": 24,
+    "Nom comarca": "Osona"
+  },
+  {
+    "Codi": 250931,
+    "Nom": "Fondarella",
+    "Codi comarca": 27,
+    "Nom comarca": "Pla d'Urgell"
+  },
+  {
+    "Codi": 80847,
+    "Nom": "Fonollosa",
+    "Codi comarca": 7,
+    "Nom comarca": "Bages"
+  },
+  {
+    "Codi": 80850,
+    "Nom": "Font-rubí",
+    "Codi comarca": 3,
+    "Nom comarca": "Alt Penedès"
+  },
+  {
+    "Codi": 170694,
+    "Nom": "Fontanals de Cerdanya",
+    "Codi comarca": 15,
+    "Nom comarca": "Cerdanya"
+  },
+  {
+    "Codi": 170708,
+    "Nom": "Fontanilles",
+    "Codi comarca": 10,
+    "Nom comarca": "Baix Empordà"
+  },
+  {
+    "Codi": 170715,
+    "Nom": "Fontcoberta",
+    "Codi comarca": 28,
+    "Nom comarca": "Pla de l'Estany"
+  },
+  {
+    "Codi": 250946,
+    "Nom": "Foradada",
+    "Codi comarca": 23,
+    "Nom comarca": "Noguera"
+  },
+  {
+    "Codi": 179026,
+    "Nom": "Forallac",
+    "Codi comarca": 10,
+    "Nom comarca": "Baix Empordà"
+  },
+  {
+    "Codi": 430614,
+    "Nom": "Forès",
+    "Codi comarca": 16,
+    "Nom comarca": "Conca de Barberà"
+  },
+  {
+    "Codi": 170736,
+    "Nom": "Fornells de la Selva",
+    "Codi comarca": 20,
+    "Nom comarca": "Gironès"
+  },
+  {
+    "Codi": 170741,
+    "Nom": "Fortià",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 80863,
+    "Nom": "Franqueses del Vallès, les",
+    "Codi comarca": 41,
+    "Nom comarca": "Vallès Oriental"
+  },
+  {
+    "Codi": 430629,
+    "Nom": "Freginals",
+    "Codi comarca": 22,
+    "Nom comarca": "Montsià"
+  },
+  {
+    "Codi": 250962,
+    "Nom": "Fuliola, la",
+    "Codi comarca": 38,
+    "Nom comarca": "Urgell"
+  },
+  {
+    "Codi": 250978,
+    "Nom": "Fulleda",
+    "Codi comarca": 18,
+    "Nom comarca": "Garrigues"
+  },
+  {
+    "Codi": 80902,
+    "Nom": "Gaià",
+    "Codi comarca": 7,
+    "Nom comarca": "Bages"
+  },
+  {
+    "Codi": 430635,
+    "Nom": "Galera, la",
+    "Codi comarca": 22,
+    "Nom comarca": "Montsià"
+  },
+  {
+    "Codi": 80879,
+    "Nom": "Gallifa",
+    "Codi comarca": 40,
+    "Nom comarca": "Vallès Occidental"
+  },
+  {
+    "Codi": 430640,
+    "Nom": "Gandesa",
+    "Codi comarca": 37,
+    "Nom comarca": "Terra Alta"
+  },
+  {
+    "Codi": 430653,
+    "Nom": "Garcia",
+    "Codi comarca": 30,
+    "Nom comarca": "Ribera d'Ebre"
+  },
+  {
+    "Codi": 430666,
+    "Nom": "Garidells, els",
+    "Codi comarca": 1,
+    "Nom comarca": "Alt Camp"
+  },
+  {
+    "Codi": 80885,
+    "Nom": "Garriga, la",
+    "Codi comarca": 41,
+    "Nom comarca": "Vallès Oriental"
+  },
+  {
+    "Codi": 170754,
+    "Nom": "Garrigàs",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 170767,
+    "Nom": "Garrigoles",
+    "Codi comarca": 10,
+    "Nom comarca": "Baix Empordà"
+  },
+  {
+    "Codi": 170773,
+    "Nom": "Garriguella",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 80898,
+    "Nom": "Gavà",
+    "Codi comarca": 11,
+    "Nom comarca": "Baix Llobregat"
+  },
+  {
+    "Codi": 250984,
+    "Nom": "Gavet de la Conca",
+    "Codi comarca": 25,
+    "Nom comarca": "Pallars Jussà"
+  },
+  {
+    "Codi": 80919,
+    "Nom": "Gelida",
+    "Codi comarca": 3,
+    "Nom comarca": "Alt Penedès"
+  },
+  {
+    "Codi": 170789,
+    "Nom": "Ger",
+    "Codi comarca": 15,
+    "Nom comarca": "Cerdanya"
+  },
+  {
+    "Codi": 259123,
+    "Nom": "Gimenells i el Pla de la Font",
+    "Codi comarca": 33,
+    "Nom comarca": "Segrià"
+  },
+  {
+    "Codi": 430672,
+    "Nom": "Ginestar",
+    "Codi comarca": 30,
+    "Nom comarca": "Ribera d'Ebre"
+  },
+  {
+    "Codi": 170792,
+    "Nom": "Girona",
+    "Codi comarca": 20,
+    "Nom comarca": "Gironès"
+  },
+  {
+    "Codi": 80924,
+    "Nom": "Gironella",
+    "Codi comarca": 14,
+    "Nom comarca": "Berguedà"
+  },
+  {
+    "Codi": 80930,
+    "Nom": "Gisclareny",
+    "Codi comarca": 14,
+    "Nom comarca": "Berguedà"
+  },
+  {
+    "Codi": 430688,
+    "Nom": "Godall",
+    "Codi comarca": 22,
+    "Nom comarca": "Montsià"
+  },
+  {
+    "Codi": 250997,
+    "Nom": "Golmés",
+    "Codi comarca": 27,
+    "Nom comarca": "Pla d'Urgell"
+  },
+  {
+    "Codi": 170806,
+    "Nom": "Gombrèn",
+    "Codi comarca": 31,
+    "Nom comarca": "Ripollès"
+  },
+  {
+    "Codi": 251001,
+    "Nom": "Gósol",
+    "Codi comarca": 14,
+    "Nom comarca": "Berguedà"
+  },
+  {
+    "Codi": 80945,
+    "Nom": "Granada, la",
+    "Codi comarca": 3,
+    "Nom comarca": "Alt Penedès"
+  },
+  {
+    "Codi": 251018,
+    "Nom": "Granadella, la",
+    "Codi comarca": 18,
+    "Nom comarca": "Garrigues"
+  },
+  {
+    "Codi": 80958,
+    "Nom": "Granera",
+    "Codi comarca": 42,
+    "Nom comarca": "Moianès"
+  },
+  {
+    "Codi": 251023,
+    "Nom": "Granja d'Escarp, la",
+    "Codi comarca": 33,
+    "Nom comarca": "Segrià"
+  },
+  {
+    "Codi": 80961,
+    "Nom": "Granollers",
+    "Codi comarca": 41,
+    "Nom comarca": "Vallès Oriental"
+  },
+  {
+    "Codi": 251039,
+    "Nom": "Granyanella",
+    "Codi comarca": 32,
+    "Nom comarca": "Segarra"
+  },
+  {
+    "Codi": 251057,
+    "Nom": "Granyena de les Garrigues",
+    "Codi comarca": 18,
+    "Nom comarca": "Garrigues"
+  },
+  {
+    "Codi": 251044,
+    "Nom": "Granyena de Segarra",
+    "Codi comarca": 32,
+    "Nom comarca": "Segarra"
+  },
+  {
+    "Codi": 430691,
+    "Nom": "Gratallops",
+    "Codi comarca": 29,
+    "Nom comarca": "Priorat"
+  },
+  {
+    "Codi": 80977,
+    "Nom": "Gualba",
+    "Codi comarca": 41,
+    "Nom comarca": "Vallès Oriental"
+  },
+  {
+    "Codi": 170813,
+    "Nom": "Gualta",
+    "Codi comarca": 10,
+    "Nom comarca": "Baix Empordà"
+  },
+  {
+    "Codi": 80996,
+    "Nom": "Guardiola de Berguedà",
+    "Codi comarca": 14,
+    "Nom comarca": "Berguedà"
+  },
+  {
+    "Codi": 430705,
+    "Nom": "Guiamets, els",
+    "Codi comarca": 29,
+    "Nom comarca": "Priorat"
+  },
+  {
+    "Codi": 170828,
+    "Nom": "Guils de Cerdanya",
+    "Codi comarca": 15,
+    "Nom comarca": "Cerdanya"
+  },
+  {
+    "Codi": 251095,
+    "Nom": "Guimerà",
+    "Codi comarca": 38,
+    "Nom comarca": "Urgell"
+  },
+  {
+    "Codi": 259031,
+    "Nom": "Guingueta d'Àneu, la",
+    "Codi comarca": 26,
+    "Nom comarca": "Pallars Sobirà"
+  },
+  {
+    "Codi": 251109,
+    "Nom": "Guissona",
+    "Codi comarca": 32,
+    "Nom comarca": "Segarra"
+  },
+  {
+    "Codi": 251116,
+    "Nom": "Guixers",
+    "Codi comarca": 35,
+    "Nom comarca": "Solsonès"
+  },
+  {
+    "Codi": 81000,
+    "Nom": "Gurb",
+    "Codi comarca": 24,
+    "Nom comarca": "Osona"
+  },
+  {
+    "Codi": 430712,
+    "Nom": "Horta de Sant Joan",
+    "Codi comarca": 37,
+    "Nom comarca": "Terra Alta"
+  },
+  {
+    "Codi": 81017,
+    "Nom": "Hospitalet de Llobregat, l'",
+    "Codi comarca": 13,
+    "Nom comarca": "Barcelonès"
+  },
+  {
+    "Codi": 81629,
+    "Nom": "Hostalets de Pierola, els",
+    "Codi comarca": 6,
+    "Nom comarca": "Anoia"
+  },
+  {
+    "Codi": 170834,
+    "Nom": "Hostalric",
+    "Codi comarca": 34,
+    "Nom comarca": "Selva"
+  },
+  {
+    "Codi": 81022,
+    "Nom": "Igualada",
+    "Codi comarca": 6,
+    "Nom comarca": "Anoia"
+  },
+  {
+    "Codi": 251155,
+    "Nom": "Isona i Conca Dellà",
+    "Codi comarca": 25,
+    "Nom comarca": "Pallars Jussà"
+  },
+  {
+    "Codi": 170849,
+    "Nom": "Isòvol",
+    "Codi comarca": 15,
+    "Nom comarca": "Cerdanya"
+  },
+  {
+    "Codi": 251137,
+    "Nom": "Ivars d'Urgell",
+    "Codi comarca": 27,
+    "Nom comarca": "Pla d'Urgell"
+  },
+  {
+    "Codi": 251121,
+    "Nom": "Ivars de Noguera",
+    "Codi comarca": 23,
+    "Nom comarca": "Noguera"
+  },
+  {
+    "Codi": 251142,
+    "Nom": "Ivorra",
+    "Codi comarca": 32,
+    "Nom comarca": "Segarra"
+  },
+  {
+    "Codi": 170852,
+    "Nom": "Jafre",
+    "Codi comarca": 10,
+    "Nom comarca": "Baix Empordà"
+  },
+  {
+    "Codi": 170865,
+    "Nom": "Jonquera, la",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 81038,
+    "Nom": "Jorba",
+    "Codi comarca": 6,
+    "Nom comarca": "Anoia"
+  },
+  {
+    "Codi": 259101,
+    "Nom": "Josa i Tuixén",
+    "Codi comarca": 4,
+    "Nom comarca": "Alt Urgell"
+  },
+  {
+    "Codi": 170871,
+    "Nom": "Juià",
+    "Codi comarca": 20,
+    "Nom comarca": "Gironès"
+  },
+  {
+    "Codi": 251180,
+    "Nom": "Juncosa",
+    "Codi comarca": 18,
+    "Nom comarca": "Garrigues"
+  },
+  {
+    "Codi": 251193,
+    "Nom": "Juneda",
+    "Codi comarca": 18,
+    "Nom comarca": "Garrigues"
+  },
+  {
+    "Codi": 251214,
+    "Nom": "Les",
+    "Codi comarca": 39,
+    "Nom comarca": "Aran"
+  },
+  {
+    "Codi": 251229,
+    "Nom": "Linyola",
+    "Codi comarca": 27,
+    "Nom comarca": "Pla d'Urgell"
+  },
+  {
+    "Codi": 81043,
+    "Nom": "Llacuna, la",
+    "Codi comarca": 6,
+    "Nom comarca": "Anoia"
+  },
+  {
+    "Codi": 170887,
+    "Nom": "Lladó",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 251235,
+    "Nom": "Lladorre",
+    "Codi comarca": 26,
+    "Nom comarca": "Pallars Sobirà"
+  },
+  {
+    "Codi": 251240,
+    "Nom": "Lladurs",
+    "Codi comarca": 35,
+    "Nom comarca": "Solsonès"
+  },
+  {
+    "Codi": 81056,
+    "Nom": "Llagosta, la",
+    "Codi comarca": 41,
+    "Nom comarca": "Vallès Oriental"
+  },
+  {
+    "Codi": 170890,
+    "Nom": "Llagostera",
+    "Codi comarca": 20,
+    "Nom comarca": "Gironès"
+  },
+  {
+    "Codi": 170904,
+    "Nom": "Llambilles",
+    "Codi comarca": 20,
+    "Nom comarca": "Gironès"
+  },
+  {
+    "Codi": 170911,
+    "Nom": "Llanars",
+    "Codi comarca": 31,
+    "Nom comarca": "Ripollès"
+  },
+  {
+    "Codi": 170926,
+    "Nom": "Llançà",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 251253,
+    "Nom": "Llardecans",
+    "Codi comarca": 33,
+    "Nom comarca": "Segrià"
+  },
+  {
+    "Codi": 251266,
+    "Nom": "Llavorsí",
+    "Codi comarca": 26,
+    "Nom comarca": "Pallars Sobirà"
+  },
+  {
+    "Codi": 251207,
+    "Nom": "Lleida",
+    "Codi comarca": 33,
+    "Nom comarca": "Segrià"
+  },
+  {
+    "Codi": 170932,
+    "Nom": "Llers",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 251272,
+    "Nom": "Lles de Cerdanya",
+    "Codi comarca": 15,
+    "Nom comarca": "Cerdanya"
+  },
+  {
+    "Codi": 81075,
+    "Nom": "Lliçà d'Amunt",
+    "Codi comarca": 41,
+    "Nom comarca": "Vallès Oriental"
+  },
+  {
+    "Codi": 81081,
+    "Nom": "Lliçà de Vall",
+    "Codi comarca": 41,
+    "Nom comarca": "Vallès Oriental"
+  },
+  {
+    "Codi": 251288,
+    "Nom": "Llimiana",
+    "Codi comarca": 25,
+    "Nom comarca": "Pallars Jussà"
+  },
+  {
+    "Codi": 81069,
+    "Nom": "Llinars del Vallès",
+    "Codi comarca": 41,
+    "Nom comarca": "Vallès Oriental"
+  },
+  {
+    "Codi": 170947,
+    "Nom": "Llívia",
+    "Codi comarca": 15,
+    "Nom comarca": "Cerdanya"
+  },
+  {
+    "Codi": 430727,
+    "Nom": "Lloar, el",
+    "Codi comarca": 29,
+    "Nom comarca": "Priorat"
+  },
+  {
+    "Codi": 251291,
+    "Nom": "Llobera",
+    "Codi comarca": 35,
+    "Nom comarca": "Solsonès"
+  },
+  {
+    "Codi": 430733,
+    "Nom": "Llorac",
+    "Codi comarca": 16,
+    "Nom comarca": "Conca de Barberà"
+  },
+  {
+    "Codi": 430748,
+    "Nom": "Llorenç del Penedès",
+    "Codi comarca": 12,
+    "Nom comarca": "Baix Penedès"
+  },
+  {
+    "Codi": 170950,
+    "Nom": "Lloret de Mar",
+    "Codi comarca": 34,
+    "Nom comarca": "Selva"
+  },
+  {
+    "Codi": 170963,
+    "Nom": "Llosses, les",
+    "Codi comarca": 31,
+    "Nom comarca": "Ripollès"
+  },
+  {
+    "Codi": 81094,
+    "Nom": "Lluçà",
+    "Codi comarca": 43,
+    "Nom comarca": "Lluçanès"
+  },
+  {
+    "Codi": 171024,
+    "Nom": "Maçanet de Cabrenys",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 171030,
+    "Nom": "Maçanet de la Selva",
+    "Codi comarca": 34,
+    "Nom comarca": "Selva"
+  },
+  {
+    "Codi": 170979,
+    "Nom": "Madremanya",
+    "Codi comarca": 20,
+    "Nom comarca": "Gironès"
+  },
+  {
+    "Codi": 170985,
+    "Nom": "Maià de Montcal",
+    "Codi comarca": 19,
+    "Nom comarca": "Garrotxa"
+  },
+  {
+    "Codi": 251333,
+    "Nom": "Maials",
+    "Codi comarca": 33,
+    "Nom comarca": "Segrià"
+  },
+  {
+    "Codi": 251305,
+    "Nom": "Maldà",
+    "Codi comarca": 38,
+    "Nom comarca": "Urgell"
+  },
+  {
+    "Codi": 81108,
+    "Nom": "Malgrat de Mar",
+    "Codi comarca": 21,
+    "Nom comarca": "Maresme"
+  },
+  {
+    "Codi": 81115,
+    "Nom": "Malla",
+    "Codi comarca": 24,
+    "Nom comarca": "Osona"
+  },
+  {
+    "Codi": 81120,
+    "Nom": "Manlleu",
+    "Codi comarca": 24,
+    "Nom comarca": "Osona"
+  },
+  {
+    "Codi": 81136,
+    "Nom": "Manresa",
+    "Codi comarca": 7,
+    "Nom comarca": "Bages"
+  },
+  {
+    "Codi": 430764,
+    "Nom": "Marçà",
+    "Codi comarca": 29,
+    "Nom comarca": "Priorat"
+  },
+  {
+    "Codi": 430751,
+    "Nom": "Margalef",
+    "Codi comarca": 29,
+    "Nom comarca": "Priorat"
+  },
+  {
+    "Codi": 82423,
+    "Nom": "Marganell",
+    "Codi comarca": 7,
+    "Nom comarca": "Bages"
+  },
+  {
+    "Codi": 81141,
+    "Nom": "Martorell",
+    "Codi comarca": 11,
+    "Nom comarca": "Baix Llobregat"
+  },
+  {
+    "Codi": 81154,
+    "Nom": "Martorelles",
+    "Codi comarca": 41,
+    "Nom comarca": "Vallès Oriental"
+  },
+  {
+    "Codi": 430770,
+    "Nom": "Mas de Barberans",
+    "Codi comarca": 22,
+    "Nom comarca": "Montsià"
+  },
+  {
+    "Codi": 171002,
+    "Nom": "Masarac i Vilarnadal",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 430786,
+    "Nom": "Masdenverge",
+    "Codi comarca": 22,
+    "Nom comarca": "Montsià"
+  },
+  {
+    "Codi": 81167,
+    "Nom": "Masies de Roda, les",
+    "Codi comarca": 24,
+    "Nom comarca": "Osona"
+  },
+  {
+    "Codi": 81173,
+    "Nom": "Masies de Voltregà, les",
+    "Codi comarca": 24,
+    "Nom comarca": "Osona"
+  },
+  {
+    "Codi": 430799,
+    "Nom": "Masllorenç",
+    "Codi comarca": 12,
+    "Nom comarca": "Baix Penedès"
+  },
+  {
+    "Codi": 81189,
+    "Nom": "Masnou, el",
+    "Codi comarca": 21,
+    "Nom comarca": "Maresme"
+  },
+  {
+    "Codi": 430803,
+    "Nom": "Masó, la",
+    "Codi comarca": 1,
+    "Nom comarca": "Alt Camp"
+  },
+  {
+    "Codi": 430810,
+    "Nom": "Maspujols",
+    "Codi comarca": 8,
+    "Nom comarca": "Baix Camp"
+  },
+  {
+    "Codi": 81192,
+    "Nom": "Masquefa",
+    "Codi comarca": 6,
+    "Nom comarca": "Anoia"
+  },
+  {
+    "Codi": 430825,
+    "Nom": "Masroig, el",
+    "Codi comarca": 29,
+    "Nom comarca": "Priorat"
+  },
+  {
+    "Codi": 251312,
+    "Nom": "Massalcoreig",
+    "Codi comarca": 33,
+    "Nom comarca": "Segrià"
+  },
+  {
+    "Codi": 171019,
+    "Nom": "Massanes",
+    "Codi comarca": 34,
+    "Nom comarca": "Selva"
+  },
+  {
+    "Codi": 251327,
+    "Nom": "Massoteres",
+    "Codi comarca": 32,
+    "Nom comarca": "Segarra"
+  },
+  {
+    "Codi": 81206,
+    "Nom": "Matadepera",
+    "Codi comarca": 40,
+    "Nom comarca": "Vallès Occidental"
+  },
+  {
+    "Codi": 81213,
+    "Nom": "Mataró",
+    "Codi comarca": 21,
+    "Nom comarca": "Maresme"
+  },
+  {
+    "Codi": 81228,
+    "Nom": "Mediona",
+    "Codi comarca": 3,
+    "Nom comarca": "Alt Penedès"
+  },
+  {
+    "Codi": 251348,
+    "Nom": "Menàrguens",
+    "Codi comarca": 23,
+    "Nom comarca": "Noguera"
+  },
+  {
+    "Codi": 170998,
+    "Nom": "Meranges",
+    "Codi comarca": 15,
+    "Nom comarca": "Cerdanya"
+  },
+  {
+    "Codi": 171058,
+    "Nom": "Mieres",
+    "Codi comarca": 19,
+    "Nom comarca": "Garrotxa"
+  },
+  {
+    "Codi": 430831,
+    "Nom": "Milà, el",
+    "Codi comarca": 1,
+    "Nom comarca": "Alt Camp"
+  },
+  {
+    "Codi": 251351,
+    "Nom": "Miralcamp",
+    "Codi comarca": 27,
+    "Nom comarca": "Pla d'Urgell"
+  },
+  {
+    "Codi": 430846,
+    "Nom": "Miravet",
+    "Codi comarca": 30,
+    "Nom comarca": "Ribera d'Ebre"
+  },
+  {
+    "Codi": 81385,
+    "Nom": "Moià",
+    "Codi comarca": 42,
+    "Nom comarca": "Moianès"
+  },
+  {
+    "Codi": 430859,
+    "Nom": "Molar, el",
+    "Codi comarca": 29,
+    "Nom comarca": "Priorat"
+  },
+  {
+    "Codi": 81234,
+    "Nom": "Molins de Rei",
+    "Codi comarca": 11,
+    "Nom comarca": "Baix Llobregat"
+  },
+  {
+    "Codi": 251370,
+    "Nom": "Mollerussa",
+    "Codi comarca": 27,
+    "Nom comarca": "Pla d'Urgell"
+  },
+  {
+    "Codi": 171061,
+    "Nom": "Mollet de Peralada",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 81249,
+    "Nom": "Mollet del Vallès",
+    "Codi comarca": 41,
+    "Nom comarca": "Vallès Oriental"
+  },
+  {
+    "Codi": 171077,
+    "Nom": "Molló",
+    "Codi comarca": 31,
+    "Nom comarca": "Ripollès"
+  },
+  {
+    "Codi": 251364,
+    "Nom": "Molsosa, la",
+    "Codi comarca": 35,
+    "Nom comarca": "Solsonès"
+  },
+  {
+    "Codi": 81287,
+    "Nom": "Monistrol de Calders",
+    "Codi comarca": 42,
+    "Nom comarca": "Moianès"
+  },
+  {
+    "Codi": 81271,
+    "Nom": "Monistrol de Montserrat",
+    "Codi comarca": 7,
+    "Nom comarca": "Bages"
+  },
+  {
+    "Codi": 430918,
+    "Nom": "Mont-ral",
+    "Codi comarca": 1,
+    "Nom comarca": "Alt Camp"
+  },
+  {
+    "Codi": 171100,
+    "Nom": "Mont-ras",
+    "Codi comarca": 10,
+    "Nom comarca": "Baix Empordà"
+  },
+  {
+    "Codi": 430923,
+    "Nom": "Mont-roig del Camp",
+    "Codi comarca": 8,
+    "Nom comarca": "Baix Camp"
+  },
+  {
+    "Codi": 171096,
+    "Nom": "Montagut i Oix",
+    "Codi comarca": 19,
+    "Nom comarca": "Garrotxa"
+  },
+  {
+    "Codi": 430862,
+    "Nom": "Montblanc",
+    "Codi comarca": 16,
+    "Nom comarca": "Conca de Barberà"
+  },
+  {
+    "Codi": 430884,
+    "Nom": "Montbrió del Camp",
+    "Codi comarca": 8,
+    "Nom comarca": "Baix Camp"
+  },
+  {
+    "Codi": 81252,
+    "Nom": "Montcada i Reixac",
+    "Codi comarca": 40,
+    "Nom comarca": "Vallès Occidental"
+  },
+  {
+    "Codi": 81304,
+    "Nom": "Montclar",
+    "Codi comarca": 14,
+    "Nom comarca": "Berguedà"
+  },
+  {
+    "Codi": 251399,
+    "Nom": "Montellà i Martinet",
+    "Codi comarca": 15,
+    "Nom comarca": "Cerdanya"
+  },
+  {
+    "Codi": 81311,
+    "Nom": "Montesquiu",
+    "Codi comarca": 24,
+    "Nom comarca": "Osona"
+  },
+  {
+    "Codi": 251403,
+    "Nom": "Montferrer i Castellbò",
+    "Codi comarca": 4,
+    "Nom comarca": "Alt Urgell"
+  },
+  {
+    "Codi": 430897,
+    "Nom": "Montferri",
+    "Codi comarca": 1,
+    "Nom comarca": "Alt Camp"
+  },
+  {
+    "Codi": 251386,
+    "Nom": "Montgai",
+    "Codi comarca": 23,
+    "Nom comarca": "Noguera"
+  },
+  {
+    "Codi": 81265,
+    "Nom": "Montgat",
+    "Codi comarca": 21,
+    "Nom comarca": "Maresme"
+  },
+  {
+    "Codi": 81326,
+    "Nom": "Montmajor",
+    "Codi comarca": 14,
+    "Nom comarca": "Berguedà"
+  },
+  {
+    "Codi": 81332,
+    "Nom": "Montmaneu",
+    "Codi comarca": 6,
+    "Nom comarca": "Anoia"
+  },
+  {
+    "Codi": 430901,
+    "Nom": "Montmell, el",
+    "Codi comarca": 12,
+    "Nom comarca": "Baix Penedès"
+  },
+  {
+    "Codi": 81350,
+    "Nom": "Montmeló",
+    "Codi comarca": 41,
+    "Nom comarca": "Vallès Oriental"
+  },
+  {
+    "Codi": 251425,
+    "Nom": "Montoliu de Lleida",
+    "Codi comarca": 33,
+    "Nom comarca": "Segrià"
+  },
+  {
+    "Codi": 251410,
+    "Nom": "Montoliu de Segarra",
+    "Codi comarca": 32,
+    "Nom comarca": "Segarra"
+  },
+  {
+    "Codi": 251431,
+    "Nom": "Montornès de Segarra",
+    "Codi comarca": 32,
+    "Nom comarca": "Segarra"
+  },
+  {
+    "Codi": 81363,
+    "Nom": "Montornès del Vallès",
+    "Codi comarca": 41,
+    "Nom comarca": "Vallès Oriental"
+  },
+  {
+    "Codi": 81379,
+    "Nom": "Montseny",
+    "Codi comarca": 41,
+    "Nom comarca": "Vallès Oriental"
+  },
+  {
+    "Codi": 430939,
+    "Nom": "Móra d'Ebre",
+    "Codi comarca": 30,
+    "Nom comarca": "Ribera d'Ebre"
+  },
+  {
+    "Codi": 430944,
+    "Nom": "Móra la Nova",
+    "Codi comarca": 30,
+    "Nom comarca": "Ribera d'Ebre"
+  },
+  {
+    "Codi": 430957,
+    "Nom": "Morell, el",
+    "Codi comarca": 36,
+    "Nom comarca": "Tarragonès"
+  },
+  {
+    "Codi": 430960,
+    "Nom": "Morera de Montsant, la",
+    "Codi comarca": 29,
+    "Nom comarca": "Priorat"
+  },
+  {
+    "Codi": 81290,
+    "Nom": "Muntanyola",
+    "Codi comarca": 24,
+    "Nom comarca": "Osona"
+  },
+  {
+    "Codi": 81398,
+    "Nom": "Mura",
+    "Codi comarca": 7,
+    "Nom comarca": "Bages"
+  },
+  {
+    "Codi": 251459,
+    "Nom": "Nalec",
+    "Codi comarca": 38,
+    "Nom comarca": "Urgell"
+  },
+  {
+    "Codi": 250254,
+    "Nom": "Naut Aran",
+    "Codi comarca": 39,
+    "Nom comarca": "Aran"
+  },
+  {
+    "Codi": 81402,
+    "Nom": "Navarcles",
+    "Codi comarca": 7,
+    "Nom comarca": "Bages"
+  },
+  {
+    "Codi": 81419,
+    "Nom": "Navàs",
+    "Codi comarca": 7,
+    "Nom comarca": "Bages"
+  },
+  {
+    "Codi": 171117,
+    "Nom": "Navata",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 251462,
+    "Nom": "Navès",
+    "Codi comarca": 35,
+    "Nom comarca": "Solsonès"
+  },
+  {
+    "Codi": 81424,
+    "Nom": "Nou de Berguedà, la",
+    "Codi comarca": 14,
+    "Nom comarca": "Berguedà"
+  },
+  {
+    "Codi": 430976,
+    "Nom": "Nou de Gaià, la",
+    "Codi comarca": 36,
+    "Nom comarca": "Tarragonès"
+  },
+  {
+    "Codi": 430982,
+    "Nom": "Nulles",
+    "Codi comarca": 1,
+    "Nom comarca": "Alt Camp"
+  },
+  {
+    "Codi": 251484,
+    "Nom": "Odèn",
+    "Codi comarca": 35,
+    "Nom comarca": "Solsonès"
+  },
+  {
+    "Codi": 81430,
+    "Nom": "Òdena",
+    "Codi comarca": 6,
+    "Nom comarca": "Anoia"
+  },
+  {
+    "Codi": 171122,
+    "Nom": "Ogassa",
+    "Codi comarca": 31,
+    "Nom comarca": "Ripollès"
+  },
+  {
+    "Codi": 81458,
+    "Nom": "Olèrdola",
+    "Codi comarca": 3,
+    "Nom comarca": "Alt Penedès"
+  },
+  {
+    "Codi": 81461,
+    "Nom": "Olesa de Bonesvalls",
+    "Codi comarca": 3,
+    "Nom comarca": "Alt Penedès"
+  },
+  {
+    "Codi": 81477,
+    "Nom": "Olesa de Montserrat",
+    "Codi comarca": 11,
+    "Nom comarca": "Baix Llobregat"
+  },
+  {
+    "Codi": 251497,
+    "Nom": "Oliana",
+    "Codi comarca": 4,
+    "Nom comarca": "Alt Urgell"
+  },
+  {
+    "Codi": 251500,
+    "Nom": "Oliola",
+    "Codi comarca": 23,
+    "Nom comarca": "Noguera"
+  },
+  {
+    "Codi": 251517,
+    "Nom": "Olius",
+    "Codi comarca": 35,
+    "Nom comarca": "Solsonès"
+  },
+  {
+    "Codi": 81483,
+    "Nom": "Olivella",
+    "Codi comarca": 17,
+    "Nom comarca": "Garraf"
+  },
+  {
+    "Codi": 81496,
+    "Nom": "Olost",
+    "Codi comarca": 43,
+    "Nom comarca": "Lluçanès"
+  },
+  {
+    "Codi": 171143,
+    "Nom": "Olot",
+    "Codi comarca": 19,
+    "Nom comarca": "Garrotxa"
+  },
+  {
+    "Codi": 251522,
+    "Nom": "Oluges, les",
+    "Codi comarca": 32,
+    "Nom comarca": "Segarra"
+  },
+  {
+    "Codi": 81445,
+    "Nom": "Olvan",
+    "Codi comarca": 14,
+    "Nom comarca": "Berguedà"
+  },
+  {
+    "Codi": 251538,
+    "Nom": "Omellons, els",
+    "Codi comarca": 18,
+    "Nom comarca": "Garrigues"
+  },
+  {
+    "Codi": 251543,
+    "Nom": "Omells de na Gaia, els",
+    "Codi comarca": 38,
+    "Nom comarca": "Urgell"
+  },
+  {
+    "Codi": 171156,
+    "Nom": "Ordis",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 251556,
+    "Nom": "Organyà",
+    "Codi comarca": 4,
+    "Nom comarca": "Alt Urgell"
+  },
+  {
+    "Codi": 81509,
+    "Nom": "Orís",
+    "Codi comarca": 24,
+    "Nom comarca": "Osona"
+  },
+  {
+    "Codi": 81516,
+    "Nom": "Oristà",
+    "Codi comarca": 43,
+    "Nom comarca": "Lluçanès"
+  },
+  {
+    "Codi": 81521,
+    "Nom": "Orpí",
+    "Codi comarca": 6,
+    "Nom comarca": "Anoia"
+  },
+  {
+    "Codi": 81537,
+    "Nom": "Òrrius",
+    "Codi comarca": 21,
+    "Nom comarca": "Maresme"
+  },
+  {
+    "Codi": 251569,
+    "Nom": "Os de Balaguer",
+    "Codi comarca": 23,
+    "Nom comarca": "Noguera"
+  },
+  {
+    "Codi": 171169,
+    "Nom": "Osor",
+    "Codi comarca": 34,
+    "Nom comarca": "Selva"
+  },
+  {
+    "Codi": 251575,
+    "Nom": "Ossó de Sió",
+    "Codi comarca": 38,
+    "Nom comarca": "Urgell"
+  },
+  {
+    "Codi": 81542,
+    "Nom": "Pacs del Penedès",
+    "Codi comarca": 3,
+    "Nom comarca": "Alt Penedès"
+  },
+  {
+    "Codi": 81555,
+    "Nom": "Palafolls",
+    "Codi comarca": 21,
+    "Nom comarca": "Maresme"
+  },
+  {
+    "Codi": 171175,
+    "Nom": "Palafrugell",
+    "Codi comarca": 10,
+    "Nom comarca": "Baix Empordà"
+  },
+  {
+    "Codi": 171181,
+    "Nom": "Palamós",
+    "Codi comarca": 10,
+    "Nom comarca": "Baix Empordà"
+  },
+  {
+    "Codi": 251581,
+    "Nom": "Palau d'Anglesola, el",
+    "Codi comarca": 27,
+    "Nom comarca": "Pla d'Urgell"
+  },
+  {
+    "Codi": 171194,
+    "Nom": "Palau de Santa Eulàlia",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 171215,
+    "Nom": "Palau-sator",
+    "Codi comarca": 10,
+    "Nom comarca": "Baix Empordà"
+  },
+  {
+    "Codi": 171208,
+    "Nom": "Palau-saverdera",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 81568,
+    "Nom": "Palau-solità i Plegamans",
+    "Codi comarca": 40,
+    "Nom comarca": "Vallès Occidental"
+  },
+  {
+    "Codi": 431009,
+    "Nom": "Pallaresos, els",
+    "Codi comarca": 36,
+    "Nom comarca": "Tarragonès"
+  },
+  {
+    "Codi": 81574,
+    "Nom": "Pallejà",
+    "Codi comarca": 11,
+    "Nom comarca": "Baix Llobregat"
+  },
+  {
+    "Codi": 430995,
+    "Nom": "Palma d'Ebre, la",
+    "Codi comarca": 30,
+    "Nom comarca": "Ribera d'Ebre"
+  },
+  {
+    "Codi": 89058,
+    "Nom": "Palma de Cervelló, la",
+    "Codi comarca": 11,
+    "Nom comarca": "Baix Llobregat"
+  },
+  {
+    "Codi": 171236,
+    "Nom": "Palol de Revardit",
+    "Codi comarca": 28,
+    "Nom comarca": "Pla de l'Estany"
+  },
+  {
+    "Codi": 171241,
+    "Nom": "Pals",
+    "Codi comarca": 10,
+    "Nom comarca": "Baix Empordà"
+  },
+  {
+    "Codi": 81580,
+    "Nom": "Papiol, el",
+    "Codi comarca": 11,
+    "Nom comarca": "Baix Llobregat"
+  },
+  {
+    "Codi": 171254,
+    "Nom": "Pardines",
+    "Codi comarca": 31,
+    "Nom comarca": "Ripollès"
+  },
+  {
+    "Codi": 81593,
+    "Nom": "Parets del Vallès",
+    "Codi comarca": 41,
+    "Nom comarca": "Vallès Oriental"
+  },
+  {
+    "Codi": 171267,
+    "Nom": "Parlavà",
+    "Codi comarca": 10,
+    "Nom comarca": "Baix Empordà"
+  },
+  {
+    "Codi": 431016,
+    "Nom": "Passanant i Belltall",
+    "Codi comarca": 16,
+    "Nom comarca": "Conca de Barberà"
+  },
+  {
+    "Codi": 171289,
+    "Nom": "Pau",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 431021,
+    "Nom": "Paüls",
+    "Codi comarca": 9,
+    "Nom comarca": "Baix Ebre"
+  },
+  {
+    "Codi": 171292,
+    "Nom": "Pedret i Marzà",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 251641,
+    "Nom": "Penelles",
+    "Codi comarca": 23,
+    "Nom comarca": "Noguera"
+  },
+  {
+    "Codi": 171306,
+    "Nom": "Pera, la",
+    "Codi comarca": 10,
+    "Nom comarca": "Baix Empordà"
+  },
+  {
+    "Codi": 81607,
+    "Nom": "Perafita",
+    "Codi comarca": 43,
+    "Nom comarca": "Lluçanès"
+  },
+  {
+    "Codi": 431037,
+    "Nom": "Perafort",
+    "Codi comarca": 36,
+    "Nom comarca": "Tarragonès"
+  },
+  {
+    "Codi": 171328,
+    "Nom": "Peralada",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 251654,
+    "Nom": "Peramola",
+    "Codi comarca": 4,
+    "Nom comarca": "Alt Urgell"
+  },
+  {
+    "Codi": 431042,
+    "Nom": "Perelló, el",
+    "Codi comarca": 9,
+    "Nom comarca": "Baix Ebre"
+  },
+  {
+    "Codi": 81614,
+    "Nom": "Piera",
+    "Codi comarca": 6,
+    "Nom comarca": "Anoia"
+  },
+  {
+    "Codi": 431055,
+    "Nom": "Piles, les",
+    "Codi comarca": 16,
+    "Nom comarca": "Conca de Barberà"
+  },
+  {
+    "Codi": 81635,
+    "Nom": "Pineda de Mar",
+    "Codi comarca": 21,
+    "Nom comarca": "Maresme"
+  },
+  {
+    "Codi": 431068,
+    "Nom": "Pinell de Brai, el",
+    "Codi comarca": 37,
+    "Nom comarca": "Terra Alta"
+  },
+  {
+    "Codi": 251667,
+    "Nom": "Pinell de Solsonès",
+    "Codi comarca": 35,
+    "Nom comarca": "Solsonès"
+  },
+  {
+    "Codi": 251673,
+    "Nom": "Pinós",
+    "Codi comarca": 35,
+    "Nom comarca": "Solsonès"
+  },
+  {
+    "Codi": 431074,
+    "Nom": "Pira",
+    "Codi comarca": 16,
+    "Nom comarca": "Conca de Barberà"
+  },
+  {
+    "Codi": 431080,
+    "Nom": "Pla de Santa Maria, el",
+    "Codi comarca": 1,
+    "Nom comarca": "Alt Camp"
+  },
+  {
+    "Codi": 81640,
+    "Nom": "Pla del Penedès, el",
+    "Codi comarca": 3,
+    "Nom comarca": "Alt Penedès"
+  },
+  {
+    "Codi": 171334,
+    "Nom": "Planes d'Hostoles, les",
+    "Codi comarca": 19,
+    "Nom comarca": "Garrotxa"
+  },
+  {
+    "Codi": 171349,
+    "Nom": "Planoles",
+    "Codi comarca": 31,
+    "Nom comarca": "Ripollès"
+  },
+  {
+    "Codi": 259118,
+    "Nom": "Plans de Sió, els",
+    "Codi comarca": 32,
+    "Nom comarca": "Segarra"
+  },
+  {
+    "Codi": 251689,
+    "Nom": "Poal, el",
+    "Codi comarca": 27,
+    "Nom comarca": "Pla d'Urgell"
+  },
+  {
+    "Codi": 251692,
+    "Nom": "Pobla de Cérvoles, la",
+    "Codi comarca": 18,
+    "Nom comarca": "Garrigues"
+  },
+  {
+    "Codi": 81653,
+    "Nom": "Pobla de Claramunt, la",
+    "Codi comarca": 6,
+    "Nom comarca": "Anoia"
+  },
+  {
+    "Codi": 81666,
+    "Nom": "Pobla de Lillet, la",
+    "Codi comarca": 14,
+    "Nom comarca": "Berguedà"
+  },
+  {
+    "Codi": 431093,
+    "Nom": "Pobla de Mafumet, la",
+    "Codi comarca": 36,
+    "Nom comarca": "Tarragonès"
+  },
+  {
+    "Codi": 431107,
+    "Nom": "Pobla de Massaluca, la",
+    "Codi comarca": 37,
+    "Nom comarca": "Terra Alta"
+  },
+  {
+    "Codi": 431114,
+    "Nom": "Pobla de Montornès, la",
+    "Codi comarca": 36,
+    "Nom comarca": "Tarragonès"
+  },
+  {
+    "Codi": 251713,
+    "Nom": "Pobla de Segur, la",
+    "Codi comarca": 25,
+    "Nom comarca": "Pallars Jussà"
+  },
+  {
+    "Codi": 431129,
+    "Nom": "Poboleda",
+    "Codi comarca": 29,
+    "Nom comarca": "Priorat"
+  },
+  {
+    "Codi": 81672,
+    "Nom": "Polinyà",
+    "Codi comarca": 40,
+    "Nom comarca": "Vallès Occidental"
+  },
+  {
+    "Codi": 431135,
+    "Nom": "Pont d'Armentera, el",
+    "Codi comarca": 1,
+    "Nom comarca": "Alt Camp"
+  },
+  {
+    "Codi": 250306,
+    "Nom": "Pont de Bar, el",
+    "Codi comarca": 4,
+    "Nom comarca": "Alt Urgell"
+  },
+  {
+    "Codi": 171352,
+    "Nom": "Pont de Molins",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 251734,
+    "Nom": "Pont de Suert, el",
+    "Codi comarca": 5,
+    "Nom comarca": "Alta Ribagorça"
+  },
+  {
+    "Codi": 81825,
+    "Nom": "Pont de Vilomara i Rocafort, el",
+    "Codi comarca": 7,
+    "Nom comarca": "Bages"
+  },
+  {
+    "Codi": 431418,
+    "Nom": "Pontils",
+    "Codi comarca": 16,
+    "Nom comarca": "Conca de Barberà"
+  },
+  {
+    "Codi": 81688,
+    "Nom": "Pontons",
+    "Codi comarca": 3,
+    "Nom comarca": "Alt Penedès"
+  },
+  {
+    "Codi": 171365,
+    "Nom": "Pontós",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 251728,
+    "Nom": "Ponts",
+    "Codi comarca": 23,
+    "Nom comarca": "Noguera"
+  },
+  {
+    "Codi": 171371,
+    "Nom": "Porqueres",
+    "Codi comarca": 28,
+    "Nom comarca": "Pla de l'Estany"
+  },
+  {
+    "Codi": 431140,
+    "Nom": "Porrera",
+    "Codi comarca": 29,
+    "Nom comarca": "Priorat"
+  },
+  {
+    "Codi": 171404,
+    "Nom": "Port de la Selva, el",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 171387,
+    "Nom": "Portbou",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 251749,
+    "Nom": "Portella, la",
+    "Codi comarca": 33,
+    "Nom comarca": "Segrià"
+  },
+  {
+    "Codi": 431153,
+    "Nom": "Pradell de la Teixeta",
+    "Codi comarca": 29,
+    "Nom comarca": "Priorat"
+  },
+  {
+    "Codi": 431166,
+    "Nom": "Prades",
+    "Codi comarca": 8,
+    "Nom comarca": "Baix Camp"
+  },
+  {
+    "Codi": 431172,
+    "Nom": "Prat de Comte",
+    "Codi comarca": 37,
+    "Nom comarca": "Terra Alta"
+  },
+  {
+    "Codi": 81691,
+    "Nom": "Prat de Llobregat, el",
+    "Codi comarca": 11,
+    "Nom comarca": "Baix Llobregat"
+  },
+  {
+    "Codi": 431188,
+    "Nom": "Pratdip",
+    "Codi comarca": 8,
+    "Nom comarca": "Baix Camp"
+  },
+  {
+    "Codi": 81712,
+    "Nom": "Prats de Lluçanès",
+    "Codi comarca": 43,
+    "Nom comarca": "Lluçanès"
+  },
+  {
+    "Codi": 81705,
+    "Nom": "Prats de Rei, els",
+    "Codi comarca": 6,
+    "Nom comarca": "Anoia"
+  },
+  {
+    "Codi": 251752,
+    "Nom": "Prats i Sansor",
+    "Codi comarca": 15,
+    "Nom comarca": "Cerdanya"
+  },
+  {
+    "Codi": 251765,
+    "Nom": "Preixana",
+    "Codi comarca": 38,
+    "Nom comarca": "Urgell"
+  },
+  {
+    "Codi": 251771,
+    "Nom": "Preixens",
+    "Codi comarca": 23,
+    "Nom comarca": "Noguera"
+  },
+  {
+    "Codi": 82303,
+    "Nom": "Premià de Dalt",
+    "Codi comarca": 21,
+    "Nom comarca": "Maresme"
+  },
+  {
+    "Codi": 81727,
+    "Nom": "Premià de Mar",
+    "Codi comarca": 21,
+    "Nom comarca": "Maresme"
+  },
+  {
+    "Codi": 171390,
+    "Nom": "Preses, les",
+    "Codi comarca": 19,
+    "Nom comarca": "Garrotxa"
+  },
+  {
+    "Codi": 251790,
+    "Nom": "Prullans",
+    "Codi comarca": 15,
+    "Nom comarca": "Cerdanya"
+  },
+  {
+    "Codi": 81751,
+    "Nom": "Puig-reig",
+    "Codi comarca": 14,
+    "Nom comarca": "Berguedà"
+  },
+  {
+    "Codi": 171411,
+    "Nom": "Puigcerdà",
+    "Codi comarca": 15,
+    "Nom comarca": "Cerdanya"
+  },
+  {
+    "Codi": 81748,
+    "Nom": "Puigdàlber",
+    "Codi comarca": 3,
+    "Nom comarca": "Alt Penedès"
+  },
+  {
+    "Codi": 251804,
+    "Nom": "Puiggròs",
+    "Codi comarca": 18,
+    "Nom comarca": "Garrigues"
+  },
+  {
+    "Codi": 431191,
+    "Nom": "Puigpelat",
+    "Codi comarca": 1,
+    "Nom comarca": "Alt Camp"
+  },
+  {
+    "Codi": 251811,
+    "Nom": "Puigverd d'Agramunt",
+    "Codi comarca": 38,
+    "Nom comarca": "Urgell"
+  },
+  {
+    "Codi": 251826,
+    "Nom": "Puigverd de Lleida",
+    "Codi comarca": 33,
+    "Nom comarca": "Segrià"
+  },
+  {
+    "Codi": 81764,
+    "Nom": "Pujalt",
+    "Codi comarca": 6,
+    "Nom comarca": "Anoia"
+  },
+  {
+    "Codi": 81770,
+    "Nom": "Quar, la",
+    "Codi comarca": 14,
+    "Nom comarca": "Berguedà"
+  },
+  {
+    "Codi": 171426,
+    "Nom": "Quart",
+    "Codi comarca": 20,
+    "Nom comarca": "Gironès"
+  },
+  {
+    "Codi": 170433,
+    "Nom": "Queralbs",
+    "Codi comarca": 31,
+    "Nom comarca": "Ripollès"
+  },
+  {
+    "Codi": 431205,
+    "Nom": "Querol",
+    "Codi comarca": 1,
+    "Nom comarca": "Alt Camp"
+  },
+  {
+    "Codi": 171432,
+    "Nom": "Rabós",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 81786,
+    "Nom": "Rajadell",
+    "Codi comarca": 7,
+    "Nom comarca": "Bages"
+  },
+  {
+    "Codi": 431362,
+    "Nom": "Ràpita, la",
+    "Codi comarca": 22,
+    "Nom comarca": "Montsià"
+  },
+  {
+    "Codi": 431212,
+    "Nom": "Rasquera",
+    "Codi comarca": 30,
+    "Nom comarca": "Ribera d'Ebre"
+  },
+  {
+    "Codi": 171447,
+    "Nom": "Regencós",
+    "Codi comarca": 10,
+    "Nom comarca": "Baix Empordà"
+  },
+  {
+    "Codi": 81799,
+    "Nom": "Rellinars",
+    "Codi comarca": 40,
+    "Nom comarca": "Vallès Occidental"
+  },
+  {
+    "Codi": 431227,
+    "Nom": "Renau",
+    "Codi comarca": 36,
+    "Nom comarca": "Tarragonès"
+  },
+  {
+    "Codi": 431233,
+    "Nom": "Reus",
+    "Codi comarca": 8,
+    "Nom comarca": "Baix Camp"
+  },
+  {
+    "Codi": 251832,
+    "Nom": "Rialp",
+    "Codi comarca": 26,
+    "Nom comarca": "Pallars Sobirà"
+  },
+  {
+    "Codi": 431248,
+    "Nom": "Riba, la",
+    "Codi comarca": 1,
+    "Nom comarca": "Alt Camp"
+  },
+  {
+    "Codi": 431251,
+    "Nom": "Riba-roja d'Ebre",
+    "Codi comarca": 30,
+    "Nom comarca": "Ribera d'Ebre"
+  },
+  {
+    "Codi": 259059,
+    "Nom": "Ribera d'Ondara",
+    "Codi comarca": 32,
+    "Nom comarca": "Segarra"
+  },
+  {
+    "Codi": 251850,
+    "Nom": "Ribera d'Urgellet",
+    "Codi comarca": 4,
+    "Nom comarca": "Alt Urgell"
+  },
+  {
+    "Codi": 171450,
+    "Nom": "Ribes de Freser",
+    "Codi comarca": 31,
+    "Nom comarca": "Ripollès"
+  },
+  {
+    "Codi": 171463,
+    "Nom": "Riells i Viabrea",
+    "Codi comarca": 34,
+    "Nom comarca": "Selva"
+  },
+  {
+    "Codi": 431264,
+    "Nom": "Riera de Gaià, la",
+    "Codi comarca": 36,
+    "Nom comarca": "Tarragonès"
+  },
+  {
+    "Codi": 251863,
+    "Nom": "Riner",
+    "Codi comarca": 35,
+    "Nom comarca": "Solsonès"
+  },
+  {
+    "Codi": 171479,
+    "Nom": "Ripoll",
+    "Codi comarca": 31,
+    "Nom comarca": "Ripollès"
+  },
+  {
+    "Codi": 81803,
+    "Nom": "Ripollet",
+    "Codi comarca": 40,
+    "Nom comarca": "Vallès Occidental"
+  },
+  {
+    "Codi": 259139,
+    "Nom": "Riu de Cerdanya",
+    "Codi comarca": 15,
+    "Nom comarca": "Cerdanya"
+  },
+  {
+    "Codi": 171485,
+    "Nom": "Riudarenes",
+    "Codi comarca": 34,
+    "Nom comarca": "Selva"
+  },
+  {
+    "Codi": 171498,
+    "Nom": "Riudaura",
+    "Codi comarca": 19,
+    "Nom comarca": "Garrotxa"
+  },
+  {
+    "Codi": 431270,
+    "Nom": "Riudecanyes",
+    "Codi comarca": 8,
+    "Nom comarca": "Baix Camp"
+  },
+  {
+    "Codi": 431286,
+    "Nom": "Riudecols",
+    "Codi comarca": 8,
+    "Nom comarca": "Baix Camp"
+  },
+  {
+    "Codi": 171501,
+    "Nom": "Riudellots de la Selva",
+    "Codi comarca": 34,
+    "Nom comarca": "Selva"
+  },
+  {
+    "Codi": 431299,
+    "Nom": "Riudoms",
+    "Codi comarca": 8,
+    "Nom comarca": "Baix Camp"
+  },
+  {
+    "Codi": 171518,
+    "Nom": "Riumors",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 81810,
+    "Nom": "Roca del Vallès, la",
+    "Codi comarca": 41,
+    "Nom comarca": "Vallès Oriental"
+  },
+  {
+    "Codi": 431303,
+    "Nom": "Rocafort de Queralt",
+    "Codi comarca": 16,
+    "Nom comarca": "Conca de Barberà"
+  },
+  {
+    "Codi": 431310,
+    "Nom": "Roda de Berà",
+    "Codi comarca": 36,
+    "Nom comarca": "Tarragonès"
+  },
+  {
+    "Codi": 81831,
+    "Nom": "Roda de Ter",
+    "Codi comarca": 24,
+    "Nom comarca": "Osona"
+  },
+  {
+    "Codi": 431325,
+    "Nom": "Rodonyà",
+    "Codi comarca": 1,
+    "Nom comarca": "Alt Camp"
+  },
+  {
+    "Codi": 431331,
+    "Nom": "Roquetes",
+    "Codi comarca": 9,
+    "Nom comarca": "Baix Ebre"
+  },
+  {
+    "Codi": 171523,
+    "Nom": "Roses",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 251898,
+    "Nom": "Rosselló",
+    "Codi comarca": 33,
+    "Nom comarca": "Segrià"
+  },
+  {
+    "Codi": 431346,
+    "Nom": "Rourell, el",
+    "Codi comarca": 1,
+    "Nom comarca": "Alt Camp"
+  },
+  {
+    "Codi": 81846,
+    "Nom": "Rubí",
+    "Codi comarca": 40,
+    "Nom comarca": "Vallès Occidental"
+  },
+  {
+    "Codi": 81859,
+    "Nom": "Rubió",
+    "Codi comarca": 6,
+    "Nom comarca": "Anoia"
+  },
+  {
+    "Codi": 171539,
+    "Nom": "Rupià",
+    "Codi comarca": 10,
+    "Nom comarca": "Baix Empordà"
+  },
+  {
+    "Codi": 89019,
+    "Nom": "Rupit i Pruit",
+    "Codi comarca": 24,
+    "Nom comarca": "Osona"
+  },
+  {
+    "Codi": 81878,
+    "Nom": "Sabadell",
+    "Codi comarca": 40,
+    "Nom comarca": "Vallès Occidental"
+  },
+  {
+    "Codi": 81884,
+    "Nom": "Sagàs",
+    "Codi comarca": 14,
+    "Nom comarca": "Berguedà"
+  },
+  {
+    "Codi": 251902,
+    "Nom": "Salàs de Pallars",
+    "Codi comarca": 25,
+    "Nom comarca": "Pallars Jussà"
+  },
+  {
+    "Codi": 81901,
+    "Nom": "Saldes",
+    "Codi comarca": 14,
+    "Nom comarca": "Berguedà"
+  },
+  {
+    "Codi": 171544,
+    "Nom": "Sales de Llierca",
+    "Codi comarca": 19,
+    "Nom comarca": "Garrotxa"
+  },
+  {
+    "Codi": 81918,
+    "Nom": "Sallent",
+    "Codi comarca": 7,
+    "Nom comarca": "Bages"
+  },
+  {
+    "Codi": 431359,
+    "Nom": "Salomó",
+    "Codi comarca": 36,
+    "Nom comarca": "Tarragonès"
+  },
+  {
+    "Codi": 439057,
+    "Nom": "Salou",
+    "Codi comarca": 36,
+    "Nom comarca": "Tarragonès"
+  },
+  {
+    "Codi": 171557,
+    "Nom": "Salt",
+    "Codi comarca": 20,
+    "Nom comarca": "Gironès"
+  },
+  {
+    "Codi": 251919,
+    "Nom": "Sanaüja",
+    "Codi comarca": 32,
+    "Nom comarca": "Segarra"
+  },
+  {
+    "Codi": 81944,
+    "Nom": "Sant Adrià de Besòs",
+    "Codi comarca": 13,
+    "Nom comarca": "Barcelonès"
+  },
+  {
+    "Codi": 81957,
+    "Nom": "Sant Agustí de Lluçanès",
+    "Codi comarca": 24,
+    "Nom comarca": "Osona"
+  },
+  {
+    "Codi": 81960,
+    "Nom": "Sant Andreu de la Barca",
+    "Codi comarca": 11,
+    "Nom comarca": "Baix Llobregat"
+  },
+  {
+    "Codi": 81976,
+    "Nom": "Sant Andreu de Llavaneres",
+    "Codi comarca": 21,
+    "Nom comarca": "Maresme"
+  },
+  {
+    "Codi": 171576,
+    "Nom": "Sant Andreu Salou",
+    "Codi comarca": 20,
+    "Nom comarca": "Gironès"
+  },
+  {
+    "Codi": 171833,
+    "Nom": "Sant Aniol de Finestres",
+    "Codi comarca": 19,
+    "Nom comarca": "Garrotxa"
+  },
+  {
+    "Codi": 81982,
+    "Nom": "Sant Antoni de Vilamajor",
+    "Codi comarca": 41,
+    "Nom comarca": "Vallès Oriental"
+  },
+  {
+    "Codi": 81995,
+    "Nom": "Sant Bartomeu del Grau",
+    "Codi comarca": 24,
+    "Nom comarca": "Osona"
+  },
+  {
+    "Codi": 82009,
+    "Nom": "Sant Boi de Llobregat",
+    "Codi comarca": 11,
+    "Nom comarca": "Baix Llobregat"
+  },
+  {
+    "Codi": 82016,
+    "Nom": "Sant Boi de Lluçanès",
+    "Codi comarca": 24,
+    "Nom comarca": "Osona"
+  },
+  {
+    "Codi": 82037,
+    "Nom": "Sant Cebrià de Vallalta",
+    "Codi comarca": 21,
+    "Nom comarca": "Maresme"
+  },
+  {
+    "Codi": 82021,
+    "Nom": "Sant Celoni",
+    "Codi comarca": 41,
+    "Nom comarca": "Vallès Oriental"
+  },
+  {
+    "Codi": 82042,
+    "Nom": "Sant Climent de Llobregat",
+    "Codi comarca": 11,
+    "Nom comarca": "Baix Llobregat"
+  },
+  {
+    "Codi": 171582,
+    "Nom": "Sant Climent Sescebes",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 82055,
+    "Nom": "Sant Cugat del Vallès",
+    "Codi comarca": 40,
+    "Nom comarca": "Vallès Occidental"
+  },
+  {
+    "Codi": 82068,
+    "Nom": "Sant Cugat Sesgarrigues",
+    "Codi comarca": 3,
+    "Nom comarca": "Alt Penedès"
+  },
+  {
+    "Codi": 251961,
+    "Nom": "Sant Esteve de la Sarga",
+    "Codi comarca": 25,
+    "Nom comarca": "Pallars Jussà"
+  },
+  {
+    "Codi": 82074,
+    "Nom": "Sant Esteve de Palautordera",
+    "Codi comarca": 41,
+    "Nom comarca": "Vallès Oriental"
+  },
+  {
+    "Codi": 82080,
+    "Nom": "Sant Esteve Sesrovires",
+    "Codi comarca": 11,
+    "Nom comarca": "Baix Llobregat"
+  },
+  {
+    "Codi": 171595,
+    "Nom": "Sant Feliu de Buixalleu",
+    "Codi comarca": 34,
+    "Nom comarca": "Selva"
+  },
+  {
+    "Codi": 82107,
+    "Nom": "Sant Feliu de Codines",
+    "Codi comarca": 41,
+    "Nom comarca": "Vallès Oriental"
+  },
+  {
+    "Codi": 171609,
+    "Nom": "Sant Feliu de Guíxols",
+    "Codi comarca": 10,
+    "Nom comarca": "Baix Empordà"
+  },
+  {
+    "Codi": 82114,
+    "Nom": "Sant Feliu de Llobregat",
+    "Codi comarca": 11,
+    "Nom comarca": "Baix Llobregat"
+  },
+  {
+    "Codi": 171616,
+    "Nom": "Sant Feliu de Pallerols",
+    "Codi comarca": 19,
+    "Nom comarca": "Garrotxa"
+  },
+  {
+    "Codi": 82129,
+    "Nom": "Sant Feliu Sasserra",
+    "Codi comarca": 7,
+    "Nom comarca": "Bages"
+  },
+  {
+    "Codi": 171621,
+    "Nom": "Sant Ferriol",
+    "Codi comarca": 19,
+    "Nom comarca": "Garrotxa"
+  },
+  {
+    "Codi": 82093,
+    "Nom": "Sant Fost de Campsentelles",
+    "Codi comarca": 41,
+    "Nom comarca": "Vallès Oriental"
+  },
+  {
+    "Codi": 82135,
+    "Nom": "Sant Fruitós de Bages",
+    "Codi comarca": 7,
+    "Nom comarca": "Bages"
+  },
+  {
+    "Codi": 171637,
+    "Nom": "Sant Gregori",
+    "Codi comarca": 20,
+    "Nom comarca": "Gironès"
+  },
+  {
+    "Codi": 251924,
+    "Nom": "Sant Guim de Freixenet",
+    "Codi comarca": 32,
+    "Nom comarca": "Segarra"
+  },
+  {
+    "Codi": 251977,
+    "Nom": "Sant Guim de la Plana",
+    "Codi comarca": 32,
+    "Nom comarca": "Segarra"
+  },
+  {
+    "Codi": 171642,
+    "Nom": "Sant Hilari Sacalm",
+    "Codi comarca": 34,
+    "Nom comarca": "Selva"
+  },
+  {
+    "Codi": 82153,
+    "Nom": "Sant Hipòlit de Voltregà",
+    "Codi comarca": 24,
+    "Nom comarca": "Osona"
+  },
+  {
+    "Codi": 81939,
+    "Nom": "Sant Iscle de Vallalta",
+    "Codi comarca": 21,
+    "Nom comarca": "Maresme"
+  },
+  {
+    "Codi": 439023,
+    "Nom": "Sant Jaume d'Enveja",
+    "Codi comarca": 22,
+    "Nom comarca": "Montsià"
+  },
+  {
+    "Codi": 82166,
+    "Nom": "Sant Jaume de Frontanyà",
+    "Codi comarca": 14,
+    "Nom comarca": "Berguedà"
+  },
+  {
+    "Codi": 171655,
+    "Nom": "Sant Jaume de Llierca",
+    "Codi comarca": 19,
+    "Nom comarca": "Garrotxa"
+  },
+  {
+    "Codi": 431378,
+    "Nom": "Sant Jaume dels Domenys",
+    "Codi comarca": 12,
+    "Nom comarca": "Baix Penedès"
+  },
+  {
+    "Codi": 171674,
+    "Nom": "Sant Joan de les Abadesses",
+    "Codi comarca": 31,
+    "Nom comarca": "Ripollès"
+  },
+  {
+    "Codi": 171680,
+    "Nom": "Sant Joan de Mollet",
+    "Codi comarca": 20,
+    "Nom comarca": "Gironès"
+  },
+  {
+    "Codi": 82188,
+    "Nom": "Sant Joan de Vilatorrada",
+    "Codi comarca": 7,
+    "Nom comarca": "Bages"
+  },
+  {
+    "Codi": 82172,
+    "Nom": "Sant Joan Despí",
+    "Codi comarca": 11,
+    "Nom comarca": "Baix Llobregat"
+  },
+  {
+    "Codi": 171851,
+    "Nom": "Sant Joan les Fonts",
+    "Codi comarca": 19,
+    "Nom comarca": "Garrotxa"
+  },
+  {
+    "Codi": 171668,
+    "Nom": "Sant Jordi Desvalls",
+    "Codi comarca": 20,
+    "Nom comarca": "Gironès"
+  },
+  {
+    "Codi": 89030,
+    "Nom": "Sant Julià de Cerdanyola",
+    "Codi comarca": 14,
+    "Nom comarca": "Berguedà"
+  },
+  {
+    "Codi": 171693,
+    "Nom": "Sant Julià de Ramis",
+    "Codi comarca": 20,
+    "Nom comarca": "Gironès"
+  },
+  {
+    "Codi": 82205,
+    "Nom": "Sant Julià de Vilatorta",
+    "Codi comarca": 24,
+    "Nom comarca": "Osona"
+  },
+  {
+    "Codi": 179032,
+    "Nom": "Sant Julià del Llor i Bonmatí",
+    "Codi comarca": 34,
+    "Nom comarca": "Selva"
+  },
+  {
+    "Codi": 82212,
+    "Nom": "Sant Just Desvern",
+    "Codi comarca": 11,
+    "Nom comarca": "Baix Llobregat"
+  },
+  {
+    "Codi": 82227,
+    "Nom": "Sant Llorenç d'Hortons",
+    "Codi comarca": 3,
+    "Nom comarca": "Alt Penedès"
+  },
+  {
+    "Codi": 171714,
+    "Nom": "Sant Llorenç de la Muga",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 251930,
+    "Nom": "Sant Llorenç de Morunys",
+    "Codi comarca": 35,
+    "Nom comarca": "Solsonès"
+  },
+  {
+    "Codi": 82233,
+    "Nom": "Sant Llorenç Savall",
+    "Codi comarca": 40,
+    "Nom comarca": "Vallès Occidental"
+  },
+  {
+    "Codi": 82251,
+    "Nom": "Sant Martí d'Albars",
+    "Codi comarca": 43,
+    "Nom comarca": "Lluçanès"
+  },
+  {
+    "Codi": 82248,
+    "Nom": "Sant Martí de Centelles",
+    "Codi comarca": 24,
+    "Nom comarca": "Osona"
+  },
+  {
+    "Codi": 171729,
+    "Nom": "Sant Martí de Llémena",
+    "Codi comarca": 20,
+    "Nom comarca": "Gironès"
+  },
+  {
+    "Codi": 259025,
+    "Nom": "Sant Martí de Riucorb",
+    "Codi comarca": 38,
+    "Nom comarca": "Urgell"
+  },
+  {
+    "Codi": 82264,
+    "Nom": "Sant Martí de Tous",
+    "Codi comarca": 6,
+    "Nom comarca": "Anoia"
+  },
+  {
+    "Codi": 82270,
+    "Nom": "Sant Martí Sarroca",
+    "Codi comarca": 3,
+    "Nom comarca": "Alt Penedès"
+  },
+  {
+    "Codi": 82286,
+    "Nom": "Sant Martí Sesgueioles",
+    "Codi comarca": 6,
+    "Nom comarca": "Anoia"
+  },
+  {
+    "Codi": 171735,
+    "Nom": "Sant Martí Vell",
+    "Codi comarca": 20,
+    "Nom comarca": "Gironès"
+  },
+  {
+    "Codi": 82299,
+    "Nom": "Sant Mateu de Bages",
+    "Codi comarca": 7,
+    "Nom comarca": "Bages"
+  },
+  {
+    "Codi": 171740,
+    "Nom": "Sant Miquel de Campmajor",
+    "Codi comarca": 28,
+    "Nom comarca": "Pla de l'Estany"
+  },
+  {
+    "Codi": 171753,
+    "Nom": "Sant Miquel de Fluvià",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 171766,
+    "Nom": "Sant Mori",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 171772,
+    "Nom": "Sant Pau de Segúries",
+    "Codi comarca": 31,
+    "Nom comarca": "Ripollès"
+  },
+  {
+    "Codi": 82310,
+    "Nom": "Sant Pere de Ribes",
+    "Codi comarca": 17,
+    "Nom comarca": "Garraf"
+  },
+  {
+    "Codi": 82325,
+    "Nom": "Sant Pere de Riudebitlles",
+    "Codi comarca": 3,
+    "Nom comarca": "Alt Penedès"
+  },
+  {
+    "Codi": 82331,
+    "Nom": "Sant Pere de Torelló",
+    "Codi comarca": 24,
+    "Nom comarca": "Osona"
+  },
+  {
+    "Codi": 82346,
+    "Nom": "Sant Pere de Vilamajor",
+    "Codi comarca": 41,
+    "Nom comarca": "Vallès Oriental"
+  },
+  {
+    "Codi": 171788,
+    "Nom": "Sant Pere Pescador",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 81897,
+    "Nom": "Sant Pere Sallavinera",
+    "Codi comarca": 6,
+    "Nom comarca": "Anoia"
+  },
+  {
+    "Codi": 82359,
+    "Nom": "Sant Pol de Mar",
+    "Codi comarca": 21,
+    "Nom comarca": "Maresme"
+  },
+  {
+    "Codi": 82362,
+    "Nom": "Sant Quintí de Mediona",
+    "Codi comarca": 3,
+    "Nom comarca": "Alt Penedès"
+  },
+  {
+    "Codi": 82378,
+    "Nom": "Sant Quirze de Besora",
+    "Codi comarca": 24,
+    "Nom comarca": "Osona"
+  },
+  {
+    "Codi": 82384,
+    "Nom": "Sant Quirze del Vallès",
+    "Codi comarca": 40,
+    "Nom comarca": "Vallès Occidental"
+  },
+  {
+    "Codi": 82397,
+    "Nom": "Sant Quirze Safaja",
+    "Codi comarca": 42,
+    "Nom comarca": "Moianès"
+  },
+  {
+    "Codi": 251945,
+    "Nom": "Sant Ramon",
+    "Codi comarca": 32,
+    "Nom comarca": "Segarra"
+  },
+  {
+    "Codi": 82401,
+    "Nom": "Sant Sadurní d'Anoia",
+    "Codi comarca": 3,
+    "Nom comarca": "Alt Penedès"
+  },
+  {
+    "Codi": 82418,
+    "Nom": "Sant Sadurní d'Osormort",
+    "Codi comarca": 24,
+    "Nom comarca": "Osona"
+  },
+  {
+    "Codi": 80983,
+    "Nom": "Sant Salvador de Guardiola",
+    "Codi comarca": 7,
+    "Nom comarca": "Bages"
+  },
+  {
+    "Codi": 82628,
+    "Nom": "Sant Vicenç de Castellet",
+    "Codi comarca": 7,
+    "Nom comarca": "Bages"
+  },
+  {
+    "Codi": 82649,
+    "Nom": "Sant Vicenç de Montalt",
+    "Codi comarca": 21,
+    "Nom comarca": "Maresme"
+  },
+  {
+    "Codi": 82652,
+    "Nom": "Sant Vicenç de Torelló",
+    "Codi comarca": 24,
+    "Nom comarca": "Osona"
+  },
+  {
+    "Codi": 82634,
+    "Nom": "Sant Vicenç dels Horts",
+    "Codi comarca": 11,
+    "Nom comarca": "Baix Llobregat"
+  },
+  {
+    "Codi": 431384,
+    "Nom": "Santa Bàrbara",
+    "Codi comarca": 22,
+    "Nom comarca": "Montsià"
+  },
+  {
+    "Codi": 82439,
+    "Nom": "Santa Cecília de Voltregà",
+    "Codi comarca": 24,
+    "Nom comarca": "Osona"
+  },
+  {
+    "Codi": 82444,
+    "Nom": "Santa Coloma de Cervelló",
+    "Codi comarca": 11,
+    "Nom comarca": "Baix Llobregat"
+  },
+  {
+    "Codi": 171805,
+    "Nom": "Santa Coloma de Farners",
+    "Codi comarca": 34,
+    "Nom comarca": "Selva"
+  },
+  {
+    "Codi": 82457,
+    "Nom": "Santa Coloma de Gramenet",
+    "Codi comarca": 13,
+    "Nom comarca": "Barcelonès"
+  },
+  {
+    "Codi": 431397,
+    "Nom": "Santa Coloma de Queralt",
+    "Codi comarca": 16,
+    "Nom comarca": "Conca de Barberà"
+  },
+  {
+    "Codi": 171812,
+    "Nom": "Santa Cristina d'Aro",
+    "Codi comarca": 10,
+    "Nom comarca": "Baix Empordà"
+  },
+  {
+    "Codi": 82460,
+    "Nom": "Santa Eugènia de Berga",
+    "Codi comarca": 24,
+    "Nom comarca": "Osona"
+  },
+  {
+    "Codi": 82476,
+    "Nom": "Santa Eulàlia de Riuprimer",
+    "Codi comarca": 24,
+    "Nom comarca": "Osona"
+  },
+  {
+    "Codi": 82482,
+    "Nom": "Santa Eulàlia de Ronçana",
+    "Codi comarca": 41,
+    "Nom comarca": "Vallès Oriental"
+  },
+  {
+    "Codi": 82495,
+    "Nom": "Santa Fe del Penedès",
+    "Codi comarca": 3,
+    "Nom comarca": "Alt Penedès"
+  },
+  {
+    "Codi": 171827,
+    "Nom": "Santa Llogaia d'Àlguema",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 82508,
+    "Nom": "Santa Margarida de Montbui",
+    "Codi comarca": 6,
+    "Nom comarca": "Anoia"
+  },
+  {
+    "Codi": 82515,
+    "Nom": "Santa Margarida i els Monjos",
+    "Codi comarca": 3,
+    "Nom comarca": "Alt Penedès"
+  },
+  {
+    "Codi": 82589,
+    "Nom": "Santa Maria d'Oló",
+    "Codi comarca": 42,
+    "Nom comarca": "Moianès"
+  },
+  {
+    "Codi": 82536,
+    "Nom": "Santa Maria de Besora",
+    "Codi comarca": 24,
+    "Nom comarca": "Osona"
+  },
+  {
+    "Codi": 82567,
+    "Nom": "Santa Maria de Martorelles",
+    "Codi comarca": 41,
+    "Nom comarca": "Vallès Oriental"
+  },
+  {
+    "Codi": 82554,
+    "Nom": "Santa Maria de Merlès",
+    "Codi comarca": 14,
+    "Nom comarca": "Berguedà"
+  },
+  {
+    "Codi": 82573,
+    "Nom": "Santa Maria de Miralles",
+    "Codi comarca": 6,
+    "Nom comarca": "Anoia"
+  },
+  {
+    "Codi": 82592,
+    "Nom": "Santa Maria de Palautordera",
+    "Codi comarca": 41,
+    "Nom comarca": "Vallès Oriental"
+  },
+  {
+    "Codi": 431401,
+    "Nom": "Santa Oliva",
+    "Codi comarca": 12,
+    "Nom comarca": "Baix Penedès"
+  },
+  {
+    "Codi": 171848,
+    "Nom": "Santa Pau",
+    "Codi comarca": 19,
+    "Nom comarca": "Garrotxa"
+  },
+  {
+    "Codi": 82606,
+    "Nom": "Santa Perpètua de Mogoda",
+    "Codi comarca": 40,
+    "Nom comarca": "Vallès Occidental"
+  },
+  {
+    "Codi": 82613,
+    "Nom": "Santa Susanna",
+    "Codi comarca": 21,
+    "Nom comarca": "Maresme"
+  },
+  {
+    "Codi": 81923,
+    "Nom": "Santpedor",
+    "Codi comarca": 7,
+    "Nom comarca": "Bages"
+  },
+  {
+    "Codi": 431423,
+    "Nom": "Sarral",
+    "Codi comarca": 16,
+    "Nom comarca": "Conca de Barberà"
+  },
+  {
+    "Codi": 171864,
+    "Nom": "Sarrià de Ter",
+    "Codi comarca": 20,
+    "Nom comarca": "Gironès"
+  },
+  {
+    "Codi": 252017,
+    "Nom": "Sarroca de Bellera",
+    "Codi comarca": 25,
+    "Nom comarca": "Pallars Jussà"
+  },
+  {
+    "Codi": 252000,
+    "Nom": "Sarroca de Lleida",
+    "Codi comarca": 33,
+    "Nom comarca": "Segrià"
+  },
+  {
+    "Codi": 171870,
+    "Nom": "Saus, Camallera i Llampaies",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 431439,
+    "Nom": "Savallà del Comtat",
+    "Codi comarca": 16,
+    "Nom comarca": "Conca de Barberà"
+  },
+  {
+    "Codi": 431444,
+    "Nom": "Secuita, la",
+    "Codi comarca": 36,
+    "Nom comarca": "Tarragonès"
+  },
+  {
+    "Codi": 171886,
+    "Nom": "Selva de Mar, la",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 431457,
+    "Nom": "Selva del Camp, la",
+    "Codi comarca": 8,
+    "Nom comarca": "Baix Camp"
+  },
+  {
+    "Codi": 431460,
+    "Nom": "Senan",
+    "Codi comarca": 16,
+    "Nom comarca": "Conca de Barberà"
+  },
+  {
+    "Codi": 430445,
+    "Nom": "Sénia, la",
+    "Codi comarca": 22,
+    "Nom comarca": "Montsià"
+  },
+  {
+    "Codi": 252022,
+    "Nom": "Senterada",
+    "Codi comarca": 25,
+    "Nom comarca": "Pallars Jussà"
+  },
+  {
+    "Codi": 250352,
+    "Nom": "Sentiu de Sió, la",
+    "Codi comarca": 23,
+    "Nom comarca": "Noguera"
+  },
+  {
+    "Codi": 82671,
+    "Nom": "Sentmenat",
+    "Codi comarca": 40,
+    "Nom comarca": "Vallès Occidental"
+  },
+  {
+    "Codi": 171903,
+    "Nom": "Serinyà",
+    "Codi comarca": 28,
+    "Nom comarca": "Pla de l'Estany"
+  },
+  {
+    "Codi": 252043,
+    "Nom": "Seròs",
+    "Codi comarca": 33,
+    "Nom comarca": "Segrià"
+  },
+  {
+    "Codi": 171910,
+    "Nom": "Serra de Daró",
+    "Codi comarca": 10,
+    "Nom comarca": "Baix Empordà"
+  },
+  {
+    "Codi": 171925,
+    "Nom": "Setcases",
+    "Codi comarca": 31,
+    "Nom comarca": "Ripollès"
+  },
+  {
+    "Codi": 252038,
+    "Nom": "Seu d'Urgell, la",
+    "Codi comarca": 4,
+    "Nom comarca": "Alt Urgell"
+  },
+  {
+    "Codi": 82690,
+    "Nom": "Seva",
+    "Codi comarca": 24,
+    "Nom comarca": "Osona"
+  },
+  {
+    "Codi": 252056,
+    "Nom": "Sidamon",
+    "Codi comarca": 27,
+    "Nom comarca": "Pla d'Urgell"
+  },
+  {
+    "Codi": 171931,
+    "Nom": "Sils",
+    "Codi comarca": 34,
+    "Nom comarca": "Selva"
+  },
+  {
+    "Codi": 82704,
+    "Nom": "Sitges",
+    "Codi comarca": 17,
+    "Nom comarca": "Garraf"
+  },
+  {
+    "Codi": 170524,
+    "Nom": "Siurana",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 82711,
+    "Nom": "Sobremunt",
+    "Codi comarca": 43,
+    "Nom comarca": "Lluçanès"
+  },
+  {
+    "Codi": 252069,
+    "Nom": "Soleràs, el",
+    "Codi comarca": 18,
+    "Nom comarca": "Garrigues"
+  },
+  {
+    "Codi": 431476,
+    "Nom": "Solivella",
+    "Codi comarca": 16,
+    "Nom comarca": "Conca de Barberà"
+  },
+  {
+    "Codi": 252075,
+    "Nom": "Solsona",
+    "Codi comarca": 35,
+    "Nom comarca": "Solsonès"
+  },
+  {
+    "Codi": 82726,
+    "Nom": "Sora",
+    "Codi comarca": 24,
+    "Nom comarca": "Osona"
+  },
+  {
+    "Codi": 252081,
+    "Nom": "Soriguera",
+    "Codi comarca": 26,
+    "Nom comarca": "Pallars Sobirà"
+  },
+  {
+    "Codi": 252094,
+    "Nom": "Sort",
+    "Codi comarca": 26,
+    "Nom comarca": "Pallars Sobirà"
+  },
+  {
+    "Codi": 252108,
+    "Nom": "Soses",
+    "Codi comarca": 33,
+    "Nom comarca": "Segrià"
+  },
+  {
+    "Codi": 82732,
+    "Nom": "Subirats",
+    "Codi comarca": 3,
+    "Nom comarca": "Alt Penedès"
+  },
+  {
+    "Codi": 252115,
+    "Nom": "Sudanell",
+    "Codi comarca": 33,
+    "Nom comarca": "Segrià"
+  },
+  {
+    "Codi": 252120,
+    "Nom": "Sunyer",
+    "Codi comarca": 33,
+    "Nom comarca": "Segrià"
+  },
+  {
+    "Codi": 82747,
+    "Nom": "Súria",
+    "Codi comarca": 7,
+    "Nom comarca": "Bages"
+  },
+  {
+    "Codi": 171946,
+    "Nom": "Susqueda",
+    "Codi comarca": 34,
+    "Nom comarca": "Selva"
+  },
+  {
+    "Codi": 82763,
+    "Nom": "Tagamanent",
+    "Codi comarca": 41,
+    "Nom comarca": "Vallès Oriental"
+  },
+  {
+    "Codi": 82779,
+    "Nom": "Talamanca",
+    "Codi comarca": 7,
+    "Nom comarca": "Bages"
+  },
+  {
+    "Codi": 252154,
+    "Nom": "Talarn",
+    "Codi comarca": 25,
+    "Nom comarca": "Pallars Jussà"
+  },
+  {
+    "Codi": 252167,
+    "Nom": "Talavera",
+    "Codi comarca": 32,
+    "Nom comarca": "Segarra"
+  },
+  {
+    "Codi": 171959,
+    "Nom": "Tallada d'Empordà, la",
+    "Codi comarca": 10,
+    "Nom comarca": "Baix Empordà"
+  },
+  {
+    "Codi": 82785,
+    "Nom": "Taradell",
+    "Codi comarca": 24,
+    "Nom comarca": "Osona"
+  },
+  {
+    "Codi": 431482,
+    "Nom": "Tarragona",
+    "Codi comarca": 36,
+    "Nom comarca": "Tarragonès"
+  },
+  {
+    "Codi": 252173,
+    "Nom": "Tàrrega",
+    "Codi comarca": 38,
+    "Nom comarca": "Urgell"
+  },
+  {
+    "Codi": 252189,
+    "Nom": "Tarrés",
+    "Codi comarca": 18,
+    "Nom comarca": "Garrigues"
+  },
+  {
+    "Codi": 252192,
+    "Nom": "Tarroja de Segarra",
+    "Codi comarca": 32,
+    "Nom comarca": "Segarra"
+  },
+  {
+    "Codi": 82750,
+    "Nom": "Tavèrnoles",
+    "Codi comarca": 24,
+    "Nom comarca": "Osona"
+  },
+  {
+    "Codi": 82802,
+    "Nom": "Tavertet",
+    "Codi comarca": 24,
+    "Nom comarca": "Osona"
+  },
+  {
+    "Codi": 82819,
+    "Nom": "Teià",
+    "Codi comarca": 21,
+    "Nom comarca": "Maresme"
+  },
+  {
+    "Codi": 252206,
+    "Nom": "Térmens",
+    "Codi comarca": 23,
+    "Nom comarca": "Noguera"
+  },
+  {
+    "Codi": 171962,
+    "Nom": "Terrades",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 82798,
+    "Nom": "Terrassa",
+    "Codi comarca": 40,
+    "Nom comarca": "Vallès Occidental"
+  },
+  {
+    "Codi": 82824,
+    "Nom": "Tiana",
+    "Codi comarca": 21,
+    "Nom comarca": "Maresme"
+  },
+  {
+    "Codi": 252213,
+    "Nom": "Tírvia",
+    "Codi comarca": 26,
+    "Nom comarca": "Pallars Sobirà"
+  },
+  {
+    "Codi": 252228,
+    "Nom": "Tiurana",
+    "Codi comarca": 23,
+    "Nom comarca": "Noguera"
+  },
+  {
+    "Codi": 431495,
+    "Nom": "Tivenys",
+    "Codi comarca": 9,
+    "Nom comarca": "Baix Ebre"
+  },
+  {
+    "Codi": 431508,
+    "Nom": "Tivissa",
+    "Codi comarca": 30,
+    "Nom comarca": "Ribera d'Ebre"
+  },
+  {
+    "Codi": 82830,
+    "Nom": "Tona",
+    "Codi comarca": 24,
+    "Nom comarca": "Osona"
+  },
+  {
+    "Codi": 252234,
+    "Nom": "Torà",
+    "Codi comarca": 35,
+    "Nom comarca": "Solsonès"
+  },
+  {
+    "Codi": 82845,
+    "Nom": "Tordera",
+    "Codi comarca": 21,
+    "Nom comarca": "Maresme"
+  },
+  {
+    "Codi": 82858,
+    "Nom": "Torelló",
+    "Codi comarca": 24,
+    "Nom comarca": "Osona"
+  },
+  {
+    "Codi": 252249,
+    "Nom": "Torms, els",
+    "Codi comarca": 18,
+    "Nom comarca": "Garrigues"
+  },
+  {
+    "Codi": 252252,
+    "Nom": "Tornabous",
+    "Codi comarca": 38,
+    "Nom comarca": "Urgell"
+  },
+  {
+    "Codi": 252271,
+    "Nom": "Torre de Cabdella, la",
+    "Codi comarca": 25,
+    "Nom comarca": "Pallars Jussà"
+  },
+  {
+    "Codi": 82861,
+    "Nom": "Torre de Claramunt, la",
+    "Codi comarca": 6,
+    "Nom comarca": "Anoia"
+  },
+  {
+    "Codi": 431515,
+    "Nom": "Torre de Fontaubella, la",
+    "Codi comarca": 29,
+    "Nom comarca": "Priorat"
+  },
+  {
+    "Codi": 431520,
+    "Nom": "Torre de l'Espanyol, la",
+    "Codi comarca": 30,
+    "Nom comarca": "Ribera d'Ebre"
+  },
+  {
+    "Codi": 252332,
+    "Nom": "Torre-serona",
+    "Codi comarca": 33,
+    "Nom comarca": "Segrià"
+  },
+  {
+    "Codi": 252265,
+    "Nom": "Torrebesses",
+    "Codi comarca": 33,
+    "Nom comarca": "Segrià"
+  },
+  {
+    "Codi": 431536,
+    "Nom": "Torredembarra",
+    "Codi comarca": 36,
+    "Nom comarca": "Tarragonès"
+  },
+  {
+    "Codi": 252287,
+    "Nom": "Torrefarrera",
+    "Codi comarca": 33,
+    "Nom comarca": "Segrià"
+  },
+  {
+    "Codi": 259078,
+    "Nom": "Torrefeta i Florejacs",
+    "Codi comarca": 32,
+    "Nom comarca": "Segarra"
+  },
+  {
+    "Codi": 252304,
+    "Nom": "Torregrossa",
+    "Codi comarca": 27,
+    "Nom comarca": "Pla d'Urgell"
+  },
+  {
+    "Codi": 252311,
+    "Nom": "Torrelameu",
+    "Codi comarca": 23,
+    "Nom comarca": "Noguera"
+  },
+  {
+    "Codi": 82877,
+    "Nom": "Torrelavit",
+    "Codi comarca": 3,
+    "Nom comarca": "Alt Penedès"
+  },
+  {
+    "Codi": 82883,
+    "Nom": "Torrelles de Foix",
+    "Codi comarca": 3,
+    "Nom comarca": "Alt Penedès"
+  },
+  {
+    "Codi": 82896,
+    "Nom": "Torrelles de Llobregat",
+    "Codi comarca": 11,
+    "Nom comarca": "Baix Llobregat"
+  },
+  {
+    "Codi": 171978,
+    "Nom": "Torrent",
+    "Codi comarca": 10,
+    "Nom comarca": "Baix Empordà"
+  },
+  {
+    "Codi": 252326,
+    "Nom": "Torres de Segre",
+    "Codi comarca": 33,
+    "Nom comarca": "Segrià"
+  },
+  {
+    "Codi": 171984,
+    "Nom": "Torroella de Fluvià",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 171997,
+    "Nom": "Torroella de Montgrí",
+    "Codi comarca": 10,
+    "Nom comarca": "Baix Empordà"
+  },
+  {
+    "Codi": 431541,
+    "Nom": "Torroja del Priorat",
+    "Codi comarca": 29,
+    "Nom comarca": "Priorat"
+  },
+  {
+    "Codi": 172001,
+    "Nom": "Tortellà",
+    "Codi comarca": 19,
+    "Nom comarca": "Garrotxa"
+  },
+  {
+    "Codi": 431554,
+    "Nom": "Tortosa",
+    "Codi comarca": 9,
+    "Nom comarca": "Baix Ebre"
+  },
+  {
+    "Codi": 172018,
+    "Nom": "Toses",
+    "Codi comarca": 31,
+    "Nom comarca": "Ripollès"
+  },
+  {
+    "Codi": 172023,
+    "Nom": "Tossa de Mar",
+    "Codi comarca": 34,
+    "Nom comarca": "Selva"
+  },
+  {
+    "Codi": 252347,
+    "Nom": "Tremp",
+    "Codi comarca": 25,
+    "Nom comarca": "Pallars Jussà"
+  },
+  {
+    "Codi": 172044,
+    "Nom": "Ullà",
+    "Codi comarca": 10,
+    "Nom comarca": "Baix Empordà"
+  },
+  {
+    "Codi": 82900,
+    "Nom": "Ullastrell",
+    "Codi comarca": 40,
+    "Nom comarca": "Vallès Occidental"
+  },
+  {
+    "Codi": 172057,
+    "Nom": "Ullastret",
+    "Codi comarca": 10,
+    "Nom comarca": "Baix Empordà"
+  },
+  {
+    "Codi": 431567,
+    "Nom": "Ulldecona",
+    "Codi comarca": 22,
+    "Nom comarca": "Montsià"
+  },
+  {
+    "Codi": 431573,
+    "Nom": "Ulldemolins",
+    "Codi comarca": 29,
+    "Nom comarca": "Priorat"
+  },
+  {
+    "Codi": 172039,
+    "Nom": "Ultramort",
+    "Codi comarca": 10,
+    "Nom comarca": "Baix Empordà"
+  },
+  {
+    "Codi": 172060,
+    "Nom": "Urús",
+    "Codi comarca": 15,
+    "Nom comarca": "Cerdanya"
+  },
+  {
+    "Codi": 82917,
+    "Nom": "Vacarisses",
+    "Codi comarca": 40,
+    "Nom comarca": "Vallès Occidental"
+  },
+  {
+    "Codi": 170144,
+    "Nom": "Vajol, la",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 172076,
+    "Nom": "Vall d'en Bas, la",
+    "Codi comarca": 19,
+    "Nom comarca": "Garrotxa"
+  },
+  {
+    "Codi": 172082,
+    "Nom": "Vall de Bianya, la",
+    "Codi comarca": 19,
+    "Nom comarca": "Garrotxa"
+  },
+  {
+    "Codi": 250432,
+    "Nom": "Vall de Boí, la",
+    "Codi comarca": 5,
+    "Nom comarca": "Alta Ribagorça"
+  },
+  {
+    "Codi": 259010,
+    "Nom": "Vall de Cardós",
+    "Codi comarca": 26,
+    "Nom comarca": "Pallars Sobirà"
+  },
+  {
+    "Codi": 172095,
+    "Nom": "Vall-llobrega",
+    "Codi comarca": 10,
+    "Nom comarca": "Baix Empordà"
+  },
+  {
+    "Codi": 82922,
+    "Nom": "Vallbona d'Anoia",
+    "Codi comarca": 6,
+    "Nom comarca": "Anoia"
+  },
+  {
+    "Codi": 252385,
+    "Nom": "Vallbona de les Monges",
+    "Codi comarca": 38,
+    "Nom comarca": "Urgell"
+  },
+  {
+    "Codi": 82938,
+    "Nom": "Vallcebre",
+    "Codi comarca": 14,
+    "Nom comarca": "Berguedà"
+  },
+  {
+    "Codi": 431589,
+    "Nom": "Vallclara",
+    "Codi comarca": 16,
+    "Nom comarca": "Conca de Barberà"
+  },
+  {
+    "Codi": 252402,
+    "Nom": "Vallfogona de Balaguer",
+    "Codi comarca": 23,
+    "Nom comarca": "Noguera"
+  },
+  {
+    "Codi": 171707,
+    "Nom": "Vallfogona de Ripollès",
+    "Codi comarca": 31,
+    "Nom comarca": "Ripollès"
+  },
+  {
+    "Codi": 431592,
+    "Nom": "Vallfogona de Riucorb",
+    "Codi comarca": 16,
+    "Nom comarca": "Conca de Barberà"
+  },
+  {
+    "Codi": 82943,
+    "Nom": "Vallgorguina",
+    "Codi comarca": 41,
+    "Nom comarca": "Vallès Oriental"
+  },
+  {
+    "Codi": 82956,
+    "Nom": "Vallirana",
+    "Codi comarca": 11,
+    "Nom comarca": "Baix Llobregat"
+  },
+  {
+    "Codi": 431606,
+    "Nom": "Vallmoll",
+    "Codi comarca": 1,
+    "Nom comarca": "Alt Camp"
+  },
+  {
+    "Codi": 82969,
+    "Nom": "Vallromanes",
+    "Codi comarca": 41,
+    "Nom comarca": "Vallès Oriental"
+  },
+  {
+    "Codi": 431613,
+    "Nom": "Valls",
+    "Codi comarca": 1,
+    "Nom comarca": "Alt Camp"
+  },
+  {
+    "Codi": 259062,
+    "Nom": "Valls d'Aguilar, les",
+    "Codi comarca": 4,
+    "Nom comarca": "Alt Urgell"
+  },
+  {
+    "Codi": 252398,
+    "Nom": "Valls de Valira, les",
+    "Codi comarca": 4,
+    "Nom comarca": "Alt Urgell"
+  },
+  {
+    "Codi": 431628,
+    "Nom": "Vandellòs i l'Hospitalet de l'Infant",
+    "Codi comarca": 8,
+    "Nom comarca": "Baix Camp"
+  },
+  {
+    "Codi": 259097,
+    "Nom": "Vansa i Fórnols, la",
+    "Codi comarca": 4,
+    "Nom comarca": "Alt Urgell"
+  },
+  {
+    "Codi": 82975,
+    "Nom": "Veciana",
+    "Codi comarca": 6,
+    "Nom comarca": "Anoia"
+  },
+  {
+    "Codi": 431634,
+    "Nom": "Vendrell, el",
+    "Codi comarca": 12,
+    "Nom comarca": "Baix Penedès"
+  },
+  {
+    "Codi": 172109,
+    "Nom": "Ventalló",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 252424,
+    "Nom": "Verdú",
+    "Codi comarca": 38,
+    "Nom comarca": "Urgell"
+  },
+  {
+    "Codi": 172116,
+    "Nom": "Verges",
+    "Codi comarca": 10,
+    "Nom comarca": "Baix Empordà"
+  },
+  {
+    "Codi": 431649,
+    "Nom": "Vespella de Gaià",
+    "Codi comarca": 36,
+    "Nom comarca": "Tarragonès"
+  },
+  {
+    "Codi": 82981,
+    "Nom": "Vic",
+    "Codi comarca": 24,
+    "Nom comarca": "Osona"
+  },
+  {
+    "Codi": 172121,
+    "Nom": "Vidrà",
+    "Codi comarca": 24,
+    "Nom comarca": "Osona"
+  },
+  {
+    "Codi": 172137,
+    "Nom": "Vidreres",
+    "Codi comarca": 34,
+    "Nom comarca": "Selva"
+  },
+  {
+    "Codi": 252430,
+    "Nom": "Vielha e Mijaran",
+    "Codi comarca": 39,
+    "Nom comarca": "Aran"
+  },
+  {
+    "Codi": 431704,
+    "Nom": "Vila-rodona",
+    "Codi comarca": 1,
+    "Nom comarca": "Alt Camp"
+  },
+  {
+    "Codi": 172305,
+    "Nom": "Vila-sacra",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 252521,
+    "Nom": "Vila-sana",
+    "Codi comarca": 27,
+    "Nom comarca": "Pla d'Urgell"
+  },
+  {
+    "Codi": 431711,
+    "Nom": "Vila-seca",
+    "Codi comarca": 36,
+    "Nom comarca": "Tarragonès"
+  },
+  {
+    "Codi": 431652,
+    "Nom": "Vilabella",
+    "Codi comarca": 1,
+    "Nom comarca": "Alt Camp"
+  },
+  {
+    "Codi": 172142,
+    "Nom": "Vilabertran",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 172155,
+    "Nom": "Vilablareix",
+    "Codi comarca": 20,
+    "Nom comarca": "Gironès"
+  },
+  {
+    "Codi": 82994,
+    "Nom": "Vilada",
+    "Codi comarca": 14,
+    "Nom comarca": "Berguedà"
+  },
+  {
+    "Codi": 172174,
+    "Nom": "Viladamat",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 172168,
+    "Nom": "Viladasens",
+    "Codi comarca": 20,
+    "Nom comarca": "Gironès"
+  },
+  {
+    "Codi": 83015,
+    "Nom": "Viladecans",
+    "Codi comarca": 11,
+    "Nom comarca": "Baix Llobregat"
+  },
+  {
+    "Codi": 83008,
+    "Nom": "Viladecavalls",
+    "Codi comarca": 40,
+    "Nom comarca": "Vallès Occidental"
+  },
+  {
+    "Codi": 172180,
+    "Nom": "Vilademuls",
+    "Codi comarca": 28,
+    "Nom comarca": "Pla de l'Estany"
+  },
+  {
+    "Codi": 172207,
+    "Nom": "Viladrau",
+    "Codi comarca": 24,
+    "Nom comarca": "Osona"
+  },
+  {
+    "Codi": 172214,
+    "Nom": "Vilafant",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 83054,
+    "Nom": "Vilafranca del Penedès",
+    "Codi comarca": 3,
+    "Nom comarca": "Alt Penedès"
+  },
+  {
+    "Codi": 252445,
+    "Nom": "Vilagrassa",
+    "Codi comarca": 38,
+    "Nom comarca": "Urgell"
+  },
+  {
+    "Codi": 172235,
+    "Nom": "Vilajuïga",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 431750,
+    "Nom": "Vilalba dels Arcs",
+    "Codi comarca": 37,
+    "Nom comarca": "Terra Alta"
+  },
+  {
+    "Codi": 83067,
+    "Nom": "Vilalba Sasserra",
+    "Codi comarca": 41,
+    "Nom comarca": "Vallès Oriental"
+  },
+  {
+    "Codi": 252458,
+    "Nom": "Vilaller",
+    "Codi comarca": 5,
+    "Nom comarca": "Alta Ribagorça"
+  },
+  {
+    "Codi": 172240,
+    "Nom": "Vilallonga de Ter",
+    "Codi comarca": 31,
+    "Nom comarca": "Ripollès"
+  },
+  {
+    "Codi": 431665,
+    "Nom": "Vilallonga del Camp",
+    "Codi comarca": 36,
+    "Nom comarca": "Tarragonès"
+  },
+  {
+    "Codi": 172253,
+    "Nom": "Vilamacolum",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 172266,
+    "Nom": "Vilamalla",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 172272,
+    "Nom": "Vilamaniscle",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 252477,
+    "Nom": "Vilamòs",
+    "Codi comarca": 39,
+    "Nom comarca": "Aran"
+  },
+  {
+    "Codi": 172288,
+    "Nom": "Vilanant",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 431671,
+    "Nom": "Vilanova d'Escornalbou",
+    "Codi comarca": 8,
+    "Nom comarca": "Baix Camp"
+  },
+  {
+    "Codi": 252483,
+    "Nom": "Vilanova de Bellpuig",
+    "Codi comarca": 27,
+    "Nom comarca": "Pla d'Urgell"
+  },
+  {
+    "Codi": 252496,
+    "Nom": "Vilanova de l'Aguda",
+    "Codi comarca": 23,
+    "Nom comarca": "Noguera"
+  },
+  {
+    "Codi": 252542,
+    "Nom": "Vilanova de la Barca",
+    "Codi comarca": 33,
+    "Nom comarca": "Segrià"
+  },
+  {
+    "Codi": 252509,
+    "Nom": "Vilanova de Meià",
+    "Codi comarca": 23,
+    "Nom comarca": "Noguera"
+  },
+  {
+    "Codi": 431687,
+    "Nom": "Vilanova de Prades",
+    "Codi comarca": 16,
+    "Nom comarca": "Conca de Barberà"
+  },
+  {
+    "Codi": 83036,
+    "Nom": "Vilanova de Sau",
+    "Codi comarca": 24,
+    "Nom comarca": "Osona"
+  },
+  {
+    "Codi": 252516,
+    "Nom": "Vilanova de Segrià",
+    "Codi comarca": 33,
+    "Nom comarca": "Segrià"
+  },
+  {
+    "Codi": 83020,
+    "Nom": "Vilanova del Camí",
+    "Codi comarca": 6,
+    "Nom comarca": "Anoia"
+  },
+  {
+    "Codi": 89024,
+    "Nom": "Vilanova del Vallès",
+    "Codi comarca": 41,
+    "Nom comarca": "Vallès Oriental"
+  },
+  {
+    "Codi": 83073,
+    "Nom": "Vilanova i la Geltrú",
+    "Codi comarca": 17,
+    "Nom comarca": "Garraf"
+  },
+  {
+    "Codi": 431690,
+    "Nom": "Vilaplana",
+    "Codi comarca": 8,
+    "Nom comarca": "Baix Camp"
+  },
+  {
+    "Codi": 82140,
+    "Nom": "Vilassar de Dalt",
+    "Codi comarca": 21,
+    "Nom comarca": "Maresme"
+  },
+  {
+    "Codi": 82191,
+    "Nom": "Vilassar de Mar",
+    "Codi comarca": 21,
+    "Nom comarca": "Maresme"
+  },
+  {
+    "Codi": 172229,
+    "Nom": "Vilaür",
+    "Codi comarca": 2,
+    "Nom comarca": "Alt Empordà"
+  },
+  {
+    "Codi": 431726,
+    "Nom": "Vilaverd",
+    "Codi comarca": 16,
+    "Nom comarca": "Conca de Barberà"
+  },
+  {
+    "Codi": 431732,
+    "Nom": "Vilella Alta, la",
+    "Codi comarca": 29,
+    "Nom comarca": "Priorat"
+  },
+  {
+    "Codi": 431747,
+    "Nom": "Vilella Baixa, la",
+    "Codi comarca": 29,
+    "Nom comarca": "Priorat"
+  },
+  {
+    "Codi": 172333,
+    "Nom": "Vilobí d'Onyar",
+    "Codi comarca": 34,
+    "Nom comarca": "Selva"
+  },
+  {
+    "Codi": 83041,
+    "Nom": "Vilobí del Penedès",
+    "Codi comarca": 3,
+    "Nom comarca": "Alt Penedès"
+  },
+  {
+    "Codi": 172327,
+    "Nom": "Vilopriu",
+    "Codi comarca": 10,
+    "Nom comarca": "Baix Empordà"
+  },
+  {
+    "Codi": 252537,
+    "Nom": "Vilosell, el",
+    "Codi comarca": 18,
+    "Nom comarca": "Garrigues"
+  },
+  {
+    "Codi": 431763,
+    "Nom": "Vimbodí i Poblet",
+    "Codi comarca": 16,
+    "Nom comarca": "Conca de Barberà"
+  },
+  {
+    "Codi": 252555,
+    "Nom": "Vinaixa",
+    "Codi comarca": 18,
+    "Nom comarca": "Garrigues"
+  },
+  {
+    "Codi": 431779,
+    "Nom": "Vinebre",
+    "Codi comarca": 30,
+    "Nom comarca": "Ribera d'Ebre"
+  },
+  {
+    "Codi": 431785,
+    "Nom": "Vinyols i els Arcs",
+    "Codi comarca": 8,
+    "Nom comarca": "Baix Camp"
+  },
+  {
+    "Codi": 83089,
+    "Nom": "Viver i Serrateix",
+    "Codi comarca": 14,
+    "Nom comarca": "Berguedà"
+  },
+  {
+    "Codi": 430521,
+    "Nom": "Xerta",
+    "Codi comarca": 9,
+    "Nom comarca": "Baix Ebre"
+  }
+]
