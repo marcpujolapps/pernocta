@@ -244,17 +244,17 @@ export function SearchSection() {
   const totalGuests = guests;
 
   return (
-    <section ref={sectionRef} className="relative px-4 bg-gradient-to-b from-background to-muted/20 z-50">
-      <div className="max-w-5xl mx-auto">
-        <div className={`bg-white rounded-3xl shadow-2xl border p-3 max-w-5xl mx-auto transition-all duration-1000 ease-out ${
+    <section ref={sectionRef} className="relative px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-muted/20 z-50 -mt-8 sm:-mt-12 md:-mt-16">
+      <div className="max-w-6xl mx-auto">
+        <div className={`bg-white rounded-2xl sm:rounded-3xl shadow-xl sm:shadow-2xl border p-2 sm:p-3 transition-all duration-1000 ease-out ${
           searchCardVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-12 scale-95'
         }`}>
           {/* Accommodation Types Row */}
-          <div className="flex flex-wrap gap-2 p-4 border-b border-gray-100">
+          <div className="flex flex-wrap gap-1.5 sm:gap-2 p-3 sm:p-4 border-b border-gray-100">
             {accommodationTypes.map((type, index) => (
               <button
                 key={type.id}
-                className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium cursor-pointer
+                className={`inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 md:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium cursor-pointer
                   transition-[background-color,color,box-shadow] duration-150
                   ${selectedTypes.includes(type.id)
                     ? "bg-gray-900 text-white shadow-md"
@@ -267,25 +267,28 @@ export function SearchSection() {
                 }}
                 onClick={() => toggleAccommodationType(type.id)}
               >
-                <type.icon className="w-4 h-4" />
-                <span>{type.name}</span>
+                <type.icon className="w-3 h-3 sm:w-4 sm:h-4" />
+                <span className="hidden xs:inline sm:inline">{type.name}</span>
+                <span className="xs:hidden sm:hidden">
+                  {type.name.split(' ')[0]}
+                </span>
               </button>
             ))}
           </div>
 
           {/* Main Search Controls */}
-          <div className={`grid grid-cols-1 lg:grid-cols-2 lg:divide-x divide-gray-200 transition-all duration-1000 ease-out delay-700 ${
+          <div className={`flex flex-col lg:flex-row lg:divide-x divide-gray-200 transition-all duration-1000 ease-out delay-700 ${
             searchCardVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}>
             {/* Location Search with Autocomplete */}
-            <div className="relative border-b lg:border-b-0 border-gray-200" ref={locationDropdownRef}>
-              <div className="p-6 hover:bg-gray-50 lg:rounded-l-2xl cursor-pointer transition-colors">
+            <div className="relative border-b lg:border-b-0 lg:border-r border-gray-200" ref={locationDropdownRef}>
+              <div className="p-4 sm:p-5 lg:p-6 hover:bg-gray-50 lg:rounded-l-2xl cursor-pointer transition-colors">
                 <div className="text-xs font-semibold text-gray-900 mb-2">
                   On
                 </div>
                 <input
                   placeholder="Cerca destinacions"
-                  className="w-full text-base text-gray-600 placeholder-gray-400 border-none outline-none bg-transparent"
+                  className="w-full text-sm sm:text-base text-gray-600 placeholder-gray-400 border-none outline-none bg-transparent"
                   value={location}
                   onChange={(e) => {
                     setLocation(e.target.value);
@@ -299,38 +302,38 @@ export function SearchSection() {
               </div>
 
               {showLocationSuggestions && location && (
-                <div className="absolute top-full left-0 right-0 bg-white border border-gray-200 rounded-2xl shadow-xl mt-2 overflow-hidden" style={{ zIndex: 1000 }}>
+                <div className="absolute top-full left-0 right-0 bg-white border border-gray-200 rounded-lg sm:rounded-2xl shadow-xl mt-2 overflow-hidden max-h-80 overflow-y-auto" style={{ zIndex: 1000 }}>
                   {filteredSuggestions.length > 0 ? (
                     filteredSuggestions.map((suggestion, index) => (
                       <button
                         key={index}
-                        className="w-full px-6 py-4 text-left hover:bg-gray-50 flex items-center justify-between transition-colors"
+                        className="w-full px-4 sm:px-6 py-3 sm:py-4 text-left hover:bg-gray-50 flex items-center justify-between transition-colors"
                         onClick={() => {
                           setLocation(suggestion.name);
                           setSelectedLocation(suggestion);
                           setShowLocationSuggestions(false);
                         }}
                       >
-                        <div className="flex items-center space-x-3">
-                          <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center">
-                            <MapPin className="w-5 h-5 text-gray-600" />
+                        <div className="flex items-center space-x-3 min-w-0 flex-1">
+                          <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600" />
                           </div>
-                          <div>
-                            <div className="font-medium text-gray-900">
+                          <div className="min-w-0 flex-1">
+                            <div className="font-medium text-gray-900 text-sm sm:text-base truncate">
                               {suggestion.name}
                             </div>
-                            <div className="text-sm text-gray-500">
+                            <div className="text-xs sm:text-sm text-gray-500 truncate">
                               {suggestion.region}
                             </div>
                           </div>
                         </div>
-                        <Badge variant="outline" className="text-xs bg-gray-50">
+                        <Badge variant="outline" className="text-xs bg-gray-50 ml-2 flex-shrink-0">
                           {suggestion.type}
                         </Badge>
                       </button>
                     ))
                   ) : (
-                    <div className="px-6 py-4 text-gray-500">
+                    <div className="px-4 sm:px-6 py-3 sm:py-4 text-gray-500 text-sm sm:text-base">
                       No s&apos;han trobat resultats
                     </div>
                   )}
@@ -338,87 +341,58 @@ export function SearchSection() {
               )}
             </div>
 
-            {/* Date Inputs - Commented out for now */}
-            {/*
-            <div className="p-4 hover:bg-gray-50 cursor-pointer transition-colors">
-              <div className="text-xs font-semibold text-gray-900 mb-1">
-                Entrada
-              </div>
-              <input
-                type="date"
-                className="w-full text-sm text-gray-600 border-none outline-none bg-transparent cursor-pointer"
-                value={checkIn}
-                onChange={(e) => setCheckIn(e.target.value)}
-              />
-            </div>
-
-            <div className="p-4 hover:bg-gray-50 cursor-pointer transition-colors">
-              <div className="text-xs font-semibold text-gray-900 mb-1">
-                Sortida
-              </div>
-              <input
-                type="date"
-                className="w-full text-sm text-gray-600 border-none outline-none bg-transparent cursor-pointer"
-                value={checkOut}
-                onChange={(e) => setCheckOut(e.target.value)}
-              />
-            </div>
-            */}
-
             {/* Guest Selector */}
             <div className="relative" ref={guestDropdownRef}>
-              <div
-                className="p-6 hover:bg-gray-50 lg:rounded-r-2xl cursor-pointer transition-colors flex items-center justify-between"
-              >
+              <div className="p-4 sm:p-5 lg:p-6 hover:bg-gray-50 lg:rounded-r-2xl cursor-pointer transition-colors flex items-center justify-between">
                 <div onClick={() => setShowGuestSelector(!showGuestSelector)} className="flex-grow">
                   <div className="text-xs font-semibold text-gray-900 mb-2">
                     Qui
                   </div>
-                  <div className="text-base text-gray-600">
+                  <div className="text-sm sm:text-base text-gray-600">
                     {totalGuests} {totalGuests === 1 ? "persona" : "persones"}
                   </div>
                 </div>
                 <button
                   onClick={handleSearch}
-                  className="bg-rose-500 text-white p-5 rounded-full hover:bg-rose-600 transition-colors ml-4"
+                  className="bg-rose-500 text-white p-3 sm:p-4 lg:p-5 rounded-full hover:bg-rose-600 transition-colors ml-4 flex-shrink-0"
                   aria-label="Search"
                 >
-                  <Search className="w-5 h-5" />
+                  <Search className="w-4 h-4 sm:w-5 sm:h-5" />
                 </button>
               </div>
 
               {showGuestSelector && (
-                <div className="absolute top-full right-0 bg-white border border-gray-200 rounded-2xl shadow-xl mt-2 p-6 w-80" style={{ zIndex: 1000 }}>
-                  <div className="space-y-6">
+                <div className="absolute top-full right-0 bg-white border border-gray-200 rounded-lg sm:rounded-2xl shadow-xl mt-2 p-4 sm:p-6 w-72 sm:w-80" style={{ zIndex: 1000 }}>
+                  <div className="space-y-4 sm:space-y-6">
                     <div className="flex items-center justify-between">
                       <div>
-                        <div className="font-medium text-gray-900">Persones</div>
-                        <div className="text-sm text-gray-500">Nombre total de persones</div>
+                        <div className="font-medium text-gray-900 text-sm sm:text-base">Persones</div>
+                        <div className="text-xs sm:text-sm text-gray-500">Nombre total de persones</div>
                       </div>
-                      <div className="flex items-center gap-4">
+                      <div className="flex items-center gap-3 sm:gap-4">
                         <button
-                          className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center hover:border-gray-900 disabled:opacity-25 disabled:cursor-not-allowed transition-colors"
+                          className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-gray-300 flex items-center justify-center hover:border-gray-900 disabled:opacity-25 disabled:cursor-not-allowed transition-colors"
                           onClick={() => setGuests(Math.max(1, guests - 1))}
                           disabled={guests <= 1}
                         >
-                          <Minus className="h-3 w-3" />
+                          <Minus className="h-2.5 w-2.5 sm:h-3 sm:w-3" />
                         </button>
-                        <span className="w-6 text-center font-medium text-gray-900">
+                        <span className="w-6 text-center font-medium text-gray-900 text-sm sm:text-base">
                           {guests}
                         </span>
                         <button
-                          className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center hover:border-gray-900 transition-colors"
+                          className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-gray-300 flex items-center justify-center hover:border-gray-900 transition-colors"
                           onClick={() => setGuests(Math.min(50, guests + 1))}
                         >
-                          <Plus className="h-3 w-3" />
+                          <Plus className="h-2.5 w-2.5 sm:h-3 sm:w-3" />
                         </button>
                       </div>
                     </div>
                   </div>
 
-                  <div className="flex justify-end mt-6">
+                  <div className="flex justify-end mt-4 sm:mt-6">
                     <button
-                      className="text-sm font-medium text-gray-900 underline hover:text-gray-700"
+                      className="text-xs sm:text-sm font-medium text-gray-900 underline hover:text-gray-700"
                       onClick={() => setShowGuestSelector(false)}
                     >
                       Tancar
@@ -432,14 +406,14 @@ export function SearchSection() {
 
         {/* Additional Filters */}
         {selectedTypes.length > 0 && !selectedTypes.includes("tots") && (
-          <div className={`mt-8 cursor-pointer text-center transition-all duration-500 ease-out ${
+          <div className={`mt-6 sm:mt-8 cursor-pointer text-center transition-all duration-500 ease-out ${
             searchCardVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
           }`} style={{ transitionDelay: '1000ms' }}>
             <button
-              className="cursor-pointer inline-flex items-center px-4 py-2 text-sm text-gray-600 hover:text-gray-900 transition-colors"
+              className="cursor-pointer inline-flex items-center px-3 sm:px-4 py-2 text-xs sm:text-sm text-gray-600 hover:text-gray-900 transition-colors"
               onClick={() => setSelectedTypes([])}
             >
-              <X className="w-4 h-4 mr-2" />
+              <X className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
               Netejar filtres
             </button>
           </div>

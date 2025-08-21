@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { NextRequest } from "next/server";
 import { z } from "zod";
 import { generateText } from "ai";
@@ -89,7 +90,7 @@ export async function POST(req: NextRequest) {
       model: google("gemini-2.5-flash-lite"),
       system: systemPrompt,
       tools: {
-        google_search: google.tools.googleSearch({}),
+        google_search: google.tools.googleSearch({}) as any,
       },
       prompt: userPrompt,
     });
