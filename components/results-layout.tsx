@@ -593,7 +593,6 @@ export function ResultsLayout({
                   accommodationId={accommodationId}
                   isSelected={selectedAccommodation === accommodationId}
                   isHovered={hoveredAccommodation === accommodationId}
-                  onSelect={() => setSelectedAccommodation(accommodationId)}
                   onHover={() => setHoveredAccommodation(accommodationId)}
                   onLeave={() => setHoveredAccommodation(null)}
                 />

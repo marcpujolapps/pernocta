@@ -2,6 +2,7 @@
 
 import type React from "react";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -24,7 +25,6 @@ interface AccommodationCardProps {
   accommodationId: string;
   isSelected: boolean;
   isHovered: boolean;
-  onSelect: () => void;
   onHover: () => void;
   onLeave: () => void;
 }
@@ -34,13 +34,18 @@ export function AccommodationCard({
   accommodationId,
   isSelected,
   isHovered,
-  onSelect,
   onHover,
   onLeave,
 }: AccommodationCardProps) {
   const [isFavorite, setIsFavorite] = useState(false);
   const [isEnriching, setIsEnriching] = useState(false);
   const [isLocating, setIsLocating] = useState(false);
+  const router = useRouter();
+
+  const handleCardClick = () => {
+    // Navigate to the accommodation details page
+    router.push(`/accommodation/${accommodationId}`);
+  };
 
   const handleEnrich = async (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -221,7 +226,7 @@ export function AccommodationCard({
       className={`group relative overflow-hidden hover:shadow-lg transition-all duration-200 cursor-pointer border border-gray-200 bg-white rounded-xl ${
         isSelected ? "ring-2 ring-gray-500 shadow-lg" : "hover:shadow-lg"
       } ${isHovered ? "shadow-md" : ""}`}
-      onClick={onSelect}
+      onClick={handleCardClick}
       onMouseEnter={onHover}
       onMouseLeave={onLeave}
       tabIndex={0}

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
+import { useRouter } from "next/navigation";
 import { Card, CardContent } from "@/components/ui/card";
 import { ImageSlider } from "@/components/ui/image-slider";
 import {
@@ -22,8 +23,11 @@ import MapGL, {
 import "mapbox-gl/dist/mapbox-gl.css";
 import { Place } from "@/lib/place";
 
+// Represent a place with its Firestore document ID
+type AccommodationItem = Place & { id: string };
+
 interface MapViewProps {
-  accommodations: Place[];
+  accommodations: AccommodationItem[];
   selectedAccommodation: string | null;
   hoveredAccommodation: string | null;
   onAccommodationSelect: (id: string) => void;
@@ -43,6 +47,7 @@ export function MapView({
     zoom: 8,
   });
   const mapRef = useRef<MapRef | null>(null);
+  const router = useRouter();
 
   // Get appropriate icon based on accommodation type
   const getAccommodationIcon = (type: string | null) => {
@@ -131,8 +136,7 @@ export function MapView({
         {accommodations
           .filter((accommodation) => accommodation.coordinates !== undefined)
           .map((accommodation) => {
-            const accommodationId =
-              accommodation.licence_id || accommodation.slug || "unknown";
+            const accommodationId = accommodation.id;
             const isSelected = selectedAccommodation === accommodationId;
             const isHovered = hoveredAccommodation === accommodationId;
             const IconComponent = getAccommodationIcon(accommodation.type);
@@ -147,7 +151,7 @@ export function MapView({
               >
                 <div
                   className="cursor-pointer"
-                  onClick={() => onAccommodationSelect(accommodationId)}
+                  onClick={() => router.push(`/accommodation/${accommodationId}`)}
                   onMouseEnter={() => onAccommodationHover(accommodationId)}
                   onMouseLeave={() => onAccommodationHover(null)}
                 >
@@ -171,7 +175,7 @@ export function MapView({
 
                     {isSelected && (
                       <Card
-                        className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-64 shadow-xl border border-gray-200 bg-white rounded-xl overflow-hidden"
+                        className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-64 shadow-xl border border-gray-200 bg-white rounded-xl overflow-hidden cursor-pointer"
                         style={{
                           zIndex: isSelected ? 1001 : 501,
                           marginTop: 0,
@@ -179,6 +183,7 @@ export function MapView({
                           marginBottom: 0,
                           paddingBottom: 0,
                         }}
+                        onClick={() => router.push(`/accommodation/${accommodationId}`)}
                       >
                         {/* Close button */}
                         <button

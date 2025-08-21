@@ -1,11 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import { Badge } from "@/components/ui/badge";
-import { Ban, ShieldCheck, } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 export function Hero() {
-  const [isVisible, setIsVisible] = useState(false);
   const [titleVisible, setTitleVisible] = useState(false);
   const [descriptionVisible, setDescriptionVisible] = useState(false);
   const [logosVisible, setLogosVisible] = useState(Array(8).fill(false));
@@ -15,7 +12,6 @@ export function Hero() {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true);
           // Stagger the animations
           setTimeout(() => setTitleVisible(true), 200);
           setTimeout(() => setDescriptionVisible(true), 600);
