@@ -288,7 +288,7 @@ export function SearchSection() {
                 </div>
                 <input
                   placeholder="Cerca destinacions"
-                  className="w-full text-sm sm:text-base text-gray-600 placeholder-gray-400 border-none outline-none bg-transparent"
+                  className="w-full text-base sm:text-base text-gray-600 placeholder-gray-400 border-none outline-none bg-transparent"
                   value={location}
                   onChange={(e) => {
                     setLocation(e.target.value);
