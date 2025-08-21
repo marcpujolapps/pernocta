@@ -289,14 +289,14 @@ export function SearchSection() {
           </div>
 
           {/* Main Search Controls */}
-          <div className={`flex flex-col lg:flex-row lg:divide-x divide-gray-200 ${
+          <div className={`flex flex-col lg:flex-row ${
             isFirstVisit ? 'transition-all duration-1000 ease-out delay-700' : 'transition-all duration-300 ease-out'
           } ${
             searchCardVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}>
-            {/* Location Search with Autocomplete */}
-            <div className="relative border-b lg:border-b-0 lg:border-r border-gray-200" ref={locationDropdownRef}>
-              <div className="p-4 sm:p-5 lg:p-6 hover:bg-gray-50 lg:rounded-l-2xl cursor-pointer transition-colors">
+            {/* Location Search with Autocomplete - takes 65% on large screens */}
+            <div className="flex-1 relative border-b lg:border-b-0" ref={locationDropdownRef}>
+              <div className="p-4 sm:p-5 lg:p-6 hover:bg-gray-50 lg:rounded-l-2xl cursor-pointer transition-colors lg:border-r border-gray-200">
                 <div className="text-xs font-semibold text-gray-900 mb-2">
                   On
                 </div>
@@ -316,7 +316,7 @@ export function SearchSection() {
               </div>
 
               {showLocationSuggestions && location && (
-                <div className="absolute top-full left-0 right-0 bg-white border border-gray-200 rounded-lg sm:rounded-2xl shadow-xl mt-2 overflow-hidden max-h-80 overflow-y-auto" style={{ zIndex: 1000 }}>
+                <div className="absolute top-full left-0 right-0 lg:min-w-[400px] bg-white border border-gray-200 rounded-lg sm:rounded-2xl shadow-xl mt-2 overflow-hidden max-h-80 overflow-y-auto" style={{ zIndex: 1000 }}>
                   {filteredSuggestions.length > 0 ? (
                     filteredSuggestions.map((suggestion, index) => (
                       <button
@@ -355,8 +355,8 @@ export function SearchSection() {
               )}
             </div>
 
-            {/* Guest Selector */}
-            <div className="relative" ref={guestDropdownRef}>
+            {/* Guest Selector - takes 35% on large screens */}
+            <div className="flex-1 relative" ref={guestDropdownRef}>
               <div className="p-4 sm:p-5 lg:p-6 hover:bg-gray-50 lg:rounded-r-2xl cursor-pointer transition-colors flex items-center justify-between">
                 <div onClick={() => setShowGuestSelector(!showGuestSelector)} className="flex-grow">
                   <div className="text-xs font-semibold text-gray-900 mb-2">

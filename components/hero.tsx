@@ -26,14 +26,15 @@ export function Hero() {
   }, []);
 
   const logos = [
+    { src: "platforms/escapada_rural.png", alt: "Escapada Rural" },
     { src: "platforms/airbnb.png", alt: "Airbnb" },
     { src: "platforms/booking.png", alt: "Booking" },
-    { src: "platforms/escapada_rural.png", alt: "Escapada Rural" },
-    { src: "platforms/club_rural.png", alt: "Club Rural" },
     { src: "platforms/homeaway.png", alt: "HomeAway" },
     { src: "platforms/tripadvisor.png", alt: "TripAdvisor" },
+    { src: "platforms/club_rural.png", alt: "Club Rural" },
     { src: "platforms/expedia.png", alt: "Expedia" },
     { src: "platforms/hotels.png", alt: "Hotels.com" },
+    { src: "platforms/vrbo.png", alt: "Vrbo" }
   ];
 
   return (
@@ -43,7 +44,7 @@ export function Hero() {
     >
       <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-5"></div>
 
-      <div className="max-w-6xl mx-auto text-center relative z-10">
+      <div className="max-w-7xl mx-auto text-center relative z-10">
         <h1
           className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground mb-4 sm:mb-6 md:mb-8 leading-tight px-2 transition-all duration-700 ease-out ${
             titleVisible
@@ -61,13 +62,13 @@ export function Hero() {
               : "opacity-0 translate-y-8"
           }`}
         >
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-4 sm:mb-6 md:mb-8 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-4 sm:mb-6 md:mb-8 max-w-5xl mx-auto leading-relaxed">
             Tenim <b>tots</b> els allotjaments que tenen les altres plataformes,{" "}
             <b>menys els il·legals sense llicència.</b>
           </p>
 
           {/* Infinite Carousel for all screen sizes */}
-          <div className="overflow-hidden relative max-w-4xl mx-auto">
+          <div className="overflow-hidden relative max-w-5xl mx-auto pb-6">
             <style jsx>{`
               @keyframes infiniteScroll {
                 from {
