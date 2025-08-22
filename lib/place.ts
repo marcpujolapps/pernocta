@@ -43,6 +43,21 @@ export interface Place {
   get_images_error?: boolean;
   images?: string[]; // Array of image URLs
   createdAt?: unknown; // Firestore Timestamp when stored in DB
+  
+  // Enrichment fields
+  enrichment_error?: boolean;
+  enriched_at?: unknown; // Firestore Timestamp when enriched
+  long_description?: string | null;
+  short_description?: string | null;
+  services?: string[] | null;
+  amenities?: string[] | null;
+  price_range_eur?: string | null;
+  website?: string | null;
+  email?: string | null;
+  phone?: string | null;
+  booking_links?: Array<{ platform: string; url: string }> | null;
+  reviews_out_of_5?: number | null;
+  reviews_summary?: string | null;
 }
 
 // Mapping from original Catalan dataset keys to normalized keys.

@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -9,6 +9,7 @@ import { Separator } from "@/components/ui/separator";
 import { ImageSlider } from "@/components/ui/image-slider";
 import MapboxMap from "@/components/MapboxMap";
 import { Place } from "@/lib/place";
+import { updateDocument } from "@/lib/firestore";
 import {
   ArrowLeft,
   Star,
@@ -24,15 +25,155 @@ import {
   FileText,
   CheckCircle,
   Grid3X3,
+  Sparkles,
 } from "lucide-react";
 import Link from "next/link";
+import { vector } from "firebase/firestore";
 
 interface AccommodationDetailProps {
   place: Place;
+  placeId: string;
 }
 
-export function AccommodationDetail({ place }: AccommodationDetailProps) {
+interface EnrichmentData {
+  long_description: string | null;
+  short_description: string | null;
+  services: string[] | null;
+  amenities: string[] | null;
+  price_range_eur: string | null;
+  website: string | null;
+  email: string | null;
+  phone: string | null;
+  booking_links: Array<{ platform: string; url: string }> | null;
+  reviews_out_of_5: number | null;
+  reviews_summary: string | null;
+}
+
+export function AccommodationDetail({
+  place,
+  placeId,
+}: AccommodationDetailProps) {
   const [isFavorite, setIsFavorite] = useState(false);
+  const [enrichmentData, setEnrichmentData] = useState<EnrichmentData | null>(
+    null
+  );
+  const [isEnriching, setIsEnriching] = useState(false);
+
+  // Load existing enrichment data on component mount
+  useEffect(() => {
+    if (place.enriched_at) {
+      // Load existing enrichment data
+      setEnrichmentData({
+        long_description: place.long_description || null,
+        short_description: place.short_description || null,
+        services: place.services || null,
+        amenities: place.amenities || null,
+        price_range_eur: place.price_range_eur || null,
+        website: place.website || null,
+        email: place.email || null,
+        phone: place.phone || null,
+        booking_links: place.booking_links || null,
+        reviews_out_of_5: place.reviews_out_of_5 || null,
+        reviews_summary: place.reviews_summary || null,
+      });
+    }
+  }, [place]);
+
+  // Manual enrichment function
+  const enrichPlace = async () => {
+    if (isEnriching) return;
+
+    setIsEnriching(true);
+    try {
+      const payload = {
+        placeId: placeId,
+        place: {
+          name: place.name,
+          municipality: place.municipality,
+          county: place.county,
+          province: place.province,
+          licence_id: place.licence_id,
+          address: place.address,
+          category: place.category,
+          modality: place.modality,
+          type: place.type,
+        },
+      };
+
+      const res = await fetch("/api/enrich-place", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await res.json();
+      console.log("Enrichment response data:", data);
+
+      if (!res.ok) {
+        console.error("Enrichment failed", { status: res.status, data });
+        // Mark as enrichment error in Firestore
+        try {
+          await updateDocument("places", placeId, {
+            enrichment_error: true,
+            enriched_at: new Date(),
+          });
+        } catch (updateErr) {
+          console.error("Failed to update enrichment_error flag:", updateErr);
+        }
+      } else {
+        console.log(
+          "Enrichment successful for",
+          place.name || place.licence_id,
+          data
+        );
+        setEnrichmentData(data.enrichment);
+
+        // Save enrichment data to Firestore
+        try {
+          const enrichmentUpdate = {
+            ...data.enrichment,
+            enriched_at: new Date(),
+            enrichment_error: false,
+            embedding: vector(data.embedding),
+          };
+
+          await updateDocument("places", placeId, enrichmentUpdate);
+        } catch (updateErr) {
+          console.error(
+            "Failed to save enrichment data to Firestore:",
+            updateErr
+          );
+          // Continue even if Firestore update fails
+        }
+      }
+    } catch (err) {
+      console.error("Enrichment error", err);
+      // Mark as enrichment error in Firestore
+      try {
+        await updateDocument("places", placeId, {
+          enrichment_error: true,
+          enriched_at: new Date(),
+        });
+      } catch (updateErr) {
+        console.error(
+          "Failed to update enrichment_error flag after error:",
+          updateErr
+        );
+      }
+    } finally {
+      setIsEnriching(false);
+    }
+  };
+
+  // Check if enrichment is available
+  const canEnrich = !place.enrichment_error && !place.enriched_at;
+
+  const hasEnrichmentData =
+    enrichmentData &&
+    (enrichmentData.long_description ||
+      enrichmentData.short_description ||
+      enrichmentData.services ||
+      enrichmentData.amenities);
 
   // Build full address from Place data
   const fullAddress = [
@@ -146,6 +287,75 @@ export function AccommodationDetail({ place }: AccommodationDetailProps) {
             </div>
           </div>
         </div>
+
+        {/* Enrichment Section */}
+        {canEnrich && !hasEnrichmentData && (
+          <div className="mb-6 p-4 bg-muted/50 rounded-lg border border-dashed border-muted-foreground/25">
+            <div className="flex items-center justify-between">
+              <div className="flex-1">
+                <h3 className="font-medium text-foreground mb-1">
+                  Obtenir més informació
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  Enriqueix aquest allotjament amb descripcions, serveis,
+                  comoditats i enllaços de reserva.
+                </p>
+              </div>
+              <Button
+                onClick={enrichPlace}
+                disabled={isEnriching}
+                className="ml-4"
+              >
+                {isEnriching ? (
+                  <>
+                    <div className="animate-spin w-4 h-4 border-2 border-background border-t-transparent rounded-full mr-2"></div>
+                    Enriquint...
+                  </>
+                ) : (
+                  <>
+                    <Sparkles className="w-4 h-4 mr-2" />
+                    Enriquir
+                  </>
+                )}
+              </Button>
+            </div>
+          </div>
+        )}
+
+        {/* Enrichment Error Message */}
+        {place.enrichment_error && (
+          <div className="mb-6 p-4 bg-red-50 rounded-lg border border-red-200">
+            <div className="flex items-center justify-between">
+              <div className="flex-1">
+                <h3 className="font-medium text-red-800 mb-1">
+                  Error d&apos;enriquiment
+                </h3>
+                <p className="text-sm text-red-600">
+                  No s&apos;ha pogut obtenir informació adicional per aquest
+                  allotjament. Pots intentar-ho de nou.
+                </p>
+              </div>
+              <Button
+                onClick={enrichPlace}
+                disabled={isEnriching}
+                variant="outline"
+                className="ml-4 border-red-200 text-red-700 hover:bg-red-50"
+              >
+                {isEnriching ? (
+                  <>
+                    <div className="animate-spin w-4 h-4 border-2 border-red-700 border-t-transparent rounded-full mr-2"></div>
+                    Reintentant...
+                  </>
+                ) : (
+                  <>
+                    <Sparkles className="w-4 h-4 mr-2" />
+                    Reintentar
+                  </>
+                )}
+              </Button>
+            </div>
+          </div>
+        )}
 
         {/* Image Gallery */}
         {place.images && place.images.length > 0 ? (
@@ -369,6 +579,230 @@ export function AccommodationDetail({ place }: AccommodationDetailProps) {
             </div>
 
             <Separator />
+
+            {/* Enrichment Data */}
+            {(hasEnrichmentData || isEnriching) && (
+              <>
+                <div>
+                  <h2 className="text-2xl font-semibold text-foreground mb-6">
+                    Informació adicional
+                    {isEnriching && (
+                      <span className="ml-2 text-sm text-muted-foreground">
+                        (carregant...)
+                      </span>
+                    )}
+                  </h2>
+
+                  {isEnriching ? (
+                    <div className="flex items-center justify-center py-8">
+                      <div className="text-center text-muted-foreground">
+                        <div className="animate-spin w-8 h-8 border-2 border-primary border-t-transparent rounded-full mx-auto mb-4"></div>
+                        <p>Enriquint la informació de l&apos;allotjament...</p>
+                      </div>
+                    </div>
+                  ) : enrichmentData ? (
+                    <div className="space-y-6">
+                      {/* Description */}
+                      {enrichmentData.long_description && (
+                        <div>
+                          <h3 className="font-medium text-foreground mb-3">
+                            Descripció
+                          </h3>
+                          <p className="text-muted-foreground leading-relaxed">
+                            {enrichmentData.long_description}
+                          </p>
+                        </div>
+                      )}
+
+                      {/* Services & Amenities */}
+                      {(enrichmentData.services ||
+                        enrichmentData.amenities) && (
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                          {enrichmentData.services && (
+                            <div>
+                              <h3 className="font-medium text-foreground mb-3">
+                                Serveis
+                              </h3>
+                              <div className="space-y-2">
+                                {enrichmentData.services.map(
+                                  (service, index) => (
+                                    <div
+                                      key={index}
+                                      className="flex items-center gap-2"
+                                    >
+                                      <CheckCircle className="w-4 h-4 text-green-600" />
+                                      <span className="text-sm text-muted-foreground">
+                                        {service}
+                                      </span>
+                                    </div>
+                                  )
+                                )}
+                              </div>
+                            </div>
+                          )}
+
+                          {enrichmentData.amenities && (
+                            <div>
+                              <h3 className="font-medium text-foreground mb-3">
+                                Comoditats
+                              </h3>
+                              <div className="space-y-2">
+                                {enrichmentData.amenities.map(
+                                  (amenity, index) => (
+                                    <div
+                                      key={index}
+                                      className="flex items-center gap-2"
+                                    >
+                                      <CheckCircle className="w-4 h-4 text-green-600" />
+                                      <span className="text-sm text-muted-foreground">
+                                        {amenity}
+                                      </span>
+                                    </div>
+                                  )
+                                )}
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      )}
+
+                      {/* Contact & Booking Info */}
+                      {(enrichmentData.website ||
+                        enrichmentData.email ||
+                        enrichmentData.phone ||
+                        enrichmentData.price_range_eur) && (
+                        <div>
+                          <h3 className="font-medium text-foreground mb-3">
+                            Contacte i reserves
+                          </h3>
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            {enrichmentData.website && (
+                              <div className="flex items-center justify-between">
+                                <span className="text-muted-foreground">
+                                  Web oficial:
+                                </span>
+                                <a
+                                  href={enrichmentData.website}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-primary hover:underline text-sm"
+                                >
+                                  Visitar web
+                                </a>
+                              </div>
+                            )}
+                            {enrichmentData.email && (
+                              <div className="flex items-center justify-between">
+                                <span className="text-muted-foreground">
+                                  Email:
+                                </span>
+                                <a
+                                  href={`mailto:${enrichmentData.email}`}
+                                  className="text-primary hover:underline text-sm"
+                                >
+                                  {enrichmentData.email}
+                                </a>
+                              </div>
+                            )}
+                            {enrichmentData.phone && (
+                              <div className="flex items-center justify-between">
+                                <span className="text-muted-foreground">
+                                  Telèfon:
+                                </span>
+                                <a
+                                  href={`tel:${enrichmentData.phone}`}
+                                  className="text-primary hover:underline text-sm"
+                                >
+                                  {enrichmentData.phone}
+                                </a>
+                              </div>
+                            )}
+                            {enrichmentData.price_range_eur && (
+                              <div className="flex items-center justify-between">
+                                <span className="text-muted-foreground">
+                                  Rang de preus:
+                                </span>
+                                <span className="font-medium text-sm">
+                                  {enrichmentData.price_range_eur}
+                                </span>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Booking Links */}
+                      {enrichmentData.booking_links &&
+                        enrichmentData.booking_links.length > 0 && (
+                          <div>
+                            <h3 className="font-medium text-foreground mb-3">
+                              Plataformes de reserva
+                            </h3>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                              {enrichmentData.booking_links.map(
+                                (link, index) => (
+                                  <a
+                                    key={index}
+                                    href={link.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center justify-between p-3 border rounded-lg hover:bg-muted/50 transition-colors"
+                                  >
+                                    <span className="font-medium">
+                                      {link.platform}
+                                    </span>
+                                    <ExternalLink className="w-4 h-4 text-muted-foreground" />
+                                  </a>
+                                )
+                              )}
+                            </div>
+                          </div>
+                        )}
+
+                      {/* Reviews */}
+                      {(enrichmentData.reviews_out_of_5 ||
+                        enrichmentData.reviews_summary) && (
+                        <div>
+                          <h3 className="font-medium text-foreground mb-3">
+                            Valoracions
+                          </h3>
+                          {enrichmentData.reviews_out_of_5 && (
+                            <div className="flex items-center gap-2 mb-3">
+                              <div className="flex items-center gap-1">
+                                {Array.from({ length: 5 }, (_, i) => (
+                                  <Star
+                                    key={i}
+                                    className={`w-4 h-4 ${
+                                      i <
+                                      Math.floor(
+                                        enrichmentData.reviews_out_of_5!
+                                      )
+                                        ? "fill-yellow-400 text-yellow-400"
+                                        : "text-gray-300"
+                                    }`}
+                                  />
+                                ))}
+                              </div>
+                              <span className="font-medium">
+                                {enrichmentData.reviews_out_of_5.toFixed(1)} de
+                                5
+                              </span>
+                            </div>
+                          )}
+                          {enrichmentData.reviews_summary && (
+                            <p className="text-muted-foreground text-sm leading-relaxed">
+                              {enrichmentData.reviews_summary}
+                            </p>
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  ) : null}
+                </div>
+
+                <Separator />
+              </>
+            )}
 
             {/* Administrative Information */}
             <div>

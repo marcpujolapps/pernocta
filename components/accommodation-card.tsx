@@ -36,55 +36,12 @@ export function AccommodationCard({
   onLeave,
 }: AccommodationCardProps) {
   const [isFavorite, setIsFavorite] = useState(false);
-  const [isEnriching, setIsEnriching] = useState(false);
   const [isLocating, setIsLocating] = useState(false);
   const router = useRouter();
 
   const handleCardClick = () => {
     // Navigate to the accommodation details page
     router.push(`/accommodation/${accommodationId}`);
-  };
-
-  const handleEnrich = async (e: React.MouseEvent) => {
-    e.stopPropagation();
-    if (isEnriching) return;
-    setIsEnriching(true);
-    try {
-      const payload = {
-        place: {
-          name: accommodation.name,
-          municipality: accommodation.municipality,
-          county: accommodation.county,
-          province: accommodation.province,
-          licence_id: accommodation.licence_id,
-          address: accommodation.address,
-          category: accommodation.category,
-          modality: accommodation.modality,
-          type: accommodation.type,
-        },
-      };
-      const res = await fetch("/api/enrich-place", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
-      const data = await res.json();
-      if (!res.ok) {
-        console.error("Enrichment failed", { status: res.status, data });
-      } else {
-        console.log(
-          "Enrichment result for",
-          accommodation.name ||
-            accommodation.address ||
-            accommodation.licence_id,
-          data
-        );
-      }
-    } catch (err) {
-      console.error("Enrichment error", err);
-    } finally {
-      setIsEnriching(false);
-    }
   };
 
   const handleLocate = async (e?: React.MouseEvent) => {
@@ -293,15 +250,6 @@ export function AccommodationCard({
 
         {/* Hidden action buttons - only show on hover for development */}
         <div className="absolute top-2 left-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex gap-1 pt-2">
-          <Button
-            size="sm"
-            variant="outline"
-            onClick={handleEnrich}
-            disabled={isEnriching}
-            className="text-xs h-6 px-2"
-          >
-            {isEnriching ? "..." : "Enriquir"}
-          </Button>
           {!accommodation.coordinates && !accommodation.geocode_error && (
             <Button
               size="sm"

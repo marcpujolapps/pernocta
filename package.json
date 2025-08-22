@@ -7,15 +7,16 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "upload:places": "node scripts/upload-places.js"
+    "upload:places": "node scripts/upload-places.js",
+    "enrich:municipality": "node scripts/enrich-places-by-municipality.js"
   },
   "dependencies": {
     "@ai-sdk/google": "^2.0.8",
-    "@ai-sdk/openai": "^1.0.0",
+    "@ai-sdk/openai": "^2.0.19",
     "@radix-ui/react-separator": "^1.1.7",
     "@radix-ui/react-slot": "^1.2.3",
     "@types/duckduckgo-images-api": "^1.0.3",
-    "ai": "^5.0.9",
+    "ai": "^5.0.22",
     "async-g-i-s": "^1.5.5",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
