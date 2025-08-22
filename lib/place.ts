@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // Shared types and mapping for "places" dataset (normalized accommodation registry records)
 // Keys are normalized to English snake_case.
 
@@ -42,11 +43,11 @@ export interface Place {
   geocode_error?: boolean;
   get_images_error?: boolean;
   images?: string[]; // Array of image URLs
-  createdAt?: unknown; // Firestore Timestamp when stored in DB
+  createdAt?: any; // Firestore Timestamp when stored in DB
   
   // Enrichment fields
   enrichment_error?: boolean;
-  enriched_at?: unknown; // Firestore Timestamp when enriched
+  enriched_at?: any; // Firestore Timestamp when enriched
   long_description?: string | null;
   short_description?: string | null;
   services?: string[] | null;

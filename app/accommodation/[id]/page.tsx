@@ -18,18 +18,16 @@ export default async function AccommodationPage({
 
   // Try to fetch the accommodation from Firestore
   let place: Place | null = null;
-  // createdAt and enriched_at are firestore timestamps, convert it to ms
-  if (place) {
-    place.createdAt = place?.createdAt?.seconds
-      ? place.createdAt.seconds * 1000
-      : null;
-    place.enriched_at = place?.enriched_at?.seconds
-      ? place.enriched_at.seconds * 1000
-      : null;
-  }
-
   try {
     place = await fetchDoc<Place>("places", id);
+    if (place) {
+      place.createdAt = place?.createdAt?.seconds
+        ? place.createdAt.seconds * 1000
+        : null;
+      place.enriched_at = place?.enriched_at?.seconds
+        ? place.enriched_at.seconds * 1000
+        : null;
+    }
   } catch (error) {
     console.error("Error fetching accommodation:", error);
   }
@@ -41,10 +39,7 @@ export default async function AccommodationPage({
 
   return (
     <div className="min-h-screen bg-background">
-      <AccommodationDetail
-        place={place}
-        placeId={id}
-      />
+      <AccommodationDetail place={place} placeId={id} />
       <Footer />
     </div>
   );
