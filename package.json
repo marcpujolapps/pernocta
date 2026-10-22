@@ -15,19 +15,17 @@
     "@ai-sdk/openai": "^2.0.19",
     "@radix-ui/react-separator": "^1.1.7",
     "@radix-ui/react-slot": "^1.2.3",
-    "@types/duckduckgo-images-api": "^1.0.3",
     "ai": "^5.0.22",
     "async-g-i-s": "^1.5.5",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "duckduckgo-images-api": "^1.0.5",
     "firebase": "^12.1.0",
     "firebase-admin": "^13.4.0",
     "lucide-react": "^0.540.0",
     "mapbox-gl": "^3.0.0",
-    "next": "15.2.4",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "next": "15.5.28",
+    "react": "19.1.10",
+    "react-dom": "19.1.10",
     "react-map-gl": "^7.1.6",
     "tailwind-merge": "^3.3.1",
     "zod": "^3.23.8"
@@ -39,9 +37,18 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "15.2.4",
+    "eslint-config-next": "15.5.28",
     "tailwindcss": "^4.1.12",
     "tw-animate-css": "^1.3.7",
     "typescript": "^5"
+  },
+  "overrides": {
+    "postcss": "8.5.31",
+    "minimatch@3": {
+      "brace-expansion": "1.1.21"
+    },
+    "firebase-admin": {
+      "@fastify/busboy": "3.2.4"
+    }
   }
 }
